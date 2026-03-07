@@ -393,7 +393,7 @@
         <span class="section-number">01</span>
         <p class="section-label">Panorama Actual</p>
         <h2>¿Dónde Estamos?</h2>
-        <p class="intro">Análisis basado en datos reales extraídos de GoHighLevel (pipelines, oportunidades) y Meta Ads Manager (pauta activa). Fecha de corte: 7 de marzo, 2026.</p>
+        <p class="intro">Análisis basado en datos reales extraídos de GoHighLevel (pipelines, oportunidades) y Meta Ads Manager (pauta activa). Fecha de corte: 7 de marzo, 2026. <strong>Nota:</strong> Diego opera dos funnels paralelos — Meta Ads (always-on → entendiendo.ai) y Webinar (orgánico LinkedIn).</p>
 
         <!-- KPI Cards -->
         <div class="kpi-grid">
@@ -402,10 +402,10 @@
                 <p class="value">$542K</p>
                 <p class="sub">20 oportunidades activas</p>
             </div>
-            <div class="kpi-card warn">
+            <div class="kpi-card success">
                 <p class="label">Registros Webinar</p>
                 <p class="value">26</p>
-                <p class="sub">Verificados con tag en GHL</p>
+                <p class="sub">100% orgánicos desde LinkedIn</p>
             </div>
             <div class="kpi-card">
                 <p class="label">CTR Meta Ads</p>
@@ -413,9 +413,9 @@
                 <p class="sub">vs benchmark 1.5-2.5%</p>
             </div>
             <div class="kpi-card warn">
-                <p class="label">Spend 30d</p>
+                <p class="label">Spend 30d (Always-On)</p>
                 <p class="value">$152</p>
-                <p class="sub">2 anuncios activos</p>
+                <p class="sub">Landing entendiendo.ai · NO webinar</p>
             </div>
         </div>
 
@@ -499,7 +499,7 @@
         </table>
 
         <!-- Meta Ads Detail -->
-        <p class="section-label" style="margin-top:32px">Meta Ads — Performance</p>
+        <p class="section-label" style="margin-top:32px">Funnel 1 — Always-On (Meta Ads → entendiendo.ai)</p>
         <table class="data-table">
             <thead>
                 <tr><th>Métrica</th><th style="text-align:right">7 días</th><th style="text-align:right">30 días</th></tr>
@@ -508,32 +508,52 @@
                 <tr><td>Gasto (USD)</td><td class="num">$37.47</td><td class="num">$152.05</td></tr>
                 <tr><td>Impresiones</td><td class="num">12,064</td><td class="num">50,784</td></tr>
                 <tr><td>Alcance</td><td class="num">10,832</td><td class="num">32,026</td></tr>
-                <tr><td>Clics</td><td class="num">520</td><td class="num">2,177</td></tr>
+                <tr><td>Clics → entendiendo.ai</td><td class="num">520</td><td class="num">2,177</td></tr>
                 <tr><td>CTR</td><td class="num highlight">4.31%</td><td class="num highlight">4.29%</td></tr>
                 <tr><td>Anuncios activos</td><td class="num">2</td><td class="num">2</td></tr>
-                <tr><td>Leads registrados (Pixel)</td><td class="num" style="color:var(--red)">0</td><td class="num" style="color:var(--red)">0</td></tr>
+                <tr><td>Conversiones trackeadas (Pixel)</td><td class="num" style="color:var(--red)">0</td><td class="num" style="color:var(--red)">0</td></tr>
+            </tbody>
+        </table>
+
+        <p class="section-label" style="margin-top:32px">Funnel 2 — Webinar (Orgánico LinkedIn)</p>
+        <table class="data-table">
+            <thead>
+                <tr><th>Métrica</th><th style="text-align:right">Valor</th><th style="text-align:right">Nota</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Registros totales (tag GHL)</td><td class="num highlight">26</td><td class="dim">Ingresados manualmente con tag</td></tr>
+                <tr><td>Con email verificado</td><td class="num" style="color:var(--green)">26 (100%)</td><td class="dim">Todos tienen email</td></tr>
+                <tr><td>Con email + teléfono</td><td class="num" style="color:var(--green)">25 (96%)</td><td class="dim">Calidad de contacto excepcional</td></tr>
+                <tr><td>Solo nombre (sin datos)</td><td class="num">1 (4%)</td><td class="dim">1 contacto sin teléfono</td></tr>
+                <tr><td>Inversión en pauta</td><td class="num" style="color:var(--cyan)">$0</td><td class="dim">100% orgánico desde LinkedIn</td></tr>
+                <tr><td>CPL orgánico</td><td class="num" style="color:var(--cyan)">$0.00</td><td class="dim">CAC = $0 — pura tracción orgánica</td></tr>
             </tbody>
         </table>
 
         <!-- Critical Findings -->
         <div class="callout red">
-            <p class="callout-title">🚨 Hallazgo Crítico — Meta Pixel NO trackea leads</p>
-            <p>El pixel de Meta no está configurado para registrar el evento <code>CompleteRegistration</code>. Se generaron 2,177 clics en 30 días pero Meta reporta <strong>0 leads</strong>. Solo hay <strong>26 registros verificados</strong> en GHL (tag <code>registrado-webinar</code>). Esto impide optimizar campañas por conversiones. <strong>CPL estimado real: $152 / 26 = ~$5.85/registro</strong> — razonable para LATAM pero con margen claro de mejora al optimizar la landing de registro.</p>
+            <p class="callout-title">🚨 Hallazgo Crítico — Meta Ads sin tracking de conversiones</p>
+            <p>Los Meta Ads dirigen tráfico al landing "always-on" (entendiendo.ai), <strong>NO al webinar</strong>. 2,177 clics en 30 días pero el pixel no trackea <code>CompleteRegistration</code> — Meta reporta 0 leads. No sabemos qué pasa después del clic al landing. <strong>¿Esos 2,177 clics se convierten en algo?</strong> Sin tracking, no hay forma de saberlo ni de optimizar.</p>
+        </div>
+
+        <div class="callout green">
+            <p class="callout-title">✅ Señal Positiva — Webinar 100% orgánico con data de calidad excepcional</p>
+            <p>26 registros de webinar generados <strong>exclusivamente desde LinkedIn, con $0 de inversión</strong>. De esos 26: <strong>100% tienen email</strong> y <strong>96% tienen email + teléfono</strong>. Esto es tracción orgánica real — la autoridad de Diego (Ex-Google, +120 empresas) genera confianza suficiente para que la gente se registre y deje datos completos sin necesidad de pauta.</p>
         </div>
 
         <div class="callout red">
             <p class="callout-title">🚨 Hallazgo Crítico — Pipeline Webinar sin automatización</p>
-            <p>26 personas se registraron al webinar (verificadas por tag <code>registrado-webinar</code>), pero el pipeline "WEBINAR" tiene <strong>0 oportunidades</strong>. Falta un workflow en GHL que cree automáticamente una oportunidad cuando alguien se registra. Sin esto, no hay visibilidad del funnel de conversión post-registro.</p>
+            <p>26 personas se registraron al webinar (tag manual en GHL), pero el pipeline "WEBINAR" tiene <strong>0 oportunidades</strong>. Falta un workflow en GHL que cree automáticamente una oportunidad cuando alguien se registra. Sin esto, no hay visibilidad del funnel de conversión post-registro.</p>
         </div>
 
         <div class="callout yellow">
-            <p class="callout-title">⚡ Oportunidad — Presupuesto de pauta extremadamente bajo</p>
-            <p>$152 en 30 días = ~$5/día. Con un CTR de 4.3% (2-3x superior al benchmark), el mensaje resuena pero el alcance es mínimo — solo 26 registros en el período. Un pipeline B2B de $542K justifica una inversión mucho mayor en adquisición. Cada lead B2B puede valer entre $5K y $50K en revenue.</p>
+            <p class="callout-title">⚡ Oportunidad — Two funnels desconectados con potencial enorme</p>
+            <p><strong>Funnel 1 (Always-On):</strong> $152/mes, 2,177 clics, 4.3% CTR — mensaje resonante, pero sin tracking no sabemos su ROI real. <strong>Funnel 2 (Webinar):</strong> $0 pauta, 26 registros orgánicos con 96% de datos completos. La oportunidad está en <strong>conectar ambos funnels</strong>: dirigir la pauta de Meta Ads al webinar en lugar del landing genérico, y multiplicar los registros 10x.</p>
         </div>
 
         <div class="callout green">
             <p class="callout-title">✅ Señal Positiva — CTR excepcional y pipeline B2B sólido</p>
-            <p>4.3% CTR demuestra que la propuesta de valor resuena fuerte. 20 oportunidades B2B con $542K en pipeline es una base sólida. La audiencia responde al mensaje "deja de usar la IA como Google" — es momento de escalar pauta y optimizar landing, no de cambiar el messaging.</p>
+            <p>4.3% CTR demuestra que la propuesta de valor resuena fuerte en Meta. 20 oportunidades B2B con $542K en pipeline es una base sólida. La audiencia responde al mensaje "deja de usar la IA como Google" — es momento de redirigir esa pauta al webinar y escalar el funnel que ya tiene tracción orgánica.</p>
         </div>
 
         <!-- Insight Box -->
@@ -542,15 +562,15 @@
             <div class="insight-grid">
                 <div class="insight-item good">
                     <p class="tag">✅ Lo Bueno</p>
-                    <p>Pipeline B2B de $542K con 3 propuestas activas. CTR de 4.3% (excepcional). 26 registros orgánicos de webinar con $5/día de pauta. Mensaje de marca resonante.</p>
+                    <p>Pipeline B2B de $542K. CTR de 4.3% en Meta (excepcional). 26 registros de webinar 100% orgánicos desde LinkedIn con 96% de datos completos. Tracción real sin inversión.</p>
                 </div>
                 <div class="insight-item bad">
                     <p class="tag">❌ Lo Malo</p>
-                    <p>Pixel de Meta no trackea conversiones. Pipeline Webinar vacío (sin automatización). $5/día de pauta insuficiente para escalar. Sin flujo de seguimiento automatizado post-registro.</p>
+                    <p>Meta Ads van al landing genérico, no al webinar. Pixel no trackea conversiones — 2,177 clics sin saber qué pasó después. Pipeline Webinar vacío (tags manuales, sin automatización).</p>
                 </div>
                 <div class="insight-item opp">
                     <p class="tag">🔮 La Oportunidad</p>
-                    <p>Escalar pauta 10x con tracking correcto. Automatizar pipeline completo. Reactivar los 26 registrados + 31 de Sistema Ventas. Cerrar 3 propuestas B2B activas ($100K+ potencial).</p>
+                    <p>Redirigir pauta de Meta al registro de webinar. Automatizar pipeline + nurturing. Conectar los 2 funnels en uno. Cerrar 3 propuestas B2B ($100K+ potencial). Escalar con datos reales.</p>
                 </div>
             </div>
         </div>
@@ -567,13 +587,13 @@
         <div class="compare-grid">
             <div class="compare-col today">
                 <h3>📍 Hoy (Marzo 2026)</h3>
-                <div class="compare-row"><span class="metric">Registros webinar</span><span class="val">26</span></div>
+                <div class="compare-row"><span class="metric">Registros webinar</span><span class="val">26 (orgánico)</span></div>
                 <div class="compare-row"><span class="metric">Ventas low-ticket</span><span class="val">0</span></div>
                 <div class="compare-row"><span class="metric">Clientes high-ticket</span><span class="val">0</span></div>
                 <div class="compare-row"><span class="metric">Revenue B2C / mes</span><span class="val">$0</span></div>
                 <div class="compare-row"><span class="metric">Pipeline B2B</span><span class="val">$542K</span></div>
-                <div class="compare-row"><span class="metric">Spend mensual</span><span class="val">$152</span></div>
-                <div class="compare-row"><span class="metric">CPL estimado</span><span class="val">~$5.85</span></div>
+                <div class="compare-row"><span class="metric">Meta Ads spend</span><span class="val">$152 (always-on)</span></div>
+                <div class="compare-row"><span class="metric">CPL webinar</span><span class="val" style="color:var(--green)">$0.00 💚</span></div>
                 <div class="compare-row"><span class="metric">Tracking</span><span class="val" style="color:var(--red)">❌ Roto</span></div>
             </div>
             <div class="compare-arrow">→</div>
@@ -620,7 +640,7 @@
 
         <div class="callout blue" style="margin-top:24px">
             <p class="callout-title">💡 La matemática del escalamiento</p>
-            <p>Con $1,500/mes de pauta y un funnel optimizado (pixel configurado + landing mejorada), la proyección conservadora es <strong>$11,700/mes de revenue B2C</strong> ($2,700 low-ticket + $9,000 high-ticket). ROAS proyectado: <strong>7.8x</strong>. Esto es <strong>adicional</strong> al pipeline B2B enterprise de $542K.</p>
+            <p>El webinar ya demostró tracción orgánica con 26 registros y $0 de inversión. Si redirigimos los $1,500/mes de pauta al funnel de webinar (en vez del landing genérico) y mantenemos el CTR de 4.3%, la proyección conservadora es <strong>$11,700/mes de revenue B2C</strong> ($2,700 low-ticket + $9,000 high-ticket). ROAS proyectado: <strong>7.8x</strong>. Esto es <strong>adicional</strong> al pipeline B2B enterprise de $542K.</p>
         </div>
     </section>
 
@@ -789,7 +809,7 @@
 
         <div class="callout blue" style="margin-top:32px">
             <p class="callout-title">💎 La Idea Central</p>
-            <p>Diego tiene todos los ingredientes para escalar: <strong>autoridad comprobada</strong> (Ex-Google, +120 empresas), un <strong>mensaje que resuena</strong> (4.3% CTR), y un <strong>pipeline B2B de $542K</strong>. Con solo 26 registros y $5/día de pauta, los resultados son prometedores pero el volumen es mínimo. Lo que falta son los sistemas: tracking de conversiones, automatización de pipeline, y escala de pauta. El Q2 se trata de construir la máquina — cada pieza que arreglamos multiplica todo lo demás.</p>
+            <p>Diego tiene dos señales poderosas operando en paralelo: un <strong>meta ads con 4.3% CTR</strong> que demuestra que el mensaje resuena, y un <strong>webinar con 26 registros 100% orgánicos</strong> que demuestra que la autoridad de marca convierte sin inversión. La clave del Q2 es <strong>unir estas dos fuerzas</strong>: redirigir la pauta al webinar, automatizar el pipeline, y escalar sobre tracción real — no sobre suposiciones. Pipeline B2B de $542K + tracción orgánica validada = la máquina está lista para ensamblarse.</p>
         </div>
     </section>
 
