@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand Guidelines — Diego Páramo | Pulse Up</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Estrategia de Crecimiento Q2 2026 — Diego Páramo | Pulse Up</title>
+    <meta name="description" content="Estrategia de crecimiento data-driven Q2 2026 para Diego Páramo y Pulse Up. Panorama actual, objetivos y plan de acción.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
@@ -24,11 +25,17 @@
             --blue-deep: #0D4FCC;
             --blue-muted: rgba(23,107,255,0.12);
             --blue-glow: rgba(23,107,255,0.5);
-            --blue-gradient: linear-gradient(135deg, #176BFF, #7CB3FF, #176BFF);
             --cyan: #00D4FF;
             --cyan-glow: rgba(0,212,255,0.3);
             --purple: #8B5CF6;
             --purple-glow: rgba(139,92,246,0.25);
+            --green: #10B981;
+            --green-muted: rgba(16,185,129,0.12);
+            --yellow: #F59E0B;
+            --yellow-muted: rgba(245,158,11,0.12);
+            --red: #EF4444;
+            --red-muted: rgba(239,68,68,0.12);
+            --orange: #F97316;
             --border-subtle: rgba(23,107,255,0.06);
             --border-default: rgba(23,107,255,0.12);
             --border-strong: rgba(23,107,255,0.25);
@@ -37,8 +44,6 @@
             --radius-sm: 8px;
             --radius-md: 14px;
             --radius-lg: 20px;
-            --radius-xl: 28px;
-            --max-content: 900px;
             --transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
         }
 
@@ -47,562 +52,752 @@
         ::-webkit-scrollbar-thumb { background:var(--blue-deep); border-radius:3px }
 
         body {
-            font-family:var(--font-primary);
-            background:var(--bg-deep);
-            color:var(--white);
-            line-height:1.75;
-            -webkit-font-smoothing:antialiased;
-            overflow-x:hidden;
+            font-family: var(--font-primary);
+            background: var(--bg-deep);
+            color: var(--white);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
         /* ── GLOW LINE ── */
         .glow-line {
             position:fixed; top:0; left:0; width:100%; height:2px;
-            background:var(--blue-gradient); background-size:200% 100%;
-            animation:shimmer 4s ease-in-out infinite; z-index:1000;
+            background:linear-gradient(90deg, var(--blue), var(--cyan), var(--purple), var(--blue));
+            background-size:300% 100%; animation:shimmer 4s ease-in-out infinite; z-index:1000;
         }
         @keyframes shimmer { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
 
         /* ── NAV ── */
-        .brand-nav {
+        nav {
             display:flex; justify-content:space-between; align-items:center;
             padding:18px 5%; border-bottom:1px solid var(--border-subtle);
-            position:sticky; top:2px; background:rgba(6,10,19,0.88);
+            position:sticky; top:2px; background:rgba(6,10,19,0.92);
             backdrop-filter:blur(24px) saturate(1.8); z-index:100;
         }
-        .brand-nav .logo-text {
-            font-family:var(--font-display); font-weight:700; font-size:1rem;
-            background:var(--blue-gradient); background-size:200% 100%;
+        nav .logo {
+            font-family:var(--font-display); font-weight:700; font-size:0.85rem;
+            background:linear-gradient(135deg, var(--blue), var(--cyan));
             -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-            background-clip:text; letter-spacing:-0.02em;
+            letter-spacing:0.05em;
         }
-        .brand-nav .version {
-            font-size:0.55rem; text-transform:uppercase; letter-spacing:0.2em;
-            color:var(--blue); opacity:0.7; font-weight:500;
-        }
+        nav .meta { font-size:0.55rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--white-dim) }
 
         /* ── HERO ── */
         .hero {
-            text-align:center; padding:120px 5% 100px; position:relative; overflow:hidden;
-            min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+            text-align:center; padding:100px 5% 80px; position:relative; overflow:hidden;
+            min-height:70vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
         }
         .hero::before {
             content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-            width:800px; height:800px;
-            background:radial-gradient(circle, var(--blue-glow) 0%, var(--purple-glow) 30%, transparent 65%);
-            opacity:0.15; pointer-events:none; animation:pulse 6s ease-in-out infinite;
-        }
-        @keyframes pulse { 0%,100%{transform:translate(-50%,-50%) scale(1)} 50%{transform:translate(-50%,-50%) scale(1.15)} }
-        .hero::after {
-            content:''; position:absolute; bottom:0; left:10%; right:10%; height:1px;
-            background:var(--blue-gradient);
+            width:700px; height:700px;
+            background:radial-gradient(circle, var(--blue-glow) 0%, var(--purple-glow) 30%, transparent 60%);
+            opacity:0.12; pointer-events:none;
         }
         .hero .eyebrow {
             font-size:0.6rem; text-transform:uppercase; letter-spacing:0.35em;
-            color:var(--cyan); margin-bottom:40px; font-weight:600; position:relative;
+            color:var(--cyan); margin-bottom:32px; font-weight:600;
         }
         .hero .brand-icon {
-            width:80px; height:80px; border-radius:20px; margin-bottom:48px;
+            width:64px; height:64px; border-radius:16px; margin-bottom:40px;
             background:linear-gradient(135deg, var(--blue), var(--purple));
-            display:flex; align-items:center; justify-content:center; font-size:2.5rem;
-            box-shadow:0 0 60px var(--blue-glow), 0 0 120px rgba(139,92,246,0.15);
-            position:relative;
+            display:flex; align-items:center; justify-content:center; font-size:2rem;
+            box-shadow:0 0 40px var(--blue-glow);
         }
         .hero h1 {
-            font-family:var(--font-display); font-size:clamp(2.8rem,7vw,5.5rem);
-            font-weight:700; letter-spacing:-0.03em; line-height:1.05; margin-bottom:16px;
+            font-family:var(--font-display); font-size:clamp(2.2rem,5vw,3.8rem);
+            font-weight:700; letter-spacing:-0.03em; line-height:1.1; margin-bottom:14px;
             background:linear-gradient(180deg, var(--white) 20%, var(--white-muted) 100%);
-            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-            position:relative;
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent;
         }
-        .hero .tagline {
-            font-size:1.1rem; font-weight:300; color:var(--blue-light);
-            letter-spacing:0.15em; text-transform:uppercase; margin-bottom:50px; position:relative;
+        .hero .subtitle {
+            font-family:var(--font-display); font-size:1.2rem; font-weight:500;
+            color:var(--blue-light); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:40px;
         }
         .hero .cover-meta {
-            font-size:0.55rem; text-transform:uppercase; letter-spacing:0.3em;
-            color:var(--white-dim); position:relative;
+            font-size:0.6rem; text-transform:uppercase; letter-spacing:0.25em;
+            color:var(--white-dim);
         }
         .hero .cover-meta span { color:var(--cyan) }
 
         /* ── SECTIONS ── */
         .section {
-            padding:100px 5%; max-width:1100px; margin:0 auto;
+            padding:80px 5%; max-width:1100px; margin:0 auto;
             border-bottom:1px solid var(--border-subtle); position:relative;
         }
         .section-number {
             font-family:var(--font-display); font-size:5rem; font-weight:700;
-            color:var(--blue); opacity:0.04; position:absolute; top:80px; right:5%; line-height:1;
+            color:var(--blue); opacity:0.04; position:absolute; top:60px; right:5%; line-height:1;
         }
         .section-label {
             font-size:0.55rem; text-transform:uppercase; letter-spacing:0.3em;
-            color:var(--blue); margin-bottom:16px; font-weight:600;
+            color:var(--blue); margin-bottom:14px; font-weight:600;
             display:flex; align-items:center; gap:12px;
         }
         .section-label::before { content:''; width:20px; height:1px; background:var(--blue) }
         .section h2 {
-            font-family:var(--font-display); font-size:clamp(1.6rem,3vw,2.4rem);
-            font-weight:600; margin-bottom:20px; letter-spacing:-0.02em; line-height:1.2;
+            font-family:var(--font-display); font-size:clamp(1.5rem,3vw,2.2rem);
+            font-weight:600; margin-bottom:16px; letter-spacing:-0.02em; line-height:1.2;
         }
         .section .intro {
-            font-size:0.95rem; line-height:1.8; color:var(--white-muted);
-            max-width:620px; margin-bottom:48px;
+            font-size:0.9rem; line-height:1.8; color:var(--white-muted);
+            max-width:620px; margin-bottom:40px;
         }
 
-        /* ── IDENTITY TABLE ── */
-        .identity-table { width:100%; border-collapse:collapse; margin-bottom:48px }
-        .identity-table td {
-            padding:18px 24px; border-bottom:1px solid var(--border-subtle);
-            font-size:0.9rem; transition:var(--transition);
-        }
-        .identity-table tr:hover td { background:rgba(23,107,255,0.03) }
-        .identity-table td:first-child {
-            font-weight:600; text-transform:uppercase; font-size:0.65rem;
-            letter-spacing:0.15em; color:var(--blue); width:160px; vertical-align:top;
-        }
-        .identity-table td:last-child { color:var(--white-soft) }
-
-        /* ── PILLAR CARDS ── */
-        .pillars-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:40px }
-        .pillar-card {
+        /* ── KPI CARDS ── */
+        .kpi-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:40px }
+        .kpi-card {
             background:var(--bg-card); border:1px solid var(--border-subtle);
-            border-radius:var(--radius-lg); padding:40px 28px;
+            border-radius:var(--radius-md); padding:28px 20px; text-align:center;
             transition:var(--transition); position:relative; overflow:hidden;
         }
-        .pillar-card::before {
+        .kpi-card::before {
             content:''; position:absolute; top:0; left:0; right:0; height:2px;
-            background:var(--blue-gradient); opacity:0; transition:var(--transition);
+            background:linear-gradient(90deg, var(--blue), var(--cyan)); opacity:0; transition:var(--transition);
         }
-        .pillar-card:hover { transform:translateY(-6px); border-color:var(--border-strong); box-shadow:0 20px 60px rgba(23,107,255,0.08) }
-        .pillar-card:hover::before { opacity:1 }
-        .pillar-card .number { font-size:0.55rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--cyan); margin-bottom:16px; font-weight:600 }
-        .pillar-card h3 { font-family:var(--font-display); font-size:1.15rem; margin-bottom:12px; font-weight:600 }
-        .pillar-card p { font-size:0.85rem; color:var(--white-dim); line-height:1.7 }
+        .kpi-card:hover { transform:translateY(-4px); border-color:var(--border-strong) }
+        .kpi-card:hover::before { opacity:1 }
+        .kpi-card .label {
+            font-size:0.55rem; text-transform:uppercase; letter-spacing:0.15em;
+            color:var(--white-dim); margin-bottom:10px; font-weight:500;
+        }
+        .kpi-card .value {
+            font-family:var(--font-display); font-size:1.8rem; font-weight:700;
+            color:var(--white); margin-bottom:4px;
+        }
+        .kpi-card .sub { font-size:0.7rem; color:var(--white-muted) }
+        .kpi-card.accent .value { color:var(--blue-bright) }
+        .kpi-card.warn .value { color:var(--yellow) }
+        .kpi-card.danger .value { color:var(--red) }
+        .kpi-card.success .value { color:var(--green) }
 
-        /* ── COLOR SWATCHES ── */
-        .color-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:18px; margin-top:32px }
-        .swatch { border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border-subtle); transition:var(--transition) }
-        .swatch:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(0,0,0,0.5) }
-        .swatch-color { height:100px }
-        .swatch-info { padding:16px; background:var(--bg-card) }
-        .swatch-info .name { font-weight:600; font-size:0.8rem; margin-bottom:4px; color:var(--white-soft) }
-        .swatch-info .hex { font-family:'SF Mono','Fira Code',monospace; font-size:0.7rem; color:var(--blue-light) }
-        .swatch-info .use { font-size:0.68rem; color:var(--white-dim); margin-top:6px }
+        /* ── TABLES ── */
+        .data-table { width:100%; border-collapse:collapse; margin:24px 0 }
+        .data-table th {
+            text-align:left; padding:14px 16px; font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.15em; color:var(--blue); border-bottom:1px solid var(--border-default);
+            font-weight:600;
+        }
+        .data-table td {
+            padding:14px 16px; font-size:0.85rem; border-bottom:1px solid var(--border-subtle);
+            color:var(--white-soft); transition:var(--transition);
+        }
+        .data-table tr:hover td { background:rgba(23,107,255,0.03) }
+        .data-table .num { font-family:var(--font-display); font-weight:600; text-align:right }
+        .data-table .highlight { color:var(--blue-bright); font-weight:600 }
+        .data-table .dim { color:var(--white-dim) }
 
-        /* ── TYPOGRAPHY ── */
-        .type-showcase { margin-top:40px }
-        .type-row { display:flex; align-items:baseline; gap:32px; padding:24px 0; border-bottom:1px solid var(--border-subtle) }
-        .type-label { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--blue); width:130px; flex-shrink:0; font-weight:500 }
-        .type-sample { flex:1 }
+        /* ── CALLOUT BOXES ── */
+        .callout {
+            border-radius:var(--radius-md); padding:24px 28px;
+            margin:20px 0; position:relative; border-left:3px solid;
+        }
+        .callout.red { background:var(--red-muted); border-color:var(--red) }
+        .callout.yellow { background:var(--yellow-muted); border-color:var(--yellow) }
+        .callout.green { background:var(--green-muted); border-color:var(--green) }
+        .callout.blue { background:var(--blue-muted); border-color:var(--blue) }
+        .callout .callout-title {
+            font-size:0.65rem; text-transform:uppercase; letter-spacing:0.15em;
+            font-weight:700; margin-bottom:8px;
+        }
+        .callout.red .callout-title { color:var(--red) }
+        .callout.yellow .callout-title { color:var(--yellow) }
+        .callout.green .callout-title { color:var(--green) }
+        .callout.blue .callout-title { color:var(--blue-light) }
+        .callout p { font-size:0.85rem; color:var(--white-soft); line-height:1.7 }
 
-        /* ── COMPONENT DEMOS ── */
-        .demo-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:40px }
-        .demo-block {
+        /* ── INSIGHT BOX ── */
+        .insight-box {
+            background:var(--bg-card); border:1px solid var(--border-default);
+            border-radius:var(--radius-lg); padding:32px; margin:32px 0;
+        }
+        .insight-box h3 {
+            font-family:var(--font-display); font-size:1rem; font-weight:600;
+            margin-bottom:16px; color:var(--cyan);
+        }
+        .insight-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px }
+        .insight-item { padding:16px; border-radius:var(--radius-sm); }
+        .insight-item.good { background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.15) }
+        .insight-item.bad { background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.15) }
+        .insight-item.opp { background:rgba(0,212,255,0.08); border:1px solid rgba(0,212,255,0.15) }
+        .insight-item .tag {
+            font-size:0.55rem; text-transform:uppercase; letter-spacing:0.15em;
+            font-weight:700; margin-bottom:8px;
+        }
+        .insight-item.good .tag { color:var(--green) }
+        .insight-item.bad .tag { color:var(--red) }
+        .insight-item.opp .tag { color:var(--cyan) }
+        .insight-item p { font-size:0.8rem; color:var(--white-muted); line-height:1.6 }
+
+        /* ── COMPARISON ── */
+        .compare-grid { display:grid; grid-template-columns:1fr auto 1fr; gap:0; margin:32px 0 }
+        .compare-col {
             background:var(--bg-card); border:1px solid var(--border-subtle);
-            border-radius:var(--radius-lg); padding:48px 28px;
-            display:flex; flex-direction:column; align-items:center; gap:20px; transition:var(--transition);
+            padding:32px 28px; border-radius:var(--radius-lg);
         }
-        .demo-block:hover { border-color:var(--border-default) }
-        .demo-label { font-size:0.55rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--blue); margin-bottom:8px; font-weight:600 }
-
-        .btn-cta {
-            display:inline-block; padding:18px 48px; font-size:0.8rem; font-weight:700;
-            text-transform:uppercase; letter-spacing:0.15em; border:none;
-            border-radius:var(--radius-md); cursor:pointer; transition:var(--transition);
-            text-decoration:none; background:var(--blue); color:var(--white); position:relative;
-            box-shadow:0 0 22px var(--blue-glow), 0 0 50px rgba(23,107,255,0.3);
+        .compare-col h3 {
+            font-family:var(--font-display); font-size:0.9rem; font-weight:600;
+            text-transform:uppercase; letter-spacing:0.1em; margin-bottom:20px;
         }
-        .btn-cta:hover { transform:translateY(-2px); box-shadow:0 0 30px var(--blue-glow), 0 0 80px rgba(23,107,255,0.4); background:var(--blue-light) }
-
-        .btn-outline {
-            display:inline-block; padding:16px 40px; font-size:0.8rem; font-weight:600;
-            text-transform:uppercase; letter-spacing:0.12em; border:1px solid var(--blue);
-            border-radius:var(--radius-md); cursor:pointer; transition:var(--transition);
-            text-decoration:none; background:transparent; color:var(--blue-light);
+        .compare-col.today h3 { color:var(--white-dim) }
+        .compare-col.target h3 { color:var(--cyan) }
+        .compare-arrow {
+            display:flex; align-items:center; justify-content:center; padding:0 20px;
+            font-size:2rem; color:var(--blue);
         }
-        .btn-outline:hover { background:var(--blue); color:var(--white); box-shadow:0 8px 32px var(--blue-glow) }
-
-        .eyebrow-badge {
-            display:inline-block; padding:8px 20px; font-size:0.55rem; font-weight:700;
-            text-transform:uppercase; letter-spacing:0.2em; border-radius:40px;
-            background:var(--blue-muted); border:1px solid var(--border-default); color:var(--blue-light);
+        .compare-row {
+            display:flex; justify-content:space-between; padding:12px 0;
+            border-bottom:1px solid var(--border-subtle); font-size:0.85rem;
         }
+        .compare-row:last-child { border:none }
+        .compare-row .metric { color:var(--white-dim) }
+        .compare-row .val { font-family:var(--font-display); font-weight:600; color:var(--white-soft) }
 
-        /* ── VOICE CARDS ── */
-        .voice-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-top:40px }
-        .voice-card {
+        /* ── PHASES ── */
+        .phase {
             background:var(--bg-card); border:1px solid var(--border-subtle);
-            border-radius:var(--radius-md); padding:28px 20px; text-align:center; transition:var(--transition);
+            border-radius:var(--radius-lg); padding:32px; margin:20px 0;
+            transition:var(--transition); position:relative; overflow:hidden;
         }
-        .voice-card:hover { border-color:var(--border-default); transform:translateY(-2px) }
-        .voice-card .attr { font-size:0.55rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--blue); margin-bottom:12px; font-weight:600 }
-        .voice-card .val { font-size:0.95rem; font-weight:500; color:var(--white-soft) }
+        .phase:hover { border-color:var(--border-default) }
+        .phase::before {
+            content:''; position:absolute; top:0; left:0; width:4px; height:100%;
+        }
+        .phase.p1::before { background:var(--red) }
+        .phase.p2::before { background:var(--yellow) }
+        .phase.p3::before { background:var(--blue) }
+        .phase.p4::before { background:var(--green) }
+        .phase-header { display:flex; align-items:center; gap:14px; margin-bottom:16px }
+        .phase-badge {
+            font-size:0.55rem; font-weight:700; text-transform:uppercase;
+            letter-spacing:0.1em; padding:6px 14px; border-radius:20px;
+        }
+        .phase.p1 .phase-badge { background:var(--red-muted); color:var(--red) }
+        .phase.p2 .phase-badge { background:var(--yellow-muted); color:var(--yellow) }
+        .phase.p3 .phase-badge { background:var(--blue-muted); color:var(--blue-light) }
+        .phase.p4 .phase-badge { background:var(--green-muted); color:var(--green) }
+        .phase h3 { font-family:var(--font-display); font-size:1.1rem; font-weight:600 }
+        .phase-timeline { font-size:0.7rem; color:var(--white-dim); margin-left:auto }
+        .phase ul { list-style:none; margin-top:12px }
+        .phase li {
+            padding:8px 0 8px 20px; position:relative; font-size:0.85rem;
+            color:var(--white-muted); line-height:1.6;
+        }
+        .phase li::before {
+            content:'→'; position:absolute; left:0; color:var(--blue);
+        }
+        .phase li strong { color:var(--white-soft) }
 
-        /* ── DOS & DONTS ── */
-        .dos-donts {
-            display:grid; grid-template-columns:1fr 1fr; gap:0; margin-top:40px;
-            border:1px solid var(--border-subtle); border-radius:var(--radius-lg); overflow:hidden;
-        }
-        .dos-col .col-header, .donts-col .col-header {
-            padding:18px 24px; font-size:0.65rem; font-weight:700;
-            text-transform:uppercase; letter-spacing:0.15em;
-        }
-        .dos-col .col-header { background:rgba(0,212,255,0.06); color:var(--cyan); border-bottom:1px solid rgba(0,212,255,0.12) }
-        .donts-col .col-header { background:rgba(239,68,68,0.06); color:#ef4444; border-bottom:1px solid rgba(239,68,68,0.12); border-left:1px solid var(--border-subtle) }
-        .dos-col .col-item, .donts-col .col-item {
-            padding:14px 24px; font-size:0.85rem; border-bottom:1px solid var(--border-subtle);
-            color:var(--white-muted); display:flex; align-items:center; gap:10px;
-        }
-        .donts-col .col-item { border-left:1px solid var(--border-subtle) }
-        .col-item .icon { flex-shrink:0; font-size:0.75rem }
-
-        /* ── PHRASES ── */
-        .phrase-list { list-style:none; margin-top:40px }
-        .phrase-list li {
-            padding:20px 24px; border-left:2px solid var(--blue);
-            margin-bottom:14px; background:linear-gradient(90deg, rgba(23,107,255,0.04), transparent);
-            border-radius:0 var(--radius-sm) var(--radius-sm) 0;
-            font-style:italic; font-size:0.95rem; color:var(--white-soft); line-height:1.7;
-        }
-
-        /* ── TOKENS CODE ── */
-        .token-block {
+        /* ── DECISIONS ── */
+        .decision-card {
             background:var(--bg-card); border:1px solid var(--border-subtle);
-            border-radius:var(--radius-md); padding:32px; margin-top:40px;
-            font-family:'SF Mono','Fira Code',monospace; font-size:0.75rem;
-            line-height:2; color:var(--white-muted); overflow-x:auto; white-space:pre;
+            border-radius:var(--radius-md); padding:24px; margin:12px 0;
+            display:grid; grid-template-columns:40px 1fr; gap:16px;
+            transition:var(--transition);
         }
-        .token-block .key { color:var(--blue-light) }
-        .token-block .val { color:var(--cyan) }
-        .token-block .comment { color:var(--white-dim); font-style:italic }
+        .decision-card:hover { border-color:var(--border-default) }
+        .decision-num {
+            font-family:var(--font-display); font-size:1.4rem; font-weight:700;
+            color:var(--blue); text-align:center; padding-top:4px;
+        }
+        .decision-content h4 { font-size:0.95rem; font-weight:600; margin-bottom:6px; color:var(--white-soft) }
+        .decision-content p { font-size:0.8rem; color:var(--white-dim); line-height:1.6 }
+        .decision-content .rec {
+            display:inline-block; margin-top:8px; padding:4px 12px; border-radius:12px;
+            font-size:0.6rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:600;
+            background:var(--blue-muted); color:var(--blue-light);
+        }
+
+        /* ── ROADMAP ── */
+        .roadmap { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:32px 0 }
+        .roadmap-step {
+            background:var(--bg-card); border:1px solid var(--border-subtle);
+            border-radius:var(--radius-md); padding:24px 16px; text-align:center;
+            transition:var(--transition); position:relative;
+        }
+        .roadmap-step:hover { transform:translateY(-3px); border-color:var(--border-default) }
+        .roadmap-step .week {
+            font-size:0.55rem; text-transform:uppercase; letter-spacing:0.15em;
+            color:var(--cyan); margin-bottom:10px; font-weight:600;
+        }
+        .roadmap-step .goal { font-size:0.85rem; font-weight:500; color:var(--white-soft); line-height:1.5 }
+        .roadmap-step .icon { font-size:1.5rem; margin-bottom:10px }
+
+        /* ── FUNNEL MATH ── */
+        .funnel-flow {
+            display:flex; align-items:center; justify-content:center;
+            gap:8px; margin:32px 0; flex-wrap:wrap;
+        }
+        .funnel-step {
+            background:var(--bg-card); border:1px solid var(--border-subtle);
+            border-radius:var(--radius-md); padding:16px 20px; text-align:center;
+            min-width:120px;
+        }
+        .funnel-step .val { font-family:var(--font-display); font-size:1.2rem; font-weight:700; color:var(--blue-bright) }
+        .funnel-step .label { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--white-dim); margin-top:4px }
+        .funnel-arrow { font-size:1.2rem; color:var(--blue); }
 
         /* ── FOOTER ── */
-        .footer {
-            text-align:center; padding:80px 5% 60px; border-top:1px solid var(--border-subtle);
+        footer {
+            text-align:center; padding:60px 5% 40px; border-top:1px solid var(--border-subtle);
         }
-        .footer .logo-text {
-            font-family:var(--font-display); font-weight:700; font-size:1.4rem;
-            background:var(--blue-gradient); background-size:200% 100%;
-            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-            margin-bottom:20px;
+        footer .logo-text {
+            font-family:var(--font-display); font-weight:700; font-size:1.2rem;
+            background:linear-gradient(135deg, var(--blue), var(--cyan));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+            margin-bottom:16px;
         }
-        .footer p { font-size:0.7rem; color:var(--white-dim); letter-spacing:0.1em }
+        footer p { font-size:0.65rem; color:var(--white-dim); letter-spacing:0.1em }
 
         /* ── RESPONSIVE ── */
         @media (max-width:768px) {
-            .pillars-grid { grid-template-columns:1fr }
-            .demo-grid { grid-template-columns:1fr }
-            .dos-donts { grid-template-columns:1fr }
-            .donts-col .col-header, .donts-col .col-item { border-left:none }
-            .type-row { flex-direction:column; gap:12px }
-            .type-label { width:auto }
-            .section { padding:60px 5% }
-            .hero { padding:80px 5% 60px }
+            .kpi-grid { grid-template-columns:repeat(2,1fr) }
+            .insight-grid { grid-template-columns:1fr }
+            .compare-grid { grid-template-columns:1fr; gap:16px }
+            .compare-arrow { transform:rotate(90deg); padding:10px 0 }
+            .roadmap { grid-template-columns:repeat(2,1fr) }
+            .phase-header { flex-wrap:wrap }
+            .funnel-flow { flex-direction:column }
+            .funnel-arrow { transform:rotate(90deg) }
+            .section { padding:50px 5% }
         }
 
         @media print {
-            .glow-line, .brand-nav { display:none }
-            body { background:#fff; color:#000 }
+            .glow-line, nav { display:none }
+            body { background:#fff; color:#111 }
             .hero::before { display:none }
             .section { page-break-inside:avoid }
+            .kpi-card, .phase, .callout, .insight-box, .decision-card { break-inside:avoid }
         }
     </style>
 </head>
 <body>
     <div class="glow-line"></div>
 
-    <nav class="brand-nav">
-        <div class="logo-text">DIEGO PÁRAMO</div>
-        <span class="version">Brand Manual v1.0 — Marzo 2026</span>
+    <nav>
+        <div class="logo">SALES VELOCITY × PULSE UP</div>
+        <span class="meta">Estrategia Q2 2026 · Marzo 7, 2026</span>
     </nav>
 
     <!-- ═══════════ HERO ═══════════ -->
     <section class="hero">
-        <p class="eyebrow">Brand Guidelines</p>
+        <p class="eyebrow">Growth Strategy</p>
         <div class="brand-icon">🧠</div>
-        <h1>Diego Páramo</h1>
-        <p class="tagline">La IA que transforma tu negocio</p>
-        <p class="cover-meta">Creado por <span>Sales Velocity</span> · Versión 1.0 · Marzo 2026 · <span>Pulse Up</span></p>
+        <h1>Estrategia de<br>Crecimiento Q2 2026</h1>
+        <p class="subtitle">Diego Páramo · Pulse Up</p>
+        <p class="cover-meta">Presentación para <span>Diego Páramo</span> · Marzo 7, 2026 · <span>Data-Driven</span></p>
     </section>
 
-    <!-- ═══════════ 01 · IDENTIDAD ═══════════ -->
+    <!-- ═══════════ 01 · PANORAMA ACTUAL ═══════════ -->
     <section class="section">
         <span class="section-number">01</span>
-        <p class="section-label">Identidad de Marca</p>
-        <h2>Quienes Somos</h2>
-        <p class="intro">Diego Páramo ayuda a directores y dueños de negocio a utilizar la inteligencia artificial a su favor — más allá de usarla como un simple buscador. Enseña a crear agentes y procesos de IA que verdaderamente impactan ingresos y ahorran tiempo, volviendo a las empresas más eficientes. Pulse Up es su compañía B2B de consultoría e implementación para empresas.</p>
+        <p class="section-label">Panorama Actual</p>
+        <h2>¿Dónde Estamos?</h2>
+        <p class="intro">Análisis basado en datos reales extraídos de GoHighLevel (pipelines, oportunidades) y Meta Ads Manager (pauta activa). Fecha de corte: 7 de marzo, 2026.</p>
 
-        <table class="identity-table">
-            <tr><td>Marca Personal</td><td>Diego Páramo — Mentoría, contenido y primera puerta de entrada</td></tr>
-            <tr><td>Compañía B2B</td><td>Pulse Up — Consultoría e implementación de IA para empresas</td></tr>
-            <tr><td>Credenciales</td><td>Ex-Google, +9 años en IA, +120 empresas impactadas, +25,000 líderes formados</td></tr>
-            <tr><td>Tagline</td><td>La IA que transforma tu negocio</td></tr>
-            <tr><td>Propuesta</td><td>Crear agentes y procesos de IA que impactan ingresos y eficiencia real</td></tr>
-            <tr><td>Sitio Web</td><td>entendiendo.ai</td></tr>
-            <tr><td>Instagram</td><td>@diegoparamo_ai</td></tr>
-            <tr><td>Audiencia</td><td>Directores, CEOs y dueños de negocio en LATAM y USA</td></tr>
-            <tr><td>Modelo</td><td>Mentoría (personal brand) → Pulse Up (consultoría B2B enterprise)</td></tr>
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+            <div class="kpi-card accent">
+                <p class="label">Pipeline B2B</p>
+                <p class="value">$542K</p>
+                <p class="sub">20 oportunidades activas</p>
+            </div>
+            <div class="kpi-card warn">
+                <p class="label">Registros Webinar</p>
+                <p class="value">26</p>
+                <p class="sub">Verificados con tag en GHL</p>
+            </div>
+            <div class="kpi-card">
+                <p class="label">CTR Meta Ads</p>
+                <p class="value">4.3%</p>
+                <p class="sub">vs benchmark 1.5-2.5%</p>
+            </div>
+            <div class="kpi-card warn">
+                <p class="label">Spend 30d</p>
+                <p class="value">$152</p>
+                <p class="sub">2 anuncios activos</p>
+            </div>
+        </div>
+
+        <!-- Pipeline B2B Detail -->
+        <p class="section-label" style="margin-top:40px">Pipeline B2B — Distribución por Etapa</p>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Etapa</th>
+                    <th style="text-align:right">Oportunidades</th>
+                    <th style="text-align:right">% del Total</th>
+                    <th style="text-align:right">Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>🔍 Discovery</td>
+                    <td class="num">6</td>
+                    <td class="num">30%</td>
+                    <td class="num" style="color:var(--blue-light)">Prospección</td>
+                </tr>
+                <tr>
+                    <td>📞 Cita</td>
+                    <td class="num">4</td>
+                    <td class="num">20%</td>
+                    <td class="num" style="color:var(--yellow)">En proceso</td>
+                </tr>
+                <tr>
+                    <td>📋 Agenda</td>
+                    <td class="num">3</td>
+                    <td class="num">15%</td>
+                    <td class="num" style="color:var(--yellow)">En proceso</td>
+                </tr>
+                <tr>
+                    <td>🔄 Seguimiento</td>
+                    <td class="num">4</td>
+                    <td class="num">20%</td>
+                    <td class="num" style="color:var(--orange)">Requiere aten.</td>
+                </tr>
+                <tr>
+                    <td>📜 Propuesta</td>
+                    <td class="num highlight">3</td>
+                    <td class="num highlight">15%</td>
+                    <td class="num" style="color:var(--green)">Cierre inminente</td>
+                </tr>
+            </tbody>
         </table>
 
-        <p class="section-label">Pilares de Marca</p>
-        <div class="pillars-grid">
-            <div class="pillar-card">
-                <p class="number">Pilar 01</p>
-                <h3>Impacto en Ingresos</h3>
-                <p>No enseñamos IA por novedad. Creamos agentes y procesos que impactan directamente los ingresos y la eficiencia operativa de las empresas.</p>
-            </div>
-            <div class="pillar-card">
-                <p class="number">Pilar 02</p>
-                <h3>Sin Código, Sin Excusas</h3>
-                <p>IA para directores que no programan. Tu primer asistente ejecutivo en 60 minutos — sin jargón técnico, sin dependencia de TI.</p>
-            </div>
-            <div class="pillar-card">
-                <p class="number">Pilar 03</p>
-                <h3>Autoridad Comprobada</h3>
-                <p>Ex-Google. +120 empresas impactadas. Board member. Cada resultado está respaldado por implementaciones reales con compañías reales.</p>
+        <!-- Other Pipelines -->
+        <p class="section-label" style="margin-top:32px">Otros Pipelines</p>
+        <table class="data-table">
+            <thead>
+                <tr><th>Pipeline</th><th style="text-align:right">Opps</th><th style="text-align:right">Valor</th><th style="text-align:right">Nota</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>💼 B2C</td>
+                    <td class="num">1</td>
+                    <td class="num">$2,500</td>
+                    <td class="dim">Seguimiento activo</td>
+                </tr>
+                <tr>
+                    <td>🎯 Sistema Ventas</td>
+                    <td class="num">31</td>
+                    <td class="num dim">$0</td>
+                    <td class="dim">Funnel anterior — 28 en Registro, 3 agendaron</td>
+                </tr>
+                <tr>
+                    <td>🚀 Lanzamiento</td>
+                    <td class="num dim">0</td>
+                    <td class="num dim">$0</td>
+                    <td class="dim">Pipeline vacío</td>
+                </tr>
+                <tr>
+                    <td>📺 Webinar</td>
+                    <td class="num" style="color:var(--red)">0</td>
+                    <td class="num dim">$0</td>
+                    <td style="color:var(--red); font-size:0.8rem">⚠️ Falta automatización</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Meta Ads Detail -->
+        <p class="section-label" style="margin-top:32px">Meta Ads — Performance</p>
+        <table class="data-table">
+            <thead>
+                <tr><th>Métrica</th><th style="text-align:right">7 días</th><th style="text-align:right">30 días</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Gasto (USD)</td><td class="num">$37.47</td><td class="num">$152.05</td></tr>
+                <tr><td>Impresiones</td><td class="num">12,064</td><td class="num">50,784</td></tr>
+                <tr><td>Alcance</td><td class="num">10,832</td><td class="num">32,026</td></tr>
+                <tr><td>Clics</td><td class="num">520</td><td class="num">2,177</td></tr>
+                <tr><td>CTR</td><td class="num highlight">4.31%</td><td class="num highlight">4.29%</td></tr>
+                <tr><td>Anuncios activos</td><td class="num">2</td><td class="num">2</td></tr>
+                <tr><td>Leads registrados (Pixel)</td><td class="num" style="color:var(--red)">0</td><td class="num" style="color:var(--red)">0</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Critical Findings -->
+        <div class="callout red">
+            <p class="callout-title">🚨 Hallazgo Crítico — Meta Pixel NO trackea leads</p>
+            <p>El pixel de Meta no está configurado para registrar el evento <code>CompleteRegistration</code>. Se generaron 2,177 clics en 30 días pero Meta reporta <strong>0 leads</strong>. Solo hay <strong>26 registros verificados</strong> en GHL (tag <code>registrado-webinar</code>). Esto impide optimizar campañas por conversiones. <strong>CPL estimado real: $152 / 26 = ~$5.85/registro</strong> — razonable para LATAM pero con margen claro de mejora al optimizar la landing de registro.</p>
+        </div>
+
+        <div class="callout red">
+            <p class="callout-title">🚨 Hallazgo Crítico — Pipeline Webinar sin automatización</p>
+            <p>26 personas se registraron al webinar (verificadas por tag <code>registrado-webinar</code>), pero el pipeline "WEBINAR" tiene <strong>0 oportunidades</strong>. Falta un workflow en GHL que cree automáticamente una oportunidad cuando alguien se registra. Sin esto, no hay visibilidad del funnel de conversión post-registro.</p>
+        </div>
+
+        <div class="callout yellow">
+            <p class="callout-title">⚡ Oportunidad — Presupuesto de pauta extremadamente bajo</p>
+            <p>$152 en 30 días = ~$5/día. Con un CTR de 4.3% (2-3x superior al benchmark), el mensaje resuena pero el alcance es mínimo — solo 26 registros en el período. Un pipeline B2B de $542K justifica una inversión mucho mayor en adquisición. Cada lead B2B puede valer entre $5K y $50K en revenue.</p>
+        </div>
+
+        <div class="callout green">
+            <p class="callout-title">✅ Señal Positiva — CTR excepcional y pipeline B2B sólido</p>
+            <p>4.3% CTR demuestra que la propuesta de valor resuena fuerte. 20 oportunidades B2B con $542K en pipeline es una base sólida. La audiencia responde al mensaje "deja de usar la IA como Google" — es momento de escalar pauta y optimizar landing, no de cambiar el messaging.</p>
+        </div>
+
+        <!-- Insight Box -->
+        <div class="insight-box">
+            <h3>📊 Diagnóstico en 3 Líneas</h3>
+            <div class="insight-grid">
+                <div class="insight-item good">
+                    <p class="tag">✅ Lo Bueno</p>
+                    <p>Pipeline B2B de $542K con 3 propuestas activas. CTR de 4.3% (excepcional). 26 registros orgánicos de webinar con $5/día de pauta. Mensaje de marca resonante.</p>
+                </div>
+                <div class="insight-item bad">
+                    <p class="tag">❌ Lo Malo</p>
+                    <p>Pixel de Meta no trackea conversiones. Pipeline Webinar vacío (sin automatización). $5/día de pauta insuficiente para escalar. Sin flujo de seguimiento automatizado post-registro.</p>
+                </div>
+                <div class="insight-item opp">
+                    <p class="tag">🔮 La Oportunidad</p>
+                    <p>Escalar pauta 10x con tracking correcto. Automatizar pipeline completo. Reactivar los 26 registrados + 31 de Sistema Ventas. Cerrar 3 propuestas B2B activas ($100K+ potencial).</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════ 02 · COLORES ═══════════ -->
+    <!-- ═══════════ 02 · OBJETIVOS ═══════════ -->
     <section class="section">
         <span class="section-number">02</span>
-        <p class="section-label">Sistema de Color</p>
-        <h2>Paleta Cromática</h2>
-        <p class="intro">Un dark mode con profundidad — navy-black como base y electric blue como acento que proyecta tecnología avanzada y confianza ejecutiva. Inspirada en la identidad visual de Diego Páramo y Pulse Up.</p>
+        <p class="section-label">Objetivos Q2 2026</p>
+        <h2>¿A Dónde Vamos?</h2>
+        <p class="intro">Metas numéricas basadas en el modelo actual de Diego: webinar gratuito → low-ticket ($50) → high-ticket ($400-$7K) + pipeline B2B enterprise.</p>
 
-        <p class="section-label">Colores Principales</p>
-        <div class="color-grid">
-            <div class="swatch">
-                <div class="swatch-color" style="background:#0A0E17"></div>
-                <div class="swatch-info"><p class="name">Deep Space</p><p class="hex">#0A0E17</p><p class="use">Fondo principal</p></div>
+        <!-- Today vs Target -->
+        <div class="compare-grid">
+            <div class="compare-col today">
+                <h3>📍 Hoy (Marzo 2026)</h3>
+                <div class="compare-row"><span class="metric">Registros webinar</span><span class="val">26</span></div>
+                <div class="compare-row"><span class="metric">Ventas low-ticket</span><span class="val">0</span></div>
+                <div class="compare-row"><span class="metric">Clientes high-ticket</span><span class="val">0</span></div>
+                <div class="compare-row"><span class="metric">Revenue B2C / mes</span><span class="val">$0</span></div>
+                <div class="compare-row"><span class="metric">Pipeline B2B</span><span class="val">$542K</span></div>
+                <div class="compare-row"><span class="metric">Spend mensual</span><span class="val">$152</span></div>
+                <div class="compare-row"><span class="metric">CPL estimado</span><span class="val">~$5.85</span></div>
+                <div class="compare-row"><span class="metric">Tracking</span><span class="val" style="color:var(--red)">❌ Roto</span></div>
             </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:#141923"></div>
-                <div class="swatch-info"><p class="name">Navy Dark</p><p class="hex">#141923</p><p class="use">Cards, superficies elevadas</p></div>
-            </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:#176BFF"></div>
-                <div class="swatch-info"><p class="name">Electric Blue</p><p class="hex">#176BFF</p><p class="use">Acento primario, CTAs, enlaces</p></div>
-            </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:#7CB3FF"></div>
-                <div class="swatch-info"><p class="name">Sky Bright</p><p class="hex">#7CB3FF</p><p class="use">Texto acento, highlights</p></div>
-            </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:linear-gradient(135deg,#176BFF,#8B5CF6)"></div>
-                <div class="swatch-info"><p class="name">Neural Gradient</p><p class="hex">#176BFF → #8B5CF6</p><p class="use">Hero, íconos, elementos premium</p></div>
-            </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:#00D4FF"></div>
-                <div class="swatch-info"><p class="name">Cyber Cyan</p><p class="hex">#00D4FF</p><p class="use">Badges, labels, acentos terciarios</p></div>
+            <div class="compare-arrow">→</div>
+            <div class="compare-col target">
+                <h3>🎯 Meta Q2 (Junio 2026)</h3>
+                <div class="compare-row"><span class="metric">Registros webinar</span><span class="val">3,000+</span></div>
+                <div class="compare-row"><span class="metric">Ventas low-ticket</span><span class="val">150</span></div>
+                <div class="compare-row"><span class="metric">Clientes high-ticket</span><span class="val">10</span></div>
+                <div class="compare-row"><span class="metric">Revenue B2C / mes</span><span class="val">$12,500</span></div>
+                <div class="compare-row"><span class="metric">Pipeline B2B</span><span class="val">$1M+</span></div>
+                <div class="compare-row"><span class="metric">Spend mensual</span><span class="val">$1,500</span></div>
+                <div class="compare-row"><span class="metric">CPL estimado</span><span class="val">$0.50</span></div>
+                <div class="compare-row"><span class="metric">Tracking</span><span class="val" style="color:var(--green)">✅ Full</span></div>
             </div>
         </div>
 
-        <p class="section-label" style="margin-top:48px">Colores Neutros</p>
-        <div class="color-grid">
-            <div class="swatch">
-                <div class="swatch-color" style="background:#FFFFFF"></div>
-                <div class="swatch-info"><p class="name">White</p><p class="hex">#FFFFFF</p><p class="use">Headlines, texto primario</p></div>
-            </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:#E8EAF0"></div>
-                <div class="swatch-info"><p class="name">White Soft</p><p class="hex">#E8EAF0</p><p class="use">Cuerpo de texto</p></div>
-            </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:#9BA3B5"></div>
-                <div class="swatch-info"><p class="name">Silver Muted</p><p class="hex">#9BA3B5</p><p class="use">Texto secundario</p></div>
-            </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:#6B7280"></div>
-                <div class="swatch-info"><p class="name">Steel Dim</p><p class="hex">#6B7280</p><p class="use">Labels, metadata</p></div>
-            </div>
+        <!-- Revenue Math -->
+        <p class="section-label" style="margin-top:40px">Proyección de Revenue B2C</p>
+
+        <div class="funnel-flow">
+            <div class="funnel-step"><p class="val">$1,500</p><p class="label">Budget / mes</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">3,000</p><p class="label">Clics (4% CTR)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">900</p><p class="label">Registros (30%)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">270</p><p class="label">Asisten (30%)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">54</p><p class="label">Compra $50 (20%)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">$2,700</p><p class="label">Revenue LT</p></div>
+        </div>
+        <div class="funnel-flow" style="margin-top:8px">
+            <div class="funnel-step"><p class="val">54</p><p class="label">Compradores LT</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">8</p><p class="label">Aplican HT (15%)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">3</p><p class="label">Cierran (40%)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">$9,000</p><p class="label">Revenue HT ($3K avg)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step" style="border-color:var(--cyan)"><p class="val" style="color:var(--cyan)">$11,700</p><p class="label">Total / mes</p></div>
         </div>
 
-        <p class="section-label" style="margin-top:48px">Principio de Color</p>
-        <p class="intro">El azul eléctrico es el color de la inteligencia digital. Se usa con moderación y siempre acompañado de glow effects (box-shadow con rgba del azul) para transmitir la sensación de tecnología activa y viva. El fondo siempre es profundo — negro con tinte azul — nunca negro puro.</p>
-
-        <p class="section-label" style="margin-top:48px">Modo Light (Contraste)</p>
-        <p class="intro">Para documentos largos, presentaciones corporativas y páginas web donde se requiere legibilidad extendida, se puede usar fondo blanco (#FFFFFF) con textos en Navy Dark (#141923). Los acentos azul (#176BFF) y cyan (#00D4FF) funcionan igual de bien sobre fondos claros, manteniendo la identidad tecnológica.</p>
-
-        <div class="color-grid">
-            <div class="swatch">
-                <div class="swatch-color" style="background:#FFFFFF; border:1px solid rgba(23,107,255,0.12)"></div>
-                <div class="swatch-info"><p class="name">Light Background</p><p class="hex">#FFFFFF</p><p class="use">Fondo alternativo light-mode</p></div>
-            </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:#F5F7FB"></div>
-                <div class="swatch-info"><p class="name">Cloud</p><p class="hex">#F5F7FB</p><p class="use">Superficies elevadas light</p></div>
-            </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:#141923"></div>
-                <div class="swatch-info"><p class="name">Navy Dark (Texto)</p><p class="hex">#141923</p><p class="use">Texto principal sobre fondo claro</p></div>
-            </div>
-            <div class="swatch">
-                <div class="swatch-color" style="background:#176BFF"></div>
-                <div class="swatch-info"><p class="name">Electric Blue (Acento)</p><p class="hex">#176BFF</p><p class="use">CTAs y acentos en light-mode</p></div>
-            </div>
+        <div class="callout blue" style="margin-top:24px">
+            <p class="callout-title">💡 La matemática del escalamiento</p>
+            <p>Con $1,500/mes de pauta y un funnel optimizado (pixel configurado + landing mejorada), la proyección conservadora es <strong>$11,700/mes de revenue B2C</strong> ($2,700 low-ticket + $9,000 high-ticket). ROAS proyectado: <strong>7.8x</strong>. Esto es <strong>adicional</strong> al pipeline B2B enterprise de $542K.</p>
         </div>
-
-        <p class="intro" style="margin-top:32px"><strong>Regla:</strong> Dark mode es la identidad principal y siempre se usa en funnels de venta, webinars y landing pages. Light mode es para contenido editorial, documentos PDF, presentaciones corporativas y secciones de contenido largo donde la lectura prolongada lo justifique.</p>
     </section>
 
-    <!-- ═══════════ 03 · TIPOGRAFÍA ═══════════ -->
+    <!-- ═══════════ 03 · PLAN DE ACCIÓN ═══════════ -->
     <section class="section">
         <span class="section-number">03</span>
-        <p class="section-label">Tipografía</p>
-        <h2>Sistema Tipográfico</h2>
-        <p class="intro">Dos familias que expresan tecnología de punta y legibilidad ejecutiva. Outfit para impacto máximo en headlines (bold, moderna, geométrica), Inter para claridad en cuerpo.</p>
+        <p class="section-label">Plan de Acción</p>
+        <h2>¿Cómo Llegamos?</h2>
+        <p class="intro">4 fases priorizadas por velocidad de impacto. Lo que genera cash rápido va primero.</p>
 
-        <div class="type-showcase">
-            <div class="type-row">
-                <span class="type-label">Display / H1</span>
-                <div class="type-sample" style="font-family:var(--font-display); font-size:clamp(2rem,4vw,3.2rem); font-weight:700; letter-spacing:-0.03em; line-height:1.1">
-                    Deja de Usar la IA<br>como Google
-                </div>
+        <!-- Phase 1 -->
+        <div class="phase p1">
+            <div class="phase-header">
+                <span class="phase-badge">🔴 Fase 1 — Acción Inmediata</span>
+                <h3>Arreglar el Tracking + Cerrar B2B</h3>
+                <span class="phase-timeline">Semana 1</span>
             </div>
-            <div class="type-row">
-                <span class="type-label">Heading / H2</span>
-                <div class="type-sample" style="font-family:var(--font-display); font-size:1.6rem; font-weight:600; letter-spacing:-0.02em">
-                    Tu primer asistente en 60 minutos
-                </div>
+            <ul>
+                <li><strong>Configurar Meta Pixel correctamente:</strong> Instalar evento <code>CompleteRegistration</code> en el formulario de registro de GHL. Sin esto, Meta no puede optimizar por conversiones.</li>
+                <li><strong>Construir workflow de pipeline Webinar:</strong> Crear automatización en GHL que mueva leads del formulario de registro al pipeline WEBINAR automáticamente. Cada registrado = oportunidad visible.</li>
+                <li><strong>Cerrar las 3 propuestas B2B activas:</strong> Hay $542K en pipeline con 3 propuestas listas. Priorizar seguimiento agresivo esta semana. Potencial de cierre: $100K+.</li>
+                <li><strong>Activar y calificar lead Jota Mundial:</strong> Lead orgánico enterprise ($200K/mes facturación). Agendar reunión de discovery esta semana — potencial $7K-$50K.</li>
+                <li><strong>Construir secuencia de nurturing:</strong> Configurar emails, SMS y WhatsApp de seguimiento para los 26 registrados existentes + 31 leads de Sistema Ventas (recordatorio de webinar 12 marzo).</li>
+            </ul>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="phase p2">
+            <div class="phase-header">
+                <span class="phase-badge">🟡 Fase 2 — Fundación</span>
+                <h3>Funnel de Ventas B2C Completo</h3>
+                <span class="phase-timeline">Semana 1-2</span>
             </div>
-            <div class="type-row">
-                <span class="type-label">Subheading / H3</span>
-                <div class="type-sample" style="font-family:var(--font-display); font-size:1.15rem; font-weight:600">
-                    Framework AFVIS para implementación estratégica
-                </div>
+            <ul>
+                <li><strong>Webinar del 12 de marzo — Ejecución impecable:</strong> Demo en vivo, construir asistente, venta del paquete $50 al cierre. Target: 60% asistencia de los 26 registrados = ~16 en vivo. Objetivo: 4-5 ventas ($200-$250). El foco real es ejecutar el formato perfecto para escalar después.</li>
+                <li><strong>Activar post-webinar upsell:</strong> Email secuencia automática para compradores $50 → oferta premium ($400 personalización 1-on-1).</li>
+                <li><strong>Crear página de checkout y entrega:</strong> Flujo completo: compra → acceso inmediato a prompts → email de bienvenida → acceso comunidad.</li>
+                <li><strong>Reactivar los 31 leads de Sistema Ventas:</strong> 28 se registraron pero no avanzaron. Secuencia de reactivación con invitación al webinar del 12 de marzo — base adicional para sumar registros.</li>
+                <li><strong>Pipeline GHL completo:</strong> Configurar etapas del funnel B2C: Registro → Asistió → Compró LT → Aplicó HT → Cerrado Ganado/Perdido.</li>
+            </ul>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="phase p3">
+            <div class="phase-header">
+                <span class="phase-badge">🔵 Fase 3 — Aceleración</span>
+                <h3>Escalar Pauta + Contenido</h3>
+                <span class="phase-timeline">Semana 2-4</span>
             </div>
-            <div class="type-row">
-                <span class="type-label">Body</span>
-                <div class="type-sample" style="font-family:var(--font-primary); font-size:1rem; color:var(--white-soft); line-height:1.8">
-                    La inteligencia artificial no es el futuro. Es el presente que el 99% de los profesionales está desperdiciando. No necesitas código, no necesitas ser técnico.
-                </div>
+            <ul>
+                <li><strong>Escalar presupuesto de pauta:</strong> De $5/día a $50/día ($1,500/mes). El CTR de 4.3% indica que el mensaje funciona — ahora maximizar volumen.</li>
+                <li><strong>Crear 3 nuevos creativos:</strong> Variaciones del hook principal ("Estás usando IA mal") + hooks alternativos: prueba social (Ex-Google, 120 empresas), resultado (10 horas/semana), curiosidad (asistentes ejecutivos).</li>
+                <li><strong>Configurar retargeting:</strong> Retargeting a visitantes de entendiendo.ai que NO se registraron + lookalike basada en compradores $50 del primer webinar.</li>
+                <li><strong>Lanzar contenido orgánico semanal:</strong> 3 reels/semana en Instagram + TikTok + LinkedIn articles. Contenido educativo que alimenta los mismos hooks de la pauta.</li>
+                <li><strong>Segundo webinar (inmersión Evergreen):</strong> Pre-grabar el webinar perfeccionado y convertirlo en funnel automático. Herramientas: StreamYard o similar.</li>
+            </ul>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="phase p4">
+            <div class="phase-header">
+                <span class="phase-badge">🟢 Fase 4 — Escala</span>
+                <h3>Sistematizar y Multiplicar</h3>
+                <span class="phase-timeline">Semana 4-8</span>
             </div>
-            <div class="type-row">
-                <span class="type-label">Caption / Label</span>
-                <div class="type-sample" style="font-family:var(--font-primary); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--blue)">
-                    WEBINAR EN VIVO · CUPOS LIMITADOS · 60 MINUTOS
-                </div>
-            </div>
+            <ul>
+                <li><strong>Webinar Evergreen automatizado:</strong> Funnel 100% automático: registro → emails → webinar grabado → venta → upsell → seguimiento closers.</li>
+                <li><strong>Expandir a USA / Florida:</strong> Ajustar precios ($97-$197 low-ticket, $1K-$15K high-ticket). Pauta en inglés con los mismos hooks adaptados.</li>
+                <li><strong>Construir pipeline de referidos B2B:</strong> Los clientes satisfechos del webinar se convierten en leads enterprise para Pulse Up. Cada cliente B2C es un potencial referido B2B.</li>
+                <li><strong>Automatizar reportería semanal:</strong> Dashboard automático con métricas clave (CPL, conversión, pipeline value, revenue) que se actualiza cada jueves.</li>
+                <li><strong>YouTube como motor de leads orgánicos:</strong> Miniclases de 10-15 min. Cada video = mini-webinar que alimenta el funnel de registro.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- ═══════════ 04 · COMPONENTES ═══════════ -->
+    <!-- ═══════════ 04 · DECISIONES ═══════════ -->
     <section class="section">
         <span class="section-number">04</span>
-        <p class="section-label">Componentes UI</p>
-        <h2>Elementos de Interfaz</h2>
-        <p class="intro">Componentes listos para usar en GHL, landing pages y comunicaciones. Todos heredan los design tokens de la marca.</p>
+        <p class="section-label">Decisiones & Siguientes Pasos</p>
+        <h2>¿Qué Necesitamos Decidir?</h2>
+        <p class="intro">Puntos que requieren tu input para avanzar con el plan.</p>
 
-        <div class="demo-grid">
-            <div class="demo-block">
-                <p class="demo-label">CTA Principal (Glow)</p>
-                <a class="btn-cta" href="#">🔥 VER CLASE YA</a>
+        <div class="decision-card">
+            <div class="decision-num">1</div>
+            <div class="decision-content">
+                <h4>Presupuesto de pauta para Q2</h4>
+                <p>Actualmente gastamos $5/día. Para escalar necesitamos mínimo $50/día ($1,500/mes). ¿Confirmamos este presupuesto a partir de la semana 2?</p>
+                <span class="rec">Recomendación: $1,500/mes</span>
             </div>
-            <div class="demo-block">
-                <p class="demo-label">CTA Secundario</p>
-                <a class="btn-outline" href="#">RESERVAR MI CUPO</a>
+        </div>
+
+        <div class="decision-card">
+            <div class="decision-num">2</div>
+            <div class="decision-content">
+                <h4>Seguimiento a las 3 propuestas B2B activas</h4>
+                <p>Hay $542K en pipeline con 3 propuestas en etapa de cierre. ¿Quién hace seguimiento? ¿Diego directamente o un closer? ¿Con qué frecuencia?</p>
+                <span class="rec">Recomendación: Seguimiento diario por 7 días</span>
             </div>
-            <div class="demo-block">
-                <p class="demo-label">Eyebrow Badge</p>
-                <span class="eyebrow-badge">⚡ En vivo · 100 cupos</span>
+        </div>
+
+        <div class="decision-card">
+            <div class="decision-num">3</div>
+            <div class="decision-content">
+                <h4>Reunión con lead Jota Mundial</h4>
+                <p>Lead orgánico enterprise (empresa de servicios, $200K/mes facturación). ¿Agendamos la reunión de discovery esta semana?</p>
+                <span class="rec">Recomendación: Agendar antes del viernes</span>
             </div>
-            <div class="demo-block">
-                <p class="demo-label">Card con Glow Border</p>
-                <div style="background:var(--bg-elevated); border:1px solid var(--border-default); border-radius:var(--radius-md); padding:24px; width:100%; text-align:left; box-shadow:0 0 20px rgba(23,107,255,0.06)">
-                    <p style="font-family:var(--font-display); font-weight:600; margin-bottom:8px">🤖 Asistente Personal</p>
-                    <p style="font-size:0.85rem; color:var(--white-muted)">Revisa tu correo, prioriza tareas y gestiona tu calendario con un solo comando de voz.</p>
-                </div>
+        </div>
+
+        <div class="decision-card">
+            <div class="decision-num">4</div>
+            <div class="decision-content">
+                <h4>Precio del low-ticket para el webinar del 12 marzo</h4>
+                <p>El plan dice $50 para LATAM. ¿Confirmamos este precio? Alternativas: $47 (psicológico) o $97 (si la audiencia es más USA/Florida).</p>
+                <span class="rec">Recomendación: $50 (LATAM) — ajustar a $97 post-validación</span>
+            </div>
+        </div>
+
+        <div class="decision-card">
+            <div class="decision-num">5</div>
+            <div class="decision-content">
+                <h4>Webinar: ¿grabarlo para Evergreen?</h4>
+                <p>El del 12 de marzo es en vivo. ¿Lo grabamos para convertirlo en funnel Evergreen después? Esto permitiría automatizar la captación 24/7.</p>
+                <span class="rec">Recomendación: Sí — grabar este como template para iterar</span>
+            </div>
+        </div>
+
+        <div class="decision-card">
+            <div class="decision-num">6</div>
+            <div class="decision-content">
+                <h4>Configuración del Meta Pixel</h4>
+                <p>¿Tienes acceso al código del formulario de registro en GHL para instalar el evento de conversión? O ¿necesitas que lo hagamos nosotros remotamente?</p>
+                <span class="rec">Recomendación: Nosotros lo configuramos esta semana</span>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════ 05 · VOZ DE MARCA ═══════════ -->
-    <section class="section">
+    <!-- ═══════════ 05 · RESUMEN EJECUTIVO ═══════════ -->
+    <section class="section" style="border:none">
         <span class="section-number">05</span>
-        <p class="section-label">Tono & Voz</p>
-        <h2>Personalidad de Marca</h2>
-        <p class="intro">Diego Páramo habla como un mentor senior que sabe de lo que habla y no tiene tiempo para rodeos. Es directo pero nunca frío. Es técnico pero siempre accesible.</p>
+        <p class="section-label">Resumen Ejecutivo</p>
+        <h2>El Roadmap Visual</h2>
 
-        <div class="voice-grid">
-            <div class="voice-card"><p class="attr">Idioma</p><p class="val">Español (colombiano)</p></div>
-            <div class="voice-card"><p class="attr">Perspectiva</p><p class="val">1ra persona plural</p></div>
-            <div class="voice-card"><p class="attr">Energía</p><p class="val">Alta, directa</p></div>
-            <div class="voice-card"><p class="attr">Postura</p><p class="val">Autoridad sin arrogancia</p></div>
-            <div class="voice-card"><p class="attr">Tono</p><p class="val">Educador práctico</p></div>
-        </div>
-
-        <p class="section-label" style="margin-top:56px">Frases Clave</p>
-        <ul class="phrase-list">
-            <li>"Estás usando la IA mal. La estás usando como Google."</li>
-            <li>"Si usas AI como buscador, estás perdiendo 10 horas a la semana."</li>
-            <li>"No vendo humo. Ejecuto. Y ahora te voy a enseñar cómo hacerlo."</li>
-            <li>"Tu primer asistente de IA en 60 minutos. Sin código. Sin excusas."</li>
-            <li>"Así como algunos se perdieron el Bitcoin, muchos se van a perder la IA."</li>
-        </ul>
-
-        <p class="section-label" style="margin-top:56px">Guía de Estilo</p>
-        <div class="dos-donts">
-            <div class="dos-col">
-                <div class="col-header">✅ SÍ — Hacer</div>
-                <div class="col-item"><span class="icon">→</span> Usar datos y casos reales (Alpina, SBS Seguros)</div>
-                <div class="col-item"><span class="icon">→</span> Hablar de resultados medibles (horas ahorradas, $)</div>
-                <div class="col-item"><span class="icon">→</span> Ser directo: "Esto no es para ti si..."</div>
-                <div class="col-item"><span class="icon">→</span> Generar urgencia genuina (cupos, en vivo, sin replay)</div>
-                <div class="col-item"><span class="icon">→</span> Usar tono colombiano natural, cercano</div>
+        <div class="roadmap">
+            <div class="roadmap-step">
+                <p class="icon">🔴</p>
+                <p class="week">Semana 1</p>
+                <p class="goal">Fix tracking. Cerrar B2B. Nurturing webinar 12 mar.</p>
             </div>
-            <div class="donts-col">
-                <div class="col-header">❌ NO — Evitar</div>
-                <div class="col-item"><span class="icon">×</span> Tecnicismos innecesarios (API, tokens, backend)</div>
-                <div class="col-item"><span class="icon">×</span> Promesas vagas sin evidencia</div>
-                <div class="col-item"><span class="icon">×</span> Tono académico o distante</div>
-                <div class="col-item"><span class="icon">×</span> Copiar fórmulas genéricas de marketing</div>
-                <div class="col-item"><span class="icon">×</span> Subestimar la audiencia o parecer condescendiente</div>
+            <div class="roadmap-step">
+                <p class="icon">🟡</p>
+                <p class="week">Semana 1-2</p>
+                <p class="goal">Ejecutar webinar. Primera venta $50. Upsell HT.</p>
+            </div>
+            <div class="roadmap-step">
+                <p class="icon">🔵</p>
+                <p class="week">Semana 2-4</p>
+                <p class="goal">Escalar pauta 10x. Nuevos creativos. Orgánico.</p>
+            </div>
+            <div class="roadmap-step">
+                <p class="icon">🟢</p>
+                <p class="week">Semana 4-8</p>
+                <p class="goal">Evergreen. Expandir USA. YouTube. Automatizar.</p>
             </div>
         </div>
-    </section>
 
-    <!-- ═══════════ 06 · DESIGN TOKENS ═══════════ -->
-    <section class="section">
-        <span class="section-number">06</span>
-        <p class="section-label">Design Tokens</p>
-        <h2>Variables CSS para GHL</h2>
-        <p class="intro">Copia estos tokens directamente en el Custom CSS de cualquier funnel de GoHighLevel para mantener la consistencia visual.</p>
-
-        <div class="token-block"><span class="comment">/* ═══ Entendiendo AI — Design Tokens ═══ */</span>
-
-<span class="key">--brand-bg-deep</span>:     <span class="val">#060A13</span>;
-<span class="key">--brand-bg-base</span>:     <span class="val">#0A0E17</span>;
-<span class="key">--brand-bg-card</span>:     <span class="val">#0F1420</span>;
-<span class="key">--brand-bg-elevated</span>: <span class="val">#141923</span>;
-
-<span class="key">--brand-blue</span>:        <span class="val">#176BFF</span>;
-<span class="key">--brand-blue-light</span>:  <span class="val">#4D8FFF</span>;
-<span class="key">--brand-blue-bright</span>: <span class="val">#7CB3FF</span>;
-<span class="key">--brand-cyan</span>:        <span class="val">#00D4FF</span>;
-<span class="key">--brand-purple</span>:      <span class="val">#8B5CF6</span>;
-
-<span class="key">--brand-white</span>:       <span class="val">#FFFFFF</span>;
-<span class="key">--brand-white-soft</span>: <span class="val">#E8EAF0</span>;
-<span class="key">--brand-white-muted</span>:<span class="val">#9BA3B5</span>;
-
-<span class="key">--brand-font-display</span>: <span class="val">'Outfit', sans-serif</span>;
-<span class="key">--brand-font-body</span>:    <span class="val">'Inter', sans-serif</span>;
-
-<span class="key">--brand-radius</span>:      <span class="val">14px</span>;
-<span class="key">--brand-glow</span>:        <span class="val">0 0 22px rgba(23,107,255,0.9), 0 0 50px rgba(23,107,255,0.6)</span>;
-
-<span class="comment">/* ═══ Uso en GHL: aplicar a .hl_page-creator--content ═══ */</span>
-<span class="comment">/* background: var(--brand-bg-deep) !important;           */</span>
-<span class="comment">/* font-family: var(--brand-font-body) !important;        */</span></div>
+        <div class="callout blue" style="margin-top:32px">
+            <p class="callout-title">💎 La Idea Central</p>
+            <p>Diego tiene todos los ingredientes para escalar: <strong>autoridad comprobada</strong> (Ex-Google, +120 empresas), un <strong>mensaje que resuena</strong> (4.3% CTR), y un <strong>pipeline B2B de $542K</strong>. Con solo 26 registros y $5/día de pauta, los resultados son prometedores pero el volumen es mínimo. Lo que falta son los sistemas: tracking de conversiones, automatización de pipeline, y escala de pauta. El Q2 se trata de construir la máquina — cada pieza que arreglamos multiplica todo lo demás.</p>
+        </div>
     </section>
 
     <!-- ═══════════ FOOTER ═══════════ -->
-    <footer class="footer">
-        <p class="logo-text">DIEGO PÁRAMO</p>
-        <p>Pulse Up · Brand Manual v1.0 · Marzo 2026</p>
-        <p style="margin-top:8px; color:var(--blue); font-size:0.6rem; letter-spacing:0.15em">CONFIDENCIAL — USO INTERNO</p>
+    <footer>
+        <p class="logo-text">SALES VELOCITY × PULSE UP</p>
+        <p>Estrategia de Crecimiento Q2 2026 · Marzo 7, 2026</p>
+        <p style="margin-top:6px; color:var(--blue); font-size:0.55rem; letter-spacing:0.15em">CONFIDENCIAL — USO INTERNO · DATOS EN TIEMPO REAL VÍA API</p>
     </footer>
 </body>
 </html>
