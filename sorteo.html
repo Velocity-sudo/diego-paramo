@@ -18,7 +18,6 @@
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
       min-height: 100vh;
     }
@@ -90,76 +89,19 @@
       font-size: 1.3rem; font-weight: 700; color: #fff; text-align: center; margin-bottom: 6px;
     }
     .form-card .form-subtitle { text-align: center; color: #9BA3B5; font-size: 0.88rem; margin-bottom: 28px; }
-
-    /* === FORM FIELDS === */
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { margin-bottom: 18px; }
-    .form-group.full-width { grid-column: 1 / -1; }
-
-    .form-group label {
-      display: block; font-size: 0.8rem; font-weight: 600;
-      color: #9BA3B5; margin-bottom: 6px; letter-spacing: 0.03em;
-    }
-    .form-group label .required { color: #FF4D4D; }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%; padding: 14px 16px;
-      background: #141923;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px; color: #E8EAF0;
-      font-family: 'Inter', sans-serif; font-size: 0.95rem;
-      outline: none; transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .form-group input::placeholder, .form-group textarea::placeholder { color: #4B5563; }
-
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color: rgba(23,107,255,0.5);
-      box-shadow: 0 0 0 3px rgba(23,107,255,0.1);
-    }
-    .form-group select {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239BA3B5'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 12px center;
-      background-size: 24px; padding-right: 40px; cursor: pointer;
-    }
-    .form-group select option { background: #141923; color: #E8EAF0; }
-    .form-group textarea { resize: vertical; min-height: 90px; }
-
-    /* === SUBMIT === */
-    .submit-btn {
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      width: 100%; padding: 18px 32px;
-      background: linear-gradient(135deg, #FFD700, #FF8C00);
-      color: #0A0E17; font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.05rem; font-weight: 800;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      border: none; border-radius: 14px; cursor: pointer;
-      box-shadow: 0 0 24px rgba(255,215,0,0.5), 0 0 60px rgba(255,140,0,0.3);
-      transition: all 0.3s ease; margin-top: 8px;
-    }
-    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(255,215,0,0.7), 0 0 80px rgba(255,140,0,0.4); }
-    .submit-btn:active { transform: translateY(0); }
-    .submit-btn .arrow { font-size: 1.2rem; transition: transform 0.3s ease; }
-    .submit-btn:hover .arrow { transform: translateX(4px); }
-    .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
-
     .fine-print { text-align: center; font-size: 0.72rem; color: #6B7280; margin-top: 16px; line-height: 1.5; }
 
-    /* === SUCCESS === */
-    .success-state { display: none; text-align: center; padding: 32px 0; }
-    .success-state .check-circle {
-      width: 80px; height: 80px; border-radius: 50%;
-      background: linear-gradient(135deg, rgba(52,211,153,0.15), rgba(52,211,153,0.05));
-      border: 2px solid rgba(52,211,153,0.4);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 36px; margin: 0 auto 20px; animation: scaleIn 0.5s ease;
+    /* === FORM EMBED === */
+    .form-embed-wrap {
+      width: 100%;
+      min-height: 850px;
     }
-    @keyframes scaleIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-    .success-state h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
-    .success-state p { color: #9BA3B5; font-size: 0.95rem; max-width: 400px; margin: 0 auto; }
-    .success-state .highlight-text { color: #FFD700; font-weight: 700; }
+    .form-embed-wrap iframe {
+      width: 100% !important;
+      min-height: 850px;
+      border: none;
+      border-radius: 12px;
+    }
 
     /* === FOOTER === */
     footer { text-align: center; padding: 30px 0 40px; border-top: 1px solid rgba(255,255,255,0.04); }
@@ -174,19 +116,16 @@
     .delay-3 { animation-delay: 0.3s; } .delay-4 { animation-delay: 0.4s; }
 
     @media (max-width: 600px) {
-      .form-row { grid-template-columns: 1fr; }
-      .form-card { padding: 28px 20px; }
+      .form-card { padding: 28px 16px; }
       .value-strip { gap: 16px; flex-direction: column; align-items: center; }
       .hero h1 { font-size: 1.5rem; }
       .price-highlight { font-size: 2.2rem; }
-      .submit-btn { font-size: 0.95rem; padding: 16px 24px; }
+      .form-embed-wrap { min-height: 900px; }
+      .form-embed-wrap iframe { min-height: 900px; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Hidden iframe for form submission (no page redirect) -->
-  <iframe name="ghl-webhook" style="display:none !important; width:0; height:0; border:0;"></iframe>
 
   <div class="bg-glow"></div>
 
@@ -209,88 +148,32 @@
 
     <section class="container">
       <div class="form-card animate delay-4">
-        <div id="form-view">
-          <h2>Llena tus datos para participar</h2>
-          <p class="form-subtitle">Toma 30 segundos. El ganador se anuncia en los próximos días.</p>
+        <h2>Llena tus datos para participar</h2>
+        <p class="form-subtitle">Toma 30 segundos. El ganador se anuncia en los próximos días.</p>
 
-          <form id="raffle-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Nombre <span class="required">*</span></label>
-                <input type="text" name="first_name" placeholder="Tu nombre" required>
-              </div>
-              <div class="form-group">
-                <label>Apellido <span class="required">*</span></label>
-                <input type="text" name="last_name" placeholder="Tu apellido" required>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label>Número (WhatsApp) <span class="required">*</span></label>
-                <input type="tel" name="phone" placeholder="+57 300 123 4567" required>
-              </div>
-              <div class="form-group">
-                <label>Email <span class="required">*</span></label>
-                <input type="email" name="email" placeholder="tu@email.com" required>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label>Nombre de tu empresa <span class="required">*</span></label>
-                <input type="text" name="company_name" placeholder="Mi Empresa S.A.S" required>
-              </div>
-              <div class="form-group">
-                <label>¿Cuántas personas en tu equipo? <span class="required">*</span></label>
-                <select name="team_size" required>
-                  <option value="" disabled selected>Selecciona</option>
-                  <option value="Solo yo (solopreneur)">Solo yo (solopreneur)</option>
-                  <option value="2-5 personas">2-5 personas</option>
-                  <option value="6-15 personas">6-15 personas</option>
-                  <option value="16-50 personas">16-50 personas</option>
-                  <option value="+50 personas">+50 personas</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>Industria de tu empresa <span class="required">*</span></label>
-              <select name="industry" required>
-                <option value="" disabled selected>Selecciona tu industria</option>
-                <option value="Tecnología / SaaS">Tecnología / SaaS</option>
-                <option value="Marketing / Agencia">Marketing / Agencia</option>
-                <option value="Consultoría / Coaching">Consultoría / Coaching</option>
-                <option value="E-commerce / Retail">E-commerce / Retail</option>
-                <option value="Finanzas / Inversiones">Finanzas / Inversiones</option>
-                <option value="Salud / Bienestar">Salud / Bienestar</option>
-                <option value="Educación / Formación">Educación / Formación</option>
-                <option value="Real Estate / Inmobiliaria">Real Estate / Inmobiliaria</option>
-                <option value="Legal / Contabilidad">Legal / Contabilidad</option>
-                <option value="Manufactura / Producción">Manufactura / Producción</option>
-                <option value="Entretenimiento / Media">Entretenimiento / Media</option>
-                <option value="Otro">Otro</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label>¿Por qué quieres ganarte esta mentoría? <span class="required">*</span></label>
-              <textarea name="motivation" placeholder="Cuéntame en 2-3 líneas qué harías con esta mentoría y cómo impactaría tu negocio..." required></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn" id="submit-btn">
-              Quiero participar en el sorteo
-              <span class="arrow">→</span>
-            </button>
-            <p class="fine-print">🔒 Tus datos están seguros. Solo los usamos para contactarte si ganas.</p>
-          </form>
+        <!-- GHL Native Form Embed -->
+        <div class="form-embed-wrap">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/QU4rOEbacMmOfSAmWHw0"
+            style="width:100%;height:100%;border:none;border-radius:12px"
+            id="inline-QU4rOEbacMmOfSAmWHw0"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Sorteo mentoría"
+            data-height="826"
+            data-layout-iframe-id="inline-QU4rOEbacMmOfSAmWHw0"
+            data-form-id="QU4rOEbacMmOfSAmWHw0"
+            title="Sorteo mentoría"
+          ></iframe>
         </div>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
-        <div class="success-state" id="success-view">
-          <div class="check-circle">✓</div>
-          <h2>¡Estás participando! 🎉</h2>
-          <p>Ya estás registrado en el sorteo de la mentoría de <span class="highlight-text">$2,500 USD</span>. El ganador se anuncia en los próximos días. <strong style="color:#fff;">¡No te vayas!</strong></p>
-        </div>
+        <p class="fine-print">🔒 Tus datos están seguros. Solo los usamos para contactarte si ganas.</p>
       </div>
     </section>
 
@@ -299,82 +182,6 @@
       <p class="footer-text">© 2026 Diego Páramo · <a href="https://entendiendo.ai">entendiendo.ai</a></p>
     </footer>
   </main>
-
-  <script>
-    var form = document.getElementById('raffle-form');
-    var submitBtn = document.getElementById('submit-btn');
-    var formView = document.getElementById('form-view');
-    var successView = document.getElementById('success-view');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      var fields = form.querySelectorAll('[required]');
-      var valid = true;
-      fields.forEach(function(f) {
-        if (!f.value.trim()) {
-          f.style.borderColor = 'rgba(255,77,77,0.5)';
-          valid = false;
-        } else {
-          f.style.borderColor = 'rgba(255,255,255,0.08)';
-        }
-      });
-      if (!valid) return;
-
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Enviando... ⏳';
-
-      // Create a hidden form that submits natively to the webhook via iframe
-      // This bypasses ALL CORS restrictions — 100% reliable
-      var hiddenForm = document.createElement('form');
-      hiddenForm.method = 'POST';
-      hiddenForm.action = 'https://services.leadconnectorhq.com/hooks/ouVnywxuvHFXuKyU3GVk/webhook-trigger/77557e00-8c09-49fc-8615-9e7b6095f4e3';
-      hiddenForm.target = 'ghl-webhook';
-      hiddenForm.style.display = 'none';
-
-      var fieldsData = {
-        first_name: form.first_name.value.trim(),
-        last_name: form.last_name.value.trim(),
-        name: form.first_name.value.trim() + ' ' + form.last_name.value.trim(),
-        phone: form.phone.value.trim(),
-        email: form.email.value.trim(),
-        company_name: form.company_name.value.trim(),
-        team_size: form.team_size.value,
-        industry: form.industry.value,
-        motivation: form.motivation.value.trim(),
-        source: 'sorteo_mentoria_webinar',
-        tags: '[Sorteo] Mentoría Webinar',
-        date: new Date().toISOString()
-      };
-
-      for (var key in fieldsData) {
-        var input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = key;
-        input.value = fieldsData[key];
-        hiddenForm.appendChild(input);
-      }
-
-      document.body.appendChild(hiddenForm);
-      hiddenForm.submit();
-
-      // Show success after brief delay
-      setTimeout(function() {
-        hiddenForm.remove();
-        formView.style.display = 'none';
-        successView.style.display = 'block';
-      }, 1000);
-    });
-
-    document.querySelectorAll('#raffle-form input, #raffle-form select, #raffle-form textarea').forEach(function(el) {
-      el.addEventListener('focus', function() { el.style.borderColor = 'rgba(23,107,255,0.5)'; });
-    });
-
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) { if (entry.isIntersecting) entry.target.style.animationPlayState = 'running'; });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.animate').forEach(function(el) { el.style.animationPlayState = 'paused'; observer.observe(el); });
-  </script>
 
 </body>
 </html>
