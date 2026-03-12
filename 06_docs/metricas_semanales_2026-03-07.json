@@ -1,0 +1,164 @@
+{
+  "client": "Diego Páramo",
+  "extraction_date": "2026-03-07",
+  "extraction_timestamp": "2026-03-07T13:37:32.475724",
+  "meta_ads": {
+    "7d": {
+      "total_spend_usd": 37.47,
+      "total_impressions": 12064,
+      "total_reach": 10832,
+      "total_clicks": 520,
+      "total_leads": 0,
+      "total_purchases": 0,
+      "avg_cpl_usd": 0,
+      "avg_ctr_pct": 4.31,
+      "num_active_ads": 2
+    },
+    "30d": {
+      "total_spend_usd": 152.05,
+      "total_impressions": 50784,
+      "total_reach": 32026,
+      "total_clicks": 2177,
+      "total_leads": 0,
+      "total_purchases": 0,
+      "avg_cpl_usd": 0,
+      "avg_ctr_pct": 4.29,
+      "num_active_ads": 2
+    }
+  },
+  "pipeline": {
+    "b2b": {
+      "total": 20,
+      "by_stage": {
+        "PROPUESTA": 3,
+        "SEGUIMIENTO": 4,
+        "AGENDA": 3,
+        "DISCOVERY": 6,
+        "CITA": 4
+      },
+      "total_pipeline_value": 542685.99
+    },
+    "b2c": {
+      "total": 1,
+      "by_stage": {
+        "SEGUIMIENTO": 1
+      },
+      "total_pipeline_value": 2500.0
+    },
+    "lanzamiento": {
+      "total": 0,
+      "by_stage": {},
+      "total_pipeline_value": 0
+    },
+    "sistema_ventas": {
+      "total": 31,
+      "by_stage": {
+        "REGISTRO": 28,
+        "AGENDO CITA": 3
+      },
+      "total_pipeline_value": 0.0
+    },
+    "webinar": {
+      "total": 0,
+      "by_stage": {},
+      "total_pipeline_value": 0
+    }
+  },
+  "kpis": {
+    "total_leads_in_pipeline": 52,
+    "total_active_clients": 0,
+    "lead_to_client_conversion_pct": 0.0,
+    "total_pipeline_value": 545185.99,
+    "total_opportunities": 52,
+    "meta_cpl_7d": 0,
+    "meta_spend_30d": 152.05
+  },
+  "deltas": {
+    "total_leads_in_pipeline": {
+      "previous": 52,
+      "current": 52,
+      "delta_pct": 0.0,
+      "direction": "→"
+    },
+    "meta_spend_30d": {
+      "previous": 152.05,
+      "current": 152.05,
+      "delta_pct": 0.0,
+      "direction": "→"
+    }
+  },
+  "week_1_ago": {
+    "extraction_date": "2026-03-07",
+    "kpis": {
+      "total_leads_in_pipeline": 52,
+      "total_active_clients": 0,
+      "lead_to_client_conversion_pct": 0.0,
+      "total_pipeline_value": 545185.99,
+      "total_opportunities": 52,
+      "meta_cpl_7d": 0,
+      "meta_spend_30d": 152.05
+    },
+    "meta_ads": {
+      "7d": {
+        "total_spend_usd": 37.47,
+        "total_impressions": 12064,
+        "total_reach": 10832,
+        "total_clicks": 520,
+        "total_leads": 0,
+        "total_purchases": 0,
+        "avg_cpl_usd": 0,
+        "avg_ctr_pct": 4.31,
+        "num_active_ads": 2
+      },
+      "30d": {
+        "total_spend_usd": 152.05,
+        "total_impressions": 50784,
+        "total_reach": 32026,
+        "total_clicks": 2177,
+        "total_leads": 0,
+        "total_purchases": 0,
+        "avg_cpl_usd": 0,
+        "avg_ctr_pct": 4.29,
+        "num_active_ads": 2
+      }
+    },
+    "pipeline": {
+      "b2b": {
+        "total": 20,
+        "by_stage": {
+          "PROPUESTA": 3,
+          "SEGUIMIENTO": 4,
+          "AGENDA": 3,
+          "DISCOVERY": 6,
+          "CITA": 4
+        },
+        "total_pipeline_value": 542685.99
+      },
+      "b2c": {
+        "total": 1,
+        "by_stage": {
+          "SEGUIMIENTO": 1
+        },
+        "total_pipeline_value": 2500.0
+      },
+      "lanzamiento": {
+        "total": 0,
+        "by_stage": {},
+        "total_pipeline_value": 0
+      },
+      "sistema_ventas": {
+        "total": 31,
+        "by_stage": {
+          "REGISTRO": 28,
+          "AGENDO CITA": 3
+        },
+        "total_pipeline_value": 0.0
+      },
+      "webinar": {
+        "total": 0,
+        "by_stage": {},
+        "total_pipeline_value": 0
+      }
+    }
+  }
+}

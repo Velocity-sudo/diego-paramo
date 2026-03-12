@@ -1,0 +1,22 @@
+{
+  "b2b": {
+    "total": 0,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "b2c": {
+    "total": 0,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "lanzamiento": {
+    "total": 0,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "sistema_ventas": {
+    "total": 0,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "webinar": {
+    "total": 0,
+    "error": "HTTP Error 403: Forbidden"
+  }
+}
