@@ -143,203 +143,25 @@
       font-weight: 600;
     }
 
-    /* === FORM CARD === */
-    .form-card {
-      background: #0F1420;
-      border: 1px solid rgba(23,107,255,0.12);
-      border-radius: 24px;
-      padding: 40px 36px;
-      margin: 16px 0 40px;
-      box-shadow: 0 8px 60px rgba(0,0,0,0.4), 0 0 30px rgba(23,107,255,0.05);
-    }
-
-    .form-card h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 6px;
-    }
-
-    .form-card .form-subtitle {
-      text-align: center;
-      color: #9BA3B5;
-      font-size: 0.88rem;
-      margin-bottom: 28px;
-    }
-
-    /* === FORM FIELDS === */
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    .form-group.full-width {
-      grid-column: 1 / -1;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #9BA3B5;
-      margin-bottom: 6px;
-      letter-spacing: 0.03em;
-    }
-
-    .form-group label .required {
-      color: #FF4D4D;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
+    /* === GHL FORM EMBED === */
+    .form-embed-wrap {
       width: 100%;
-      padding: 14px 16px;
-      background: #141923;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      color: #E8EAF0;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      min-height: 500px;
+      overflow: hidden;
     }
 
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: #4B5563;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: rgba(23,107,255,0.5);
-      box-shadow: 0 0 0 3px rgba(23,107,255,0.1);
-    }
-
-    .form-group select {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%239BA3B5'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 12px center;
-      background-size: 24px;
-      padding-right: 40px;
-      cursor: pointer;
-    }
-
-    .form-group select option {
-      background: #141923;
-      color: #E8EAF0;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
-
-    /* === SUBMIT BUTTON === */
-    .submit-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
+    .form-embed-wrap iframe {
       width: 100%;
-      padding: 18px 32px;
-      background: linear-gradient(135deg, #FFD700, #FF8C00);
-      color: #0A0E17;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
       border: none;
-      border-radius: 14px;
-      cursor: pointer;
-      box-shadow: 0 0 24px rgba(255,215,0,0.5), 0 0 60px rgba(255,140,0,0.3);
-      transition: all 0.3s ease;
-      margin-top: 8px;
+      min-height: 500px;
     }
 
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 30px rgba(255,215,0,0.7), 0 0 80px rgba(255,140,0,0.4);
-    }
-
-    .submit-btn:active { transform: translateY(0); }
-
-    .submit-btn .arrow {
-      font-size: 1.2rem;
-      transition: transform 0.3s ease;
-    }
-
-    .submit-btn:hover .arrow { transform: translateX(4px); }
-
-    .submit-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none !important;
-    }
-
-    /* === FINE PRINT === */
     .fine-print {
       text-align: center;
       font-size: 0.72rem;
       color: #6B7280;
       margin-top: 16px;
       line-height: 1.5;
-    }
-
-    /* === SUCCESS STATE === */
-    .success-state {
-      display: none;
-      text-align: center;
-      padding: 32px 0;
-    }
-
-    .success-state .check-circle {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(52,211,153,0.15), rgba(52,211,153,0.05));
-      border: 2px solid rgba(52,211,153,0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      margin: 0 auto 20px;
-      animation: scaleIn 0.5s ease;
-    }
-
-    @keyframes scaleIn {
-      from { transform: scale(0); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    .success-state h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-
-    .success-state p {
-      color: #9BA3B5;
-      font-size: 0.95rem;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    .success-state .highlight-text {
-      color: #FFD700;
-      font-weight: 700;
     }
 
     /* === FOOTER === */
@@ -384,12 +206,10 @@
 
     /* === RESPONSIVE === */
     @media (max-width: 600px) {
-      .form-row { grid-template-columns: 1fr; }
       .form-card { padding: 28px 20px; }
       .value-strip { gap: 16px; flex-direction: column; align-items: center; }
       .hero h1 { font-size: 1.5rem; }
       .price-highlight { font-size: 2.2rem; }
-      .submit-btn { font-size: 0.95rem; padding: 16px 24px; }
     }
   </style>
 </head>
@@ -428,70 +248,23 @@
     <!-- FORM CARD -->
     <section class="container">
       <div class="form-card animate delay-4">
+        <h2>Llena tus datos para participar</h2>
+        <p class="form-subtitle" style="text-align:center;color:#9BA3B5;font-size:0.88rem;margin-bottom:28px;">Toma 30 segundos. El ganador se anuncia al final del webinar.</p>
 
-        <!-- FORM -->
-        <div id="form-view">
-          <h2>Llena tus datos para participar</h2>
-          <p class="form-subtitle">Toma 30 segundos. El ganador se anuncia al final del webinar.</p>
-
-          <form id="raffle-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Nombre completo <span class="required">*</span></label>
-                <input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name">
-              </div>
-              <div class="form-group">
-                <label>Email <span class="required">*</span></label>
-                <input type="email" name="email" placeholder="tu@email.com" required autocomplete="email">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label>Celular / WhatsApp <span class="required">*</span></label>
-                <input type="tel" name="celular" placeholder="+57 300 123 4567" required autocomplete="tel">
-              </div>
-              <div class="form-group">
-                <label>Industria de tu empresa <span class="required">*</span></label>
-                <select name="industria" required>
-                  <option value="" disabled selected>Selecciona tu industria</option>
-                  <option value="Tecnología / SaaS">Tecnología / SaaS</option>
-                  <option value="Marketing / Agencia">Marketing / Agencia</option>
-                  <option value="Consultoría / Coaching">Consultoría / Coaching</option>
-                  <option value="E-commerce / Retail">E-commerce / Retail</option>
-                  <option value="Finanzas / Inversiones">Finanzas / Inversiones</option>
-                  <option value="Salud / Bienestar">Salud / Bienestar</option>
-                  <option value="Educación / Formación">Educación / Formación</option>
-                  <option value="Real Estate / Inmobiliaria">Real Estate / Inmobiliaria</option>
-                  <option value="Legal / Contabilidad">Legal / Contabilidad</option>
-                  <option value="Manufactura / Producción">Manufactura / Producción</option>
-                  <option value="Entretenimiento / Media">Entretenimiento / Media</option>
-                  <option value="Otro">Otro</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group full-width">
-              <label>¿Por qué quieres ganarte esta mentoría? <span class="required">*</span></label>
-              <textarea name="motivacion" placeholder="Cuéntame en 2-3 líneas qué harías con esta mentoría y cómo impactaría tu negocio..." required></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn" id="submit-btn">
-              Quiero participar en el sorteo
-              <span class="arrow">→</span>
-            </button>
-
-            <p class="fine-print">🔒 Tus datos están seguros. Solo los usamos para contactarte si ganas.</p>
-          </form>
+        <!-- GHL FORM EMBED — PEGAR AQUÍ EL IFRAME DE GHL -->
+        <div class="form-embed-wrap">
+          <!-- 
+            INSTRUCCIONES:
+            1. En GHL → Sites → Forms → Crear form
+            2. Copiar el código de embed (iframe)
+            3. Pegar aquí reemplazando este comentario
+            Ejemplo:
+            <iframe src="https://link.entendiendo.ai/widget/form/XXXXXXXXX" style="width:100%;border:none;min-height:500px;" scrolling="no"></iframe>
+          -->
+          <p style="text-align:center;color:#6B7280;padding:40px 0;">⚠️ Pegar aquí el iframe del formulario de GHL</p>
         </div>
 
-        <!-- SUCCESS STATE -->
-        <div class="success-state" id="success-view">
-          <div class="check-circle">✓</div>
-          <h2>¡Estás participando! 🎉</h2>
-          <p>Ya estás registrado en el sorteo de la mentoría de <span class="highlight-text">$2,500 USD</span>. El ganador se anuncia al final del webinar. <strong style="color:#fff;">¡No te vayas!</strong></p>
-        </div>
-
+        <p class="fine-print">🔒 Tus datos están seguros. Solo los usamos para contactarte si ganas.</p>
       </div>
     </section>
 
@@ -503,73 +276,6 @@
   </main>
 
   <script>
-    const form = document.getElementById('raffle-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const formView = document.getElementById('form-view');
-    const successView = document.getElementById('success-view');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // Basic validation
-      const fields = form.querySelectorAll('[required]');
-      let valid = true;
-      fields.forEach(f => {
-        if (!f.value.trim()) {
-          f.style.borderColor = 'rgba(255,77,77,0.5)';
-          valid = false;
-        } else {
-          f.style.borderColor = 'rgba(255,255,255,0.08)';
-        }
-      });
-
-      if (!valid) return;
-
-      // Disable button
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Enviando... ⏳';
-
-      // Collect data
-      const data = {
-        nombre: form.nombre.value.trim(),
-        email: form.email.value.trim(),
-        celular: form.celular.value.trim(),
-        industria: form.industria.value,
-        motivacion: form.motivacion.value.trim(),
-        fuente: 'sorteo_mentoria_webinar',
-        fecha: new Date().toISOString()
-      };
-
-      try {
-        // Send to GHL webhook
-        // REEMPLAZAR: con el webhook URL real de GHL
-        const webhookUrl = 'https://services.leadconnectorhq.com/hooks/ouVnywxuvHFXuKyU3GVk/webhook-trigger/60d4e1e0-b4e6-4d1c-81b2-49cf92d282c2';
-
-        await fetch(webhookUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-          mode: 'no-cors'
-        });
-
-        // Show success
-        formView.style.display = 'none';
-        successView.style.display = 'block';
-
-      } catch (err) {
-        // Even with no-cors, show success (data was sent)
-        formView.style.display = 'none';
-        successView.style.display = 'block';
-      }
-    });
-
-    // Live validation — remove red border on focus
-    document.querySelectorAll('#raffle-form input, #raffle-form select, #raffle-form textarea').forEach(el => {
-      el.addEventListener('focus', () => {
-        el.style.borderColor = 'rgba(23,107,255,0.5)';
-      });
-    });
-
     // Intersection Observer for animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -587,3 +293,4 @@
 
 </body>
 </html>
+
