@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gana una Mentoría de $2,500 USD — Diego Páramo</title>
-  <meta name="description" content="Participa en el sorteo de una mentoría personalizada de $2,500 USD con Diego Páramo. Llena el formulario y podrías ser el ganador.">
+  <meta name="description" content="Participa en el sorteo de una mentoría personalizada de $2,500 USD con Diego Páramo.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,8 +74,7 @@
     .value-item .vi-icon {
       width: 36px; height: 36px; border-radius: 10px;
       background: rgba(23,107,255,0.12); border: 1px solid rgba(23,107,255,0.2);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;
     }
     .value-item strong { color: #fff; font-weight: 600; }
 
@@ -88,13 +87,9 @@
     }
     .form-card h2 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.3rem; font-weight: 700; color: #fff;
-      text-align: center; margin-bottom: 6px;
+      font-size: 1.3rem; font-weight: 700; color: #fff; text-align: center; margin-bottom: 6px;
     }
-    .form-card .form-subtitle {
-      text-align: center; color: #9BA3B5;
-      font-size: 0.88rem; margin-bottom: 28px;
-    }
+    .form-card .form-subtitle { text-align: center; color: #9BA3B5; font-size: 0.88rem; margin-bottom: 28px; }
 
     /* === FORM FIELDS === */
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -115,15 +110,11 @@
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 12px; color: #E8EAF0;
       font-family: 'Inter', sans-serif; font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      outline: none; transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: #4B5563; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #4B5563; }
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
       border-color: rgba(23,107,255,0.5);
       box-shadow: 0 0 0 3px rgba(23,107,255,0.1);
     }
@@ -136,7 +127,7 @@
     .form-group select option { background: #141923; color: #E8EAF0; }
     .form-group textarea { resize: vertical; min-height: 90px; }
 
-    /* === SUBMIT BUTTON === */
+    /* === SUBMIT === */
     .submit-btn {
       display: flex; align-items: center; justify-content: center; gap: 10px;
       width: 100%; padding: 18px 32px;
@@ -148,10 +139,7 @@
       box-shadow: 0 0 24px rgba(255,215,0,0.5), 0 0 60px rgba(255,140,0,0.3);
       transition: all 0.3s ease; margin-top: 8px;
     }
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 30px rgba(255,215,0,0.7), 0 0 80px rgba(255,140,0,0.4);
-    }
+    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(255,215,0,0.7), 0 0 80px rgba(255,140,0,0.4); }
     .submit-btn:active { transform: translateY(0); }
     .submit-btn .arrow { font-size: 1.2rem; transition: transform 0.3s ease; }
     .submit-btn:hover .arrow { transform: translateX(4px); }
@@ -159,24 +147,17 @@
 
     .fine-print { text-align: center; font-size: 0.72rem; color: #6B7280; margin-top: 16px; line-height: 1.5; }
 
-    /* === SUCCESS STATE === */
+    /* === SUCCESS === */
     .success-state { display: none; text-align: center; padding: 32px 0; }
     .success-state .check-circle {
       width: 80px; height: 80px; border-radius: 50%;
       background: linear-gradient(135deg, rgba(52,211,153,0.15), rgba(52,211,153,0.05));
       border: 2px solid rgba(52,211,153,0.4);
       display: flex; align-items: center; justify-content: center;
-      font-size: 36px; margin: 0 auto 20px;
-      animation: scaleIn 0.5s ease;
+      font-size: 36px; margin: 0 auto 20px; animation: scaleIn 0.5s ease;
     }
-    @keyframes scaleIn {
-      from { transform: scale(0); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-    .success-state h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 12px;
-    }
+    @keyframes scaleIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .success-state h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
     .success-state p { color: #9BA3B5; font-size: 0.95rem; max-width: 400px; margin: 0 auto; }
     .success-state .highlight-text { color: #FFD700; font-weight: 700; }
 
@@ -204,6 +185,9 @@
 </head>
 <body>
 
+  <!-- Hidden iframe for form submission (no page redirect) -->
+  <iframe name="ghl-webhook" style="display:none !important; width:0; height:0; border:0;"></iframe>
+
   <div class="bg-glow"></div>
 
   <main>
@@ -227,7 +211,7 @@
       <div class="form-card animate delay-4">
         <div id="form-view">
           <h2>Llena tus datos para participar</h2>
-          <p class="form-subtitle">Toma 30 segundos. El ganador se anuncia al final del webinar.</p>
+          <p class="form-subtitle">Toma 30 segundos. El ganador se anuncia en los próximos días.</p>
 
           <form id="raffle-form" novalidate>
             <div class="form-row">
@@ -298,7 +282,6 @@
               Quiero participar en el sorteo
               <span class="arrow">→</span>
             </button>
-
             <p class="fine-print">🔒 Tus datos están seguros. Solo los usamos para contactarte si ganas.</p>
           </form>
         </div>
@@ -306,7 +289,7 @@
         <div class="success-state" id="success-view">
           <div class="check-circle">✓</div>
           <h2>¡Estás participando! 🎉</h2>
-          <p>Ya estás registrado en el sorteo de la mentoría de <span class="highlight-text">$2,500 USD</span>. El ganador se anuncia al final del webinar. <strong style="color:#fff;">¡No te vayas!</strong></p>
+          <p>Ya estás registrado en el sorteo de la mentoría de <span class="highlight-text">$2,500 USD</span>. El ganador se anuncia en los próximos días. <strong style="color:#fff;">¡No te vayas!</strong></p>
         </div>
       </div>
     </section>
@@ -318,17 +301,17 @@
   </main>
 
   <script>
-    const form = document.getElementById('raffle-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const formView = document.getElementById('form-view');
-    const successView = document.getElementById('success-view');
+    var form = document.getElementById('raffle-form');
+    var submitBtn = document.getElementById('submit-btn');
+    var formView = document.getElementById('form-view');
+    var successView = document.getElementById('success-view');
 
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const fields = form.querySelectorAll('[required]');
-      let valid = true;
-      fields.forEach(f => {
+      var fields = form.querySelectorAll('[required]');
+      var valid = true;
+      fields.forEach(function(f) {
         if (!f.value.trim()) {
           f.style.borderColor = 'rgba(255,77,77,0.5)';
           valid = false;
@@ -341,42 +324,56 @@
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Enviando... ⏳';
 
-      const params = new URLSearchParams();
-      params.append('first_name', form.first_name.value.trim());
-      params.append('last_name', form.last_name.value.trim());
-      params.append('name', form.first_name.value.trim() + ' ' + form.last_name.value.trim());
-      params.append('phone', form.phone.value.trim());
-      params.append('email', form.email.value.trim());
-      params.append('company_name', form.company_name.value.trim());
-      params.append('team_size', form.team_size.value);
-      params.append('industry', form.industry.value);
-      params.append('motivation', form.motivation.value.trim());
-      params.append('source', 'sorteo_mentoria_webinar');
-      params.append('tags', '[Sorteo] Mentoría Webinar');
-      params.append('date', new Date().toISOString());
+      // Create a hidden form that submits natively to the webhook via iframe
+      // This bypasses ALL CORS restrictions — 100% reliable
+      var hiddenForm = document.createElement('form');
+      hiddenForm.method = 'POST';
+      hiddenForm.action = 'https://services.leadconnectorhq.com/hooks/ouVnywxuvHFXuKyU3GVk/webhook-trigger/e328eb14-7837-454b-88bb-c7ad3126d1d8';
+      hiddenForm.target = 'ghl-webhook';
+      hiddenForm.style.display = 'none';
 
-      try {
-        await fetch('https://services.leadconnectorhq.com/hooks/ouVnywxuvHFXuKyU3GVk/webhook-trigger/e328eb14-7837-454b-88bb-c7ad3126d1d8', {
-          method: 'POST',
-          body: params,
-          mode: 'no-cors'
-        });
-        formView.style.display = 'none';
-        successView.style.display = 'block';
-      } catch (err) {
-        formView.style.display = 'none';
-        successView.style.display = 'block';
+      var fieldsData = {
+        first_name: form.first_name.value.trim(),
+        last_name: form.last_name.value.trim(),
+        name: form.first_name.value.trim() + ' ' + form.last_name.value.trim(),
+        phone: form.phone.value.trim(),
+        email: form.email.value.trim(),
+        company_name: form.company_name.value.trim(),
+        team_size: form.team_size.value,
+        industry: form.industry.value,
+        motivation: form.motivation.value.trim(),
+        source: 'sorteo_mentoria_webinar',
+        tags: '[Sorteo] Mentoría Webinar',
+        date: new Date().toISOString()
+      };
+
+      for (var key in fieldsData) {
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = fieldsData[key];
+        hiddenForm.appendChild(input);
       }
+
+      document.body.appendChild(hiddenForm);
+      hiddenForm.submit();
+
+      // Show success after brief delay
+      setTimeout(function() {
+        hiddenForm.remove();
+        formView.style.display = 'none';
+        successView.style.display = 'block';
+      }, 1000);
     });
 
-    document.querySelectorAll('#raffle-form input, #raffle-form select, #raffle-form textarea').forEach(el => {
-      el.addEventListener('focus', () => { el.style.borderColor = 'rgba(23,107,255,0.5)'; });
+    document.querySelectorAll('#raffle-form input, #raffle-form select, #raffle-form textarea').forEach(function(el) {
+      el.addEventListener('focus', function() { el.style.borderColor = 'rgba(23,107,255,0.5)'; });
     });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.style.animationPlayState = 'running'; });
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) { if (entry.isIntersecting) entry.target.style.animationPlayState = 'running'; });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.animate').forEach(el => { el.style.animationPlayState = 'paused'; observer.observe(el); });
+    document.querySelectorAll('.animate').forEach(function(el) { el.style.animationPlayState = 'paused'; observer.observe(el); });
   </script>
 
 </body>
