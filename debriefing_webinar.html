@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debriefing Webinar — AI Para Todos | Diego Páramo</title>
+  <meta name="description" content="Resumen ejecutivo del webinar AI Para Todos — Métricas, resultados y oportunidades.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #07090F;
+      --bg-card: #0D1117;
+      --bg-card-alt: #111820;
+      --border: rgba(255,255,255,0.06);
+      --border-accent: rgba(99,179,237,0.15);
+      --white: #FFFFFF;
+      --muted: #8B95A5;
+      --accent-blue: #63B3ED;
+      --accent-purple: #9F7AEA;
+      --accent-green: #48BB78;
+      --accent-gold: #F6C857;
+      --accent-red: #FC8181;
+      --accent-cyan: #4FD1C5;
+      --gradient-hero: linear-gradient(135deg, #63B3ED 0%, #9F7AEA 50%, #F6C857 100%);
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-display: 'Outfit', 'Inter', sans-serif;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      padding: 32px 0 16px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .header-logo {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: var(--gradient-hero);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .header-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 4px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 100px;
+      background: rgba(99,179,237,0.1);
+      border: 1px solid rgba(99,179,237,0.2);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero h1 span {
+      background: var(--gradient-hero);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-date {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .hero-date strong {
+      color: var(--white);
+    }
+
+    /* ─── KPI GRID ─── */
+    .kpi-section {
+      padding: 20px 0 50px;
+    }
+    .kpi-section-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .kpi-section-title .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .kpi-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-accent);
+    }
+    .kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .kpi-card.blue::before { background: var(--accent-blue); }
+    .kpi-card.purple::before { background: var(--accent-purple); }
+    .kpi-card.green::before { background: var(--accent-green); }
+    .kpi-card.gold::before { background: var(--accent-gold); }
+    .kpi-card.red::before { background: var(--accent-red); }
+    .kpi-card.cyan::before { background: var(--accent-cyan); }
+
+    .kpi-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .kpi-value {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .kpi-value.blue { color: var(--accent-blue); }
+    .kpi-value.purple { color: var(--accent-purple); }
+    .kpi-value.green { color: var(--accent-green); }
+    .kpi-value.gold { color: var(--accent-gold); }
+    .kpi-value.red { color: var(--accent-red); }
+    .kpi-value.cyan { color: var(--accent-cyan); }
+
+    .kpi-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .kpi-note strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* ─── FUNNEL BREAKDOWN ─── */
+    .funnel-section {
+      padding: 40px 0 50px;
+    }
+    .funnel-bar-wrap {
+      margin-bottom: 20px;
+    }
+    .funnel-bar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    .funnel-bar-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .funnel-bar-value {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .funnel-bar-track {
+      width: 100%;
+      height: 12px;
+      background: var(--bg-card-alt);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .funnel-bar-fill {
+      height: 100%;
+      border-radius: 99px;
+      transition: width 1.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .funnel-bar-fill.blue { background: linear-gradient(90deg, var(--accent-blue), #90CDF4); }
+    .funnel-bar-fill.purple { background: linear-gradient(90deg, var(--accent-purple), #C4B5FD); }
+    .funnel-bar-fill.green { background: linear-gradient(90deg, var(--accent-green), #9AE6B4); }
+    .funnel-bar-fill.gold { background: linear-gradient(90deg, var(--accent-gold), #FEFCBF); }
+    .funnel-bar-fill.cyan { background: linear-gradient(90deg, var(--accent-cyan), #81E6D9); }
+
+    .funnel-pct {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ─── CONVERSION TABLE ─── */
+    .conversion-section {
+      padding: 40px 0;
+    }
+    .conv-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .conv-table th,
+    .conv-table td {
+      padding: 14px 20px;
+      text-align: left;
+    }
+    .conv-table th {
+      background: var(--bg-card-alt);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+    }
+    .conv-table td {
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+    .conv-table tr:hover td {
+      background: rgba(99,179,237,0.03);
+    }
+    .conv-rate {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    /* ─── INSIGHTS ─── */
+    .insights-section {
+      padding: 40px 0 60px;
+    }
+    .insight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .insight-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+    }
+    .insight-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .insight-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .insight-card p strong {
+      color: var(--white);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+    }
+    footer p {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    /* ─── ANIMATION ─── */
+    .animate {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+    .delay-6 { transition-delay: 0.6s; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 600px) {
+      .kpi-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .kpi-card { padding: 20px 16px; }
+      .kpi-value { font-size: 2rem; }
+      .hero { padding: 40px 0 24px; }
+      .conv-table { font-size: 0.8rem; }
+      .conv-table th, .conv-table td { padding: 10px 12px; }
+      .insight-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="header-logo">AI Para Todos</div>
+      <div class="header-sub">Diego Páramo</div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge animate">📊 Debriefing Ejecutivo</div>
+      <h1 class="animate delay-1">Resultados del<br><span>Webinar en Vivo</span></h1>
+      <p class="hero-date animate delay-2"><strong>Marzo 2026</strong> · Datos extraídos de GoHighLevel en tiempo real</p>
+    </div>
+  </section>
+
+  <!-- KPI SECTION 1: AUDIENCIA -->
+  <section class="kpi-section">
+    <div class="container">
+      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-blue)"></span> Audiencia</h2>
+      <div class="kpi-grid">
+        <div class="kpi-card blue animate delay-1">
+          <div class="kpi-label">Registros Totales</div>
+          <div class="kpi-value blue">1,148</div>
+          <div class="kpi-note">Leads en el pipeline WEBINAR</div>
+        </div>
+        <div class="kpi-card purple animate delay-2">
+          <div class="kpi-label">Asistentes en Vivo</div>
+          <div class="kpi-value purple">~500</div>
+          <div class="kpi-note">Pico máximo: <strong>~370 simultáneos</strong></div>
+        </div>
+        <div class="kpi-card cyan animate delay-3">
+          <div class="kpi-label">Tasa de Asistencia</div>
+          <div class="kpi-value cyan">43%</div>
+          <div class="kpi-note">500 / 1,148 registros</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI SECTION 2: VENTAS -->
+  <section class="kpi-section">
+    <div class="container">
+      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-green)"></span> Ventas — Pack Maestro ($20 USD)</h2>
+      <div class="kpi-grid">
+        <div class="kpi-card green animate delay-1">
+          <div class="kpi-label">Ventas Exitosas</div>
+          <div class="kpi-value green">26</div>
+          <div class="kpi-note">Tag: <strong>pack-maestro</strong></div>
+        </div>
+        <div class="kpi-card gold animate delay-2">
+          <div class="kpi-label">Revenue Total</div>
+          <div class="kpi-value gold">$520</div>
+          <div class="kpi-note">26 × $20 USD</div>
+        </div>
+        <div class="kpi-card red animate delay-3">
+          <div class="kpi-label">Pagos Fallidos</div>
+          <div class="kpi-value red">9</div>
+          <div class="kpi-note">35 intentos totales · <strong>74% éxito</strong></div>
+        </div>
+        <div class="kpi-card purple animate delay-4">
+          <div class="kpi-label">Conversión a Venta</div>
+          <div class="kpi-value purple">5.2%</div>
+          <div class="kpi-note">26 ventas / 500 asistentes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI SECTION 3: ENGAGEMENT -->
+  <section class="kpi-section">
+    <div class="container">
+      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-gold)"></span> Engagement Post-Webinar</h2>
+      <div class="kpi-grid">
+        <div class="kpi-card gold animate delay-1">
+          <div class="kpi-label">Sorteo Mentoría</div>
+          <div class="kpi-value gold">86</div>
+          <div class="kpi-note">Participantes registrados</div>
+        </div>
+        <div class="kpi-card blue animate delay-2">
+          <div class="kpi-label">Pipeline: Cerrado</div>
+          <div class="kpi-value blue">21</div>
+          <div class="kpi-note">Oportunidades en "Cerrado - Oferta"</div>
+        </div>
+        <div class="kpi-card green animate delay-3">
+          <div class="kpi-label">Pipeline: Lead Activo</div>
+          <div class="kpi-value green">1,148</div>
+          <div class="kpi-note">Leads registrados en pipeline</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNNEL VISUALIZATION -->
+  <section class="funnel-section">
+    <div class="container">
+      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-purple)"></span> Embudo de Conversión</h2>
+
+      <div class="funnel-bar-wrap animate delay-1">
+        <div class="funnel-bar-header">
+          <span class="funnel-bar-label">📋 Registros</span>
+          <span class="funnel-bar-value" style="color:var(--accent-blue)">1,148</span>
+        </div>
+        <div class="funnel-bar-track">
+          <div class="funnel-bar-fill blue" style="width:100%"></div>
+        </div>
+      </div>
+
+      <div class="funnel-bar-wrap animate delay-2">
+        <div class="funnel-bar-header">
+          <span class="funnel-bar-label">🎥 Asistentes en Vivo</span>
+          <span class="funnel-bar-value" style="color:var(--accent-purple)">~500</span>
+        </div>
+        <div class="funnel-bar-track">
+          <div class="funnel-bar-fill purple" style="width:43.5%"></div>
+        </div>
+        <div class="funnel-pct">43% de los registros</div>
+      </div>
+
+      <div class="funnel-bar-wrap animate delay-3">
+        <div class="funnel-bar-header">
+          <span class="funnel-bar-label">🎰 Participaron en Sorteo</span>
+          <span class="funnel-bar-value" style="color:var(--accent-cyan)">86</span>
+        </div>
+        <div class="funnel-bar-track">
+          <div class="funnel-bar-fill cyan" style="width:7.5%"></div>
+        </div>
+        <div class="funnel-pct">17.2% de asistentes</div>
+      </div>
+
+      <div class="funnel-bar-wrap animate delay-4">
+        <div class="funnel-bar-header">
+          <span class="funnel-bar-label">💳 Intentaron Pagar</span>
+          <span class="funnel-bar-value" style="color:var(--accent-gold)">35</span>
+        </div>
+        <div class="funnel-bar-track">
+          <div class="funnel-bar-fill gold" style="width:3%"></div>
+        </div>
+        <div class="funnel-pct">7% de asistentes</div>
+      </div>
+
+      <div class="funnel-bar-wrap animate delay-5">
+        <div class="funnel-bar-header">
+          <span class="funnel-bar-label">✅ Compraron Pack Maestro</span>
+          <span class="funnel-bar-value" style="color:var(--accent-green)">26</span>
+        </div>
+        <div class="funnel-bar-track">
+          <div class="funnel-bar-fill green" style="width:2.26%"></div>
+        </div>
+        <div class="funnel-pct">5.2% de asistentes · 2.26% de registros totales</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONVERSION TABLE -->
+  <section class="conversion-section">
+    <div class="container">
+      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-cyan)"></span> Tasas de Conversión</h2>
+      <table class="conv-table animate delay-1">
+        <thead>
+          <tr>
+            <th>Etapa</th>
+            <th>De → A</th>
+            <th>Tasa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Registro → Asistencia</td>
+            <td>1,148 → ~500</td>
+            <td><span class="conv-rate" style="color:var(--accent-blue)">43.6%</span></td>
+          </tr>
+          <tr>
+            <td>Asistencia → Intento de Pago</td>
+            <td>~500 → 35</td>
+            <td><span class="conv-rate" style="color:var(--accent-purple)">7.0%</span></td>
+          </tr>
+          <tr>
+            <td>Intento de Pago → Pago Exitoso</td>
+            <td>35 → 26</td>
+            <td><span class="conv-rate" style="color:var(--accent-green)">74.3%</span></td>
+          </tr>
+          <tr>
+            <td>Asistencia → Sorteo</td>
+            <td>~500 → 86</td>
+            <td><span class="conv-rate" style="color:var(--accent-gold)">17.2%</span></td>
+          </tr>
+          <tr>
+            <td>Registro → Compra (funnel completo)</td>
+            <td>1,148 → 26</td>
+            <td><span class="conv-rate" style="color:var(--accent-cyan)">2.26%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="insights-section">
+    <div class="container">
+      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-green)"></span> Insights Clave</h2>
+      <div class="insight-grid">
+        <div class="insight-card animate delay-1">
+          <h3>🎯 Asistencia Sólida</h3>
+          <p>El <strong>43%</strong> de asistencia está por encima del benchmark de webinars (25-40%). Indica un buen pre-calentamiento y tema atractivo de IA para negocios.</p>
+        </div>
+        <div class="insight-card animate delay-2">
+          <h3>💰 Revenue Inmediato</h3>
+          <p><strong>$520 USD en revenue directo</strong> con un producto de $20. El Pack Maestro funciona como un <strong>self-liquidating offer</strong> que cubre parcialmente el costo de adquisición.</p>
+        </div>
+        <div class="insight-card animate delay-3">
+          <h3>🔥 86 Leads Calientes</h3>
+          <p>Los <strong>86 participantes del sorteo</strong> son leads de alta intención que interactuaron post-webinar. Son candidatos ideales para la <strong>oferta de mentoría high-ticket</strong>.</p>
+        </div>
+        <div class="insight-card animate delay-4">
+          <h3>⚠️ 9 Pagos Fallidos</h3>
+          <p>El <strong>25.7% de los intentos de pago fallaron</strong>. Revisar: tarjetas internacionales, pasarela de pago, y considerar agregar PayPal como opción alternativa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Debriefing generado el <strong>12 de Marzo, 2026</strong> · Datos de GoHighLevel API</p>
+      <p style="margin-top:6px;">Preparado por <a href="https://luchobranding.com" target="_blank">Sales Velocity System</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+    // Animate KPI numbers on visibility
+    function animateValue(el, start, end, duration) {
+      const range = end - start;
+      const startTime = performance.now();
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(start + range * eased);
+        el.textContent = current.toLocaleString('en-US');
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    const kpiObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.dataset.animated = 'true';
+          const text = entry.target.textContent.replace(/[^0-9.]/g, '');
+          const val = parseFloat(text);
+          if (!isNaN(val) && val > 1 && !entry.target.textContent.includes('$') && !entry.target.textContent.includes('%') && !entry.target.textContent.includes('~')) {
+            animateValue(entry.target, 0, val, 1200);
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.kpi-value').forEach(el => kpiObserver.observe(el));
+  </script>
+</body>
+</html>
