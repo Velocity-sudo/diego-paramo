@@ -341,26 +341,24 @@
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Enviando... ⏳';
 
-      const data = {
-        first_name: form.first_name.value.trim(),
-        last_name: form.last_name.value.trim(),
-        name: form.first_name.value.trim() + ' ' + form.last_name.value.trim(),
-        phone: form.phone.value.trim(),
-        email: form.email.value.trim(),
-        company_name: form.company_name.value.trim(),
-        team_size: form.team_size.value,
-        industry: form.industry.value,
-        motivation: form.motivation.value.trim(),
-        source: 'sorteo_mentoria_webinar',
-        tags: ['[Sorteo] Mentoría Webinar'],
-        date: new Date().toISOString()
-      };
+      const params = new URLSearchParams();
+      params.append('first_name', form.first_name.value.trim());
+      params.append('last_name', form.last_name.value.trim());
+      params.append('name', form.first_name.value.trim() + ' ' + form.last_name.value.trim());
+      params.append('phone', form.phone.value.trim());
+      params.append('email', form.email.value.trim());
+      params.append('company_name', form.company_name.value.trim());
+      params.append('team_size', form.team_size.value);
+      params.append('industry', form.industry.value);
+      params.append('motivation', form.motivation.value.trim());
+      params.append('source', 'sorteo_mentoria_webinar');
+      params.append('tags', '[Sorteo] Mentoría Webinar');
+      params.append('date', new Date().toISOString());
 
       try {
         await fetch('https://services.leadconnectorhq.com/hooks/ouVnywxuvHFXuKyU3GVk/webhook-trigger/e328eb14-7837-454b-88bb-c7ad3126d1d8', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
+          body: params,
           mode: 'no-cors'
         });
         formView.style.display = 'none';
