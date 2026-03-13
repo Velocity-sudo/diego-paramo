@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Debriefing Webinar — AI Para Todos | Diego Páramo</title>
-  <meta name="description" content="Resumen ejecutivo del webinar AI Para Todos — Métricas, resultados y oportunidades.">
+  <meta name="description" content="Resumen ejecutivo del webinar AI Para Todos — Métricas y resultados.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -20,7 +20,6 @@
       --accent-purple: #9F7AEA;
       --accent-green: #48BB78;
       --accent-gold: #F6C857;
-      --accent-red: #FC8181;
       --accent-cyan: #4FD1C5;
       --accent-orange: #ED8936;
       --gradient-hero: linear-gradient(135deg, #63B3ED 0%, #9F7AEA 50%, #F6C857 100%);
@@ -74,7 +73,7 @@
     /* ─── HERO ─── */
     .hero {
       text-align: center;
-      padding: 60px 0 40px;
+      padding: 60px 0 50px;
     }
     .hero-badge {
       display: inline-block;
@@ -108,33 +107,6 @@
     }
     .hero-date strong {
       color: var(--white);
-    }
-
-    /* ─── LIVE BADGE ─── */
-    .live-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 14px;
-      border-radius: 100px;
-      background: rgba(72,187,120,0.1);
-      border: 1px solid rgba(72,187,120,0.25);
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--accent-green);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-top: 12px;
-    }
-    .live-badge .pulse {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--accent-green);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.7); }
     }
 
     /* ─── KPI GRID ─── */
@@ -184,7 +156,6 @@
     .kpi-card.purple::before { background: var(--accent-purple); }
     .kpi-card.green::before { background: var(--accent-green); }
     .kpi-card.gold::before { background: var(--accent-gold); }
-    .kpi-card.red::before { background: var(--accent-red); }
     .kpi-card.cyan::before { background: var(--accent-cyan); }
     .kpi-card.orange::before { background: var(--accent-orange); }
 
@@ -207,7 +178,6 @@
     .kpi-value.purple { color: var(--accent-purple); }
     .kpi-value.green { color: var(--accent-green); }
     .kpi-value.gold { color: var(--accent-gold); }
-    .kpi-value.red { color: var(--accent-red); }
     .kpi-value.cyan { color: var(--accent-cyan); }
     .kpi-value.orange { color: var(--accent-orange); }
 
@@ -218,27 +188,6 @@
     .kpi-note strong {
       color: var(--white);
       font-weight: 600;
-    }
-
-    /* ─── DELTA BADGES ─── */
-    .delta {
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-      padding: 2px 8px;
-      border-radius: 100px;
-      font-size: 0.68rem;
-      font-weight: 600;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-    .delta.up {
-      background: rgba(72,187,120,0.12);
-      color: var(--accent-green);
-    }
-    .delta.down {
-      background: rgba(252,129,129,0.12);
-      color: var(--accent-red);
     }
 
     /* ─── FUNNEL BREAKDOWN ─── */
@@ -280,7 +229,6 @@
     .funnel-bar-fill.green { background: linear-gradient(90deg, var(--accent-green), #9AE6B4); }
     .funnel-bar-fill.gold { background: linear-gradient(90deg, var(--accent-gold), #FEFCBF); }
     .funnel-bar-fill.cyan { background: linear-gradient(90deg, var(--accent-cyan), #81E6D9); }
-    .funnel-bar-fill.orange { background: linear-gradient(90deg, var(--accent-orange), #FBD38D); }
 
     .funnel-pct {
       font-size: 0.75rem;
@@ -325,57 +273,6 @@
       font-family: var(--font-display);
       font-weight: 700;
       font-size: 1rem;
-    }
-
-    /* ─── GROWTH COMPARISON ─── */
-    .growth-section {
-      padding: 40px 0 50px;
-    }
-    .growth-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-    }
-    .growth-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-    }
-    .growth-card .metric-name {
-      font-size: 0.72rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-    .growth-card .values {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 8px;
-    }
-    .growth-card .old-val {
-      font-size: 1.1rem;
-      color: var(--muted);
-      text-decoration: line-through;
-      font-weight: 500;
-    }
-    .growth-card .arrow {
-      color: var(--accent-green);
-      font-size: 1rem;
-    }
-    .growth-card .new-val {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--accent-green);
-    }
-    .growth-card .change {
-      font-size: 0.78rem;
-      color: var(--accent-green);
-      font-weight: 600;
     }
 
     /* ─── INSIGHTS ─── */
@@ -441,7 +338,6 @@
     .delay-3 { transition-delay: 0.3s; }
     .delay-4 { transition-delay: 0.4s; }
     .delay-5 { transition-delay: 0.5s; }
-    .delay-6 { transition-delay: 0.6s; }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 600px) {
@@ -452,8 +348,6 @@
       .conv-table { font-size: 0.8rem; }
       .conv-table th, .conv-table td { padding: 10px 12px; }
       .insight-grid { grid-template-columns: 1fr; }
-      .growth-grid { grid-template-columns: 1fr 1fr; }
-      .growth-card .new-val { font-size: 1.4rem; }
     }
   </style>
 </head>
@@ -470,137 +364,80 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container">
-      <div class="hero-badge animate">📊 Debriefing Ejecutivo — Actualizado</div>
+      <div class="hero-badge animate">📊 Debriefing Ejecutivo</div>
       <h1 class="animate delay-1">Resultados del<br><span>Webinar en Vivo</span></h1>
-      <p class="hero-date animate delay-2"><strong>Marzo 2026</strong> · Datos extraídos de GoHighLevel API</p>
-      <div class="live-badge animate delay-3"><span class="pulse"></span> Datos en tiempo real — 12 Marzo 2026</div>
+      <p class="hero-date animate delay-2"><strong>Marzo 2026</strong> · AI Para Todos — Diego Páramo</p>
     </div>
   </section>
 
-  <!-- GROWTH COMPARISON -->
-  <section class="growth-section">
-    <div class="container">
-      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-green)"></span> Crecimiento Post-Webinar</h2>
-      <p style="font-size:0.85rem;color:var(--muted);margin-bottom:24px;margin-top:-16px" class="animate">Comparación desde el día del webinar vs. datos actuales de GHL</p>
-      <div class="growth-grid">
-        <div class="growth-card animate delay-1">
-          <div class="metric-name">Registros Totales</div>
-          <div class="values">
-            <span class="old-val">1,148</span>
-            <span class="arrow">→</span>
-            <span class="new-val">1,290</span>
-          </div>
-          <div class="change">+142 nuevos registros (+12.4%)</div>
-        </div>
-        <div class="growth-card animate delay-2">
-          <div class="metric-name">Ventas Pack Maestro</div>
-          <div class="values">
-            <span class="old-val">26</span>
-            <span class="arrow">→</span>
-            <span class="new-val">30</span>
-          </div>
-          <div class="change">+4 ventas adicionales (+15.4%)</div>
-        </div>
-        <div class="growth-card animate delay-3">
-          <div class="metric-name">Sorteo Mentoría</div>
-          <div class="values">
-            <span class="old-val">86</span>
-            <span class="arrow">→</span>
-            <span class="new-val">123</span>
-          </div>
-          <div class="change">+37 participantes (+43%)</div>
-        </div>
-        <div class="growth-card animate delay-4">
-          <div class="metric-name">Revenue Total</div>
-          <div class="values">
-            <span class="old-val">$520</span>
-            <span class="arrow">→</span>
-            <span class="new-val">$600</span>
-          </div>
-          <div class="change">+$80 USD adicionales (+15.4%)</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- KPI SECTION 1: AUDIENCIA -->
+  <!-- KPIs PRINCIPALES -->
   <section class="kpi-section">
     <div class="container">
-      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-blue)"></span> Audiencia</h2>
+      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-blue)"></span> Resultados del Webinar</h2>
       <div class="kpi-grid">
         <div class="kpi-card blue animate delay-1">
           <div class="kpi-label">Registros Totales</div>
           <div class="kpi-value blue">1,290</div>
-          <div class="kpi-note">Pipeline WEBINAR · GHL <span class="delta up">↑ +142</span></div>
+          <div class="kpi-note">Personas registradas al webinar</div>
         </div>
         <div class="kpi-card purple animate delay-2">
           <div class="kpi-label">Asistentes en Vivo</div>
           <div class="kpi-value purple">~500</div>
-          <div class="kpi-note">Pico máximo: <strong>~370 simultáneos</strong></div>
+          <div class="kpi-note">Pico máximo: <strong>371 simultáneos</strong></div>
         </div>
         <div class="kpi-card cyan animate delay-3">
           <div class="kpi-label">Tasa de Asistencia</div>
           <div class="kpi-value cyan">39%</div>
-          <div class="kpi-note">~500 / 1,290 registros</div>
+          <div class="kpi-note">~500 asistentes de 1,290 registros</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KPI SECTION 2: VENTAS -->
+  <!-- SORTEO MENTORÍA -->
+  <section class="kpi-section">
+    <div class="container">
+      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-gold)"></span> Sorteo Mentoría</h2>
+      <div class="kpi-grid">
+        <div class="kpi-card gold animate delay-1">
+          <div class="kpi-label">Participantes del Sorteo</div>
+          <div class="kpi-value gold">123</div>
+          <div class="kpi-note">Se registraron para participar por la mentoría</div>
+        </div>
+        <div class="kpi-card orange animate delay-2">
+          <div class="kpi-label">% de Asistentes</div>
+          <div class="kpi-value orange">24.6%</div>
+          <div class="kpi-note">123 de ~500 asistentes participaron</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENTAS -->
   <section class="kpi-section">
     <div class="container">
       <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-green)"></span> Ventas — Pack Maestro ($20 USD)</h2>
       <div class="kpi-grid">
         <div class="kpi-card green animate delay-1">
-          <div class="kpi-label">Ventas Exitosas</div>
+          <div class="kpi-label">Ventas Cerradas</div>
           <div class="kpi-value green">30</div>
-          <div class="kpi-note">Stage: <strong>Pack Maestro</strong> <span class="delta up">↑ +4</span></div>
+          <div class="kpi-note">Compraron el Pack Maestro</div>
         </div>
         <div class="kpi-card gold animate delay-2">
           <div class="kpi-label">Revenue Total</div>
           <div class="kpi-value gold">$600</div>
-          <div class="kpi-note">30 × $20 USD</div>
+          <div class="kpi-note">30 ventas × $20 USD</div>
         </div>
         <div class="kpi-card purple animate delay-3">
           <div class="kpi-label">Conversión a Venta</div>
           <div class="kpi-value purple">6.0%</div>
           <div class="kpi-note">30 ventas / ~500 asistentes</div>
         </div>
-        <div class="kpi-card orange animate delay-4">
-          <div class="kpi-label">Cerrado — Oferta</div>
-          <div class="kpi-value orange">103</div>
-          <div class="kpi-note">Leads en stage de cierre <span class="delta up">↑ +75</span></div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- KPI SECTION 3: ENGAGEMENT -->
-  <section class="kpi-section">
-    <div class="container">
-      <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-gold)"></span> Engagement Post-Webinar</h2>
-      <div class="kpi-grid">
-        <div class="kpi-card gold animate delay-1">
-          <div class="kpi-label">Sorteo Mentoría</div>
-          <div class="kpi-value gold">123</div>
-          <div class="kpi-note">Participantes registrados <span class="delta up">↑ +37</span></div>
-        </div>
-        <div class="kpi-card orange animate delay-2">
-          <div class="kpi-label">Sistema de Ventas</div>
-          <div class="kpi-value orange">33</div>
-          <div class="kpi-note">Leads en pipeline <strong>Sistema de Ventas</strong></div>
-        </div>
-        <div class="kpi-card blue animate delay-3">
-          <div class="kpi-label">Cerrado — Oferta</div>
-          <div class="kpi-value blue">103</div>
-          <div class="kpi-note">Oportunidades en cierre avanzado</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FUNNEL VISUALIZATION -->
+  <!-- EMBUDO DE CONVERSIÓN -->
   <section class="funnel-section">
     <div class="container">
       <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-purple)"></span> Embudo de Conversión</h2>
@@ -628,38 +465,16 @@
 
       <div class="funnel-bar-wrap animate delay-3">
         <div class="funnel-bar-header">
-          <span class="funnel-bar-label">🎰 Participaron en Sorteo</span>
-          <span class="funnel-bar-value" style="color:var(--accent-cyan)">123</span>
+          <span class="funnel-bar-label">🎰 Participaron en Sorteo Mentoría</span>
+          <span class="funnel-bar-value" style="color:var(--accent-gold)">123</span>
         </div>
         <div class="funnel-bar-track">
-          <div class="funnel-bar-fill cyan" style="width:9.5%"></div>
+          <div class="funnel-bar-fill gold" style="width:9.5%"></div>
         </div>
         <div class="funnel-pct">24.6% de asistentes</div>
       </div>
 
       <div class="funnel-bar-wrap animate delay-4">
-        <div class="funnel-bar-header">
-          <span class="funnel-bar-label">🔥 Cerrado — Oferta</span>
-          <span class="funnel-bar-value" style="color:var(--accent-orange)">103</span>
-        </div>
-        <div class="funnel-bar-track">
-          <div class="funnel-bar-fill orange" style="width:8%"></div>
-        </div>
-        <div class="funnel-pct">20.6% de asistentes · 8% de registros</div>
-      </div>
-
-      <div class="funnel-bar-wrap animate delay-5">
-        <div class="funnel-bar-header">
-          <span class="funnel-bar-label">💳 Sistema de Ventas</span>
-          <span class="funnel-bar-value" style="color:var(--accent-gold)">33</span>
-        </div>
-        <div class="funnel-bar-track">
-          <div class="funnel-bar-fill gold" style="width:2.6%"></div>
-        </div>
-        <div class="funnel-pct">6.6% de asistentes · Pipeline Sistema de Ventas</div>
-      </div>
-
-      <div class="funnel-bar-wrap animate delay-6">
         <div class="funnel-bar-header">
           <span class="funnel-bar-label">✅ Compraron Pack Maestro</span>
           <span class="funnel-bar-value" style="color:var(--accent-green)">30</span>
@@ -667,12 +482,12 @@
         <div class="funnel-bar-track">
           <div class="funnel-bar-fill green" style="width:2.33%"></div>
         </div>
-        <div class="funnel-pct">6% de asistentes · 2.33% de registros totales</div>
+        <div class="funnel-pct">6% de asistentes · 2.33% de registros</div>
       </div>
     </div>
   </section>
 
-  <!-- CONVERSION TABLE -->
+  <!-- TABLA DE CONVERSIÓN -->
   <section class="conversion-section">
     <div class="container">
       <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-cyan)"></span> Tasas de Conversión</h2>
@@ -691,17 +506,12 @@
             <td><span class="conv-rate" style="color:var(--accent-blue)">38.8%</span></td>
           </tr>
           <tr>
-            <td>Asistencia → Sorteo</td>
+            <td>Asistencia → Sorteo Mentoría</td>
             <td>~500 → 123</td>
-            <td><span class="conv-rate" style="color:var(--accent-cyan)">24.6%</span></td>
+            <td><span class="conv-rate" style="color:var(--accent-gold)">24.6%</span></td>
           </tr>
           <tr>
-            <td>Asistencia → Cerrado Oferta</td>
-            <td>~500 → 103</td>
-            <td><span class="conv-rate" style="color:var(--accent-orange)">20.6%</span></td>
-          </tr>
-          <tr>
-            <td>Asistencia → Compra Pack</td>
+            <td>Asistencia → Compra Pack Maestro</td>
             <td>~500 → 30</td>
             <td><span class="conv-rate" style="color:var(--accent-green)">6.0%</span></td>
           </tr>
@@ -709,11 +519,6 @@
             <td>Registro → Compra (funnel completo)</td>
             <td>1,290 → 30</td>
             <td><span class="conv-rate" style="color:var(--accent-purple)">2.33%</span></td>
-          </tr>
-          <tr>
-            <td>Registro → Sistema de Ventas</td>
-            <td>1,290 → 33</td>
-            <td><span class="conv-rate" style="color:var(--accent-gold)">2.56%</span></td>
           </tr>
         </tbody>
       </table>
@@ -726,28 +531,20 @@
       <h2 class="kpi-section-title animate"><span class="dot" style="background:var(--accent-green)"></span> Insights Clave</h2>
       <div class="insight-grid">
         <div class="insight-card animate delay-1">
-          <h3>📈 Crecimiento Orgánico Post-Webinar</h3>
-          <p>El pipeline creció de <strong>1,148 a 1,290 registros (+12.4%)</strong> después del webinar en vivo. Esto indica que el contenido sigue generando tracción orgánica o que las secuencias de seguimiento están recapturando leads.</p>
+          <h3>📈 Audiencia Masiva</h3>
+          <p><strong>1,290 registros</strong> con una tasa de asistencia del <strong>39%</strong> (~500 personas en vivo). El pico de <strong>371 simultáneos</strong> demuestra un engagement excepcional durante la transmisión.</p>
         </div>
         <div class="insight-card animate delay-2">
-          <h3>🔥 103 Leads en Cierre (+268%)</h3>
-          <p>De los 28 iniciales, ahora hay <strong>103 oportunidades en Cerrado-Oferta</strong>. Esto es masivo — el equipo de cierre tiene un pipeline caliente. Cada una tiene un valor asignado de <strong>$2,500 USD</strong> = <strong>$257,500 en pipeline potencial</strong>.</p>
+          <h3>🎰 Alto Interés en la Mentoría</h3>
+          <p><strong>123 personas (24.6% de asistentes)</strong> se registraron al sorteo de la mentoría. Esto está muy por encima del benchmark típico y demuestra un fuerte deseo de trabajar directamente con Diego.</p>
         </div>
         <div class="insight-card animate delay-3">
-          <h3>💰 Revenue Directo: $600 USD</h3>
-          <p><strong>30 ventas × $20</strong> del Pack Maestro. Funciona como <strong>self-liquidating offer</strong> que cubre parcialmente costos de adquisición. El revenue real vendrá de las 103 oportunidades de cierre a $2,500.</p>
+          <h3>💰 Revenue: $600 USD</h3>
+          <p><strong>30 ventas del Pack Maestro a $20 cada uno</strong>. Funciona como <strong>self-liquidating offer</strong> que ayuda a cubrir parte de los costos de adquisición mientras identifica a los compradores más comprometidos.</p>
         </div>
         <div class="insight-card animate delay-4">
-          <h3>🎰 123 Leads del Sorteo = Mina de Oro</h3>
-          <p>Los <strong>123 participantes del sorteo</strong> tienen la mayor intención de compra post-webinar. Es <strong>24.6% de los asistentes</strong> — muy por encima del benchmark. Son candidatos ideales para la <strong>oferta de mentoría high-ticket</strong>.</p>
-        </div>
-        <div class="insight-card animate delay-5">
-          <h3>🚀 Pipeline de $257K+ en Juego</h3>
-          <p>Con <strong>103 leads en Cerrado-Oferta a $2,500 cada uno</strong>, el pipeline potencial es de <strong>$257,500 USD</strong>. Incluso con una tasa de cierre conservadora del 10%, son <strong>$25,750 en revenue potencial</strong>.</p>
-        </div>
-        <div class="insight-card animate delay-6">
-          <h3>📊 33 Leads en Sistema de Ventas</h3>
-          <p>Ya hay <strong>33 leads migrados al pipeline Sistema de Ventas</strong>, indicando que el equipo de closers está trabajando activamente estos prospectos con un proceso de venta estructurado.</p>
+          <h3>🚀 Conversión del 6%</h3>
+          <p>Una tasa del <strong>6% de asistentes a compra</strong> es sólida para un webinar en vivo. Con <strong>123 interesados en la mentoría</strong>, el potencial de monetización high-ticket posterior es significativo.</p>
         </div>
       </div>
     </div>
@@ -756,7 +553,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>Debriefing actualizado el <strong>12 de Marzo, 2026</strong> · Datos en tiempo real de GoHighLevel API</p>
+      <p>Debriefing — <strong>Webinar AI Para Todos</strong> · Marzo 2026</p>
       <p style="margin-top:6px;">Preparado por <a href="https://luchobranding.com" target="_blank">Sales Velocity System</a></p>
     </div>
   </footer>
