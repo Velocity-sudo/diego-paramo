@@ -1,0 +1,19 @@
+{
+  "total": 3300,
+  "has_email": 627,
+  "has_phone": 627,
+  "has_both": 627,
+  "has_none": 2673,
+  "by_source": {
+    "sin fuente": 2145,
+    "Form Registro a Webinar Oficial": 627,
+    "Form Post Registro - Calificación Leads Webinar 03/03": 528
+  },
+  "top_tags": {
+    "registrado-webinar": 627,
+    "organico": 66,
+    "webinar": 33,
+    "recursos": 33,
+    "clase": 33
+  }
+}

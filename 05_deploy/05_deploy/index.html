@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia de Crecimiento Q2 2026 — Diego Páramo | Pulse Up</title>
+    <meta name="description" content="Estrategia de crecimiento data-driven Q2 2026 para Diego Páramo y Pulse Up. Panorama actual, objetivos y plan de acción.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+        :root {
+            --bg-deep: #060A13;
+            --bg-base: #0A0E17;
+            --bg-card: #0F1420;
+            --bg-elevated: #141923;
+            --bg-surface: #1A1F2E;
+            --white: #FFFFFF;
+            --white-soft: #E8EAF0;
+            --white-muted: #9BA3B5;
+            --white-dim: #6B7280;
+            --blue: #176BFF;
+            --blue-light: #4D8FFF;
+            --blue-bright: #7CB3FF;
+            --blue-deep: #0D4FCC;
+            --blue-muted: rgba(23,107,255,0.12);
+            --blue-glow: rgba(23,107,255,0.5);
+            --cyan: #00D4FF;
+            --cyan-glow: rgba(0,212,255,0.3);
+            --purple: #8B5CF6;
+            --purple-glow: rgba(139,92,246,0.25);
+            --green: #10B981;
+            --green-muted: rgba(16,185,129,0.12);
+            --yellow: #F59E0B;
+            --yellow-muted: rgba(245,158,11,0.12);
+            --red: #EF4444;
+            --red-muted: rgba(239,68,68,0.12);
+            --orange: #F97316;
+            --border-subtle: rgba(23,107,255,0.06);
+            --border-default: rgba(23,107,255,0.12);
+            --border-strong: rgba(23,107,255,0.25);
+            --font-primary: 'Inter', -apple-system, sans-serif;
+            --font-display: 'Outfit', sans-serif;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        ::-webkit-scrollbar { width:5px }
+        ::-webkit-scrollbar-track { background:var(--bg-deep) }
+        ::-webkit-scrollbar-thumb { background:var(--blue-deep); border-radius:3px }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--bg-deep);
+            color: var(--white);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ── GLOW LINE ── */
+        .glow-line {
+            position:fixed; top:0; left:0; width:100%; height:2px;
+            background:linear-gradient(90deg, var(--blue), var(--cyan), var(--purple), var(--blue));
+            background-size:300% 100%; animation:shimmer 4s ease-in-out infinite; z-index:1000;
+        }
+        @keyframes shimmer { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+
+        /* ── NAV ── */
+        nav {
+            display:flex; justify-content:space-between; align-items:center;
+            padding:18px 5%; border-bottom:1px solid var(--border-subtle);
+            position:sticky; top:2px; background:rgba(6,10,19,0.92);
+            backdrop-filter:blur(24px) saturate(1.8); z-index:100;
+        }
+        nav .logo {
+            font-family:var(--font-display); font-weight:700; font-size:0.85rem;
+            background:linear-gradient(135deg, var(--blue), var(--cyan));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+            letter-spacing:0.05em;
+        }
+        nav .meta { font-size:0.55rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--white-dim) }
+
+        /* ── HERO ── */
+        .hero {
+            text-align:center; padding:100px 5% 80px; position:relative; overflow:hidden;
+            min-height:70vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+        }
+        .hero::before {
+            content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+            width:700px; height:700px;
+            background:radial-gradient(circle, var(--blue-glow) 0%, var(--purple-glow) 30%, transparent 60%);
+            opacity:0.12; pointer-events:none;
+        }
+        .hero .eyebrow {
+            font-size:0.6rem; text-transform:uppercase; letter-spacing:0.35em;
+            color:var(--cyan); margin-bottom:32px; font-weight:600;
+        }
+        .hero .brand-icon {
+            width:64px; height:64px; border-radius:16px; margin-bottom:40px;
+            background:linear-gradient(135deg, var(--blue), var(--purple));
+            display:flex; align-items:center; justify-content:center; font-size:2rem;
+            box-shadow:0 0 40px var(--blue-glow);
+        }
+        .hero h1 {
+            font-family:var(--font-display); font-size:clamp(2.2rem,5vw,3.8rem);
+            font-weight:700; letter-spacing:-0.03em; line-height:1.1; margin-bottom:14px;
+            background:linear-gradient(180deg, var(--white) 20%, var(--white-muted) 100%);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+        }
+        .hero .subtitle {
+            font-family:var(--font-display); font-size:1.2rem; font-weight:500;
+            color:var(--blue-light); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:40px;
+        }
+        .hero .cover-meta {
+            font-size:0.6rem; text-transform:uppercase; letter-spacing:0.25em;
+            color:var(--white-dim);
+        }
+        .hero .cover-meta span { color:var(--cyan) }
+
+        /* ── SECTIONS ── */
+        .section {
+            padding:80px 5%; max-width:1100px; margin:0 auto;
+            border-bottom:1px solid var(--border-subtle); position:relative;
+        }
+        .section-number {
+            font-family:var(--font-display); font-size:5rem; font-weight:700;
+            color:var(--blue); opacity:0.04; position:absolute; top:60px; right:5%; line-height:1;
+        }
+        .section-label {
+            font-size:0.55rem; text-transform:uppercase; letter-spacing:0.3em;
+            color:var(--blue); margin-bottom:14px; font-weight:600;
+            display:flex; align-items:center; gap:12px;
+        }
+        .section-label::before { content:''; width:20px; height:1px; background:var(--blue) }
+        .section h2 {
+            font-family:var(--font-display); font-size:clamp(1.5rem,3vw,2.2rem);
+            font-weight:600; margin-bottom:16px; letter-spacing:-0.02em; line-height:1.2;
+        }
+        .section .intro {
+            font-size:0.9rem; line-height:1.8; color:var(--white-muted);
+            max-width:620px; margin-bottom:40px;
+        }
+
+        /* ── KPI CARDS ── */
+        .kpi-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:40px }
+        .kpi-card {
+            background:var(--bg-card); border:1px solid var(--border-subtle);
+            border-radius:var(--radius-md); padding:28px 20px; text-align:center;
+            transition:var(--transition); position:relative; overflow:hidden;
+        }
+        .kpi-card::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:2px;
+            background:linear-gradient(90deg, var(--blue), var(--cyan)); opacity:0; transition:var(--transition);
+        }
+        .kpi-card:hover { transform:translateY(-4px); border-color:var(--border-strong) }
+        .kpi-card:hover::before { opacity:1 }
+        .kpi-card .label {
+            font-size:0.55rem; text-transform:uppercase; letter-spacing:0.15em;
+            color:var(--white-dim); margin-bottom:10px; font-weight:500;
+        }
+        .kpi-card .value {
+            font-family:var(--font-display); font-size:1.8rem; font-weight:700;
+            color:var(--white); margin-bottom:4px;
+        }
+        .kpi-card .sub { font-size:0.7rem; color:var(--white-muted) }
+        .kpi-card.accent .value { color:var(--blue-bright) }
+        .kpi-card.warn .value { color:var(--yellow) }
+        .kpi-card.danger .value { color:var(--red) }
+        .kpi-card.success .value { color:var(--green) }
+
+        /* ── TABLES ── */
+        .data-table { width:100%; border-collapse:collapse; margin:24px 0 }
+        .data-table th {
+            text-align:left; padding:14px 16px; font-size:0.6rem; text-transform:uppercase;
+            letter-spacing:0.15em; color:var(--blue); border-bottom:1px solid var(--border-default);
+            font-weight:600;
+        }
+        .data-table td {
+            padding:14px 16px; font-size:0.85rem; border-bottom:1px solid var(--border-subtle);
+            color:var(--white-soft); transition:var(--transition);
+        }
+        .data-table tr:hover td { background:rgba(23,107,255,0.03) }
+        .data-table .num { font-family:var(--font-display); font-weight:600; text-align:right }
+        .data-table .highlight { color:var(--blue-bright); font-weight:600 }
+        .data-table .dim { color:var(--white-dim) }
+
+        /* ── CALLOUT BOXES ── */
+        .callout {
+            border-radius:var(--radius-md); padding:24px 28px;
+            margin:20px 0; position:relative; border-left:3px solid;
+        }
+        .callout.red { background:var(--red-muted); border-color:var(--red) }
+        .callout.yellow { background:var(--yellow-muted); border-color:var(--yellow) }
+        .callout.green { background:var(--green-muted); border-color:var(--green) }
+        .callout.blue { background:var(--blue-muted); border-color:var(--blue) }
+        .callout .callout-title {
+            font-size:0.65rem; text-transform:uppercase; letter-spacing:0.15em;
+            font-weight:700; margin-bottom:8px;
+        }
+        .callout.red .callout-title { color:var(--red) }
+        .callout.yellow .callout-title { color:var(--yellow) }
+        .callout.green .callout-title { color:var(--green) }
+        .callout.blue .callout-title { color:var(--blue-light) }
+        .callout p { font-size:0.85rem; color:var(--white-soft); line-height:1.7 }
+
+        /* ── INSIGHT BOX ── */
+        .insight-box {
+            background:var(--bg-card); border:1px solid var(--border-default);
+            border-radius:var(--radius-lg); padding:32px; margin:32px 0;
+        }
+        .insight-box h3 {
+            font-family:var(--font-display); font-size:1rem; font-weight:600;
+            margin-bottom:16px; color:var(--cyan);
+        }
+        .insight-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px }
+        .insight-item { padding:16px; border-radius:var(--radius-sm); }
+        .insight-item.good { background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.15) }
+        .insight-item.bad { background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.15) }
+        .insight-item.opp { background:rgba(0,212,255,0.08); border:1px solid rgba(0,212,255,0.15) }
+        .insight-item .tag {
+            font-size:0.55rem; text-transform:uppercase; letter-spacing:0.15em;
+            font-weight:700; margin-bottom:8px;
+        }
+        .insight-item.good .tag { color:var(--green) }
+        .insight-item.bad .tag { color:var(--red) }
+        .insight-item.opp .tag { color:var(--cyan) }
+        .insight-item p { font-size:0.8rem; color:var(--white-muted); line-height:1.6 }
+
+        /* ── COMPARISON ── */
+        .compare-grid { display:grid; grid-template-columns:1fr auto 1fr; gap:0; margin:32px 0 }
+        .compare-col {
+            background:var(--bg-card); border:1px solid var(--border-subtle);
+            padding:32px 28px; border-radius:var(--radius-lg);
+        }
+        .compare-col h3 {
+            font-family:var(--font-display); font-size:0.9rem; font-weight:600;
+            text-transform:uppercase; letter-spacing:0.1em; margin-bottom:20px;
+        }
+        .compare-col.today h3 { color:var(--white-dim) }
+        .compare-col.target h3 { color:var(--cyan) }
+        .compare-arrow {
+            display:flex; align-items:center; justify-content:center; padding:0 20px;
+            font-size:2rem; color:var(--blue);
+        }
+        .compare-row {
+            display:flex; justify-content:space-between; padding:12px 0;
+            border-bottom:1px solid var(--border-subtle); font-size:0.85rem;
+        }
+        .compare-row:last-child { border:none }
+        .compare-row .metric { color:var(--white-dim) }
+        .compare-row .val { font-family:var(--font-display); font-weight:600; color:var(--white-soft) }
+
+        /* ── PHASES ── */
+        .phase {
+            background:var(--bg-card); border:1px solid var(--border-subtle);
+            border-radius:var(--radius-lg); padding:32px; margin:20px 0;
+            transition:var(--transition); position:relative; overflow:hidden;
+        }
+        .phase:hover { border-color:var(--border-default) }
+        .phase::before {
+            content:''; position:absolute; top:0; left:0; width:4px; height:100%;
+        }
+        .phase.p1::before { background:var(--red) }
+        .phase.p2::before { background:var(--yellow) }
+        .phase.p3::before { background:var(--blue) }
+        .phase.p4::before { background:var(--green) }
+        .phase-header { display:flex; align-items:center; gap:14px; margin-bottom:16px }
+        .phase-badge {
+            font-size:0.55rem; font-weight:700; text-transform:uppercase;
+            letter-spacing:0.1em; padding:6px 14px; border-radius:20px;
+        }
+        .phase.p1 .phase-badge { background:var(--red-muted); color:var(--red) }
+        .phase.p2 .phase-badge { background:var(--yellow-muted); color:var(--yellow) }
+        .phase.p3 .phase-badge { background:var(--blue-muted); color:var(--blue-light) }
+        .phase.p4 .phase-badge { background:var(--green-muted); color:var(--green) }
+        .phase h3 { font-family:var(--font-display); font-size:1.1rem; font-weight:600 }
+        .phase-timeline { font-size:0.7rem; color:var(--white-dim); margin-left:auto }
+        .phase ul { list-style:none; margin-top:12px }
+        .phase li {
+            padding:8px 0 8px 20px; position:relative; font-size:0.85rem;
+            color:var(--white-muted); line-height:1.6;
+        }
+        .phase li::before {
+            content:'→'; position:absolute; left:0; color:var(--blue);
+        }
+        .phase li strong { color:var(--white-soft) }
+
+        /* ── DECISIONS ── */
+        .decision-card {
+            background:var(--bg-card); border:1px solid var(--border-subtle);
+            border-radius:var(--radius-md); padding:24px; margin:12px 0;
+            display:grid; grid-template-columns:40px 1fr; gap:16px;
+            transition:var(--transition);
+        }
+        .decision-card:hover { border-color:var(--border-default) }
+        .decision-num {
+            font-family:var(--font-display); font-size:1.4rem; font-weight:700;
+            color:var(--blue); text-align:center; padding-top:4px;
+        }
+        .decision-content h4 { font-size:0.95rem; font-weight:600; margin-bottom:6px; color:var(--white-soft) }
+        .decision-content p { font-size:0.8rem; color:var(--white-dim); line-height:1.6 }
+        .decision-content .rec {
+            display:inline-block; margin-top:8px; padding:4px 12px; border-radius:12px;
+            font-size:0.6rem; text-transform:uppercase; letter-spacing:0.1em; font-weight:600;
+            background:var(--blue-muted); color:var(--blue-light);
+        }
+
+        /* ── ROADMAP ── */
+        .roadmap { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:32px 0 }
+        .roadmap-step {
+            background:var(--bg-card); border:1px solid var(--border-subtle);
+            border-radius:var(--radius-md); padding:24px 16px; text-align:center;
+            transition:var(--transition); position:relative;
+        }
+        .roadmap-step:hover { transform:translateY(-3px); border-color:var(--border-default) }
+        .roadmap-step .week {
+            font-size:0.55rem; text-transform:uppercase; letter-spacing:0.15em;
+            color:var(--cyan); margin-bottom:10px; font-weight:600;
+        }
+        .roadmap-step .goal { font-size:0.85rem; font-weight:500; color:var(--white-soft); line-height:1.5 }
+        .roadmap-step .icon { font-size:1.5rem; margin-bottom:10px }
+
+        /* ── FUNNEL MATH ── */
+        .funnel-flow {
+            display:flex; align-items:center; justify-content:center;
+            gap:8px; margin:32px 0; flex-wrap:wrap;
+        }
+        .funnel-step {
+            background:var(--bg-card); border:1px solid var(--border-subtle);
+            border-radius:var(--radius-md); padding:16px 20px; text-align:center;
+            min-width:120px;
+        }
+        .funnel-step .val { font-family:var(--font-display); font-size:1.2rem; font-weight:700; color:var(--blue-bright) }
+        .funnel-step .label { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--white-dim); margin-top:4px }
+        .funnel-arrow { font-size:1.2rem; color:var(--blue); }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align:center; padding:60px 5% 40px; border-top:1px solid var(--border-subtle);
+        }
+        footer .logo-text {
+            font-family:var(--font-display); font-weight:700; font-size:1.2rem;
+            background:linear-gradient(135deg, var(--blue), var(--cyan));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+            margin-bottom:16px;
+        }
+        footer p { font-size:0.65rem; color:var(--white-dim); letter-spacing:0.1em }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width:768px) {
+            .kpi-grid { grid-template-columns:repeat(2,1fr) }
+            .insight-grid { grid-template-columns:1fr }
+            .compare-grid { grid-template-columns:1fr; gap:16px }
+            .compare-arrow { transform:rotate(90deg); padding:10px 0 }
+            .roadmap { grid-template-columns:repeat(2,1fr) }
+            .phase-header { flex-wrap:wrap }
+            .funnel-flow { flex-direction:column }
+            .funnel-arrow { transform:rotate(90deg) }
+            .section { padding:50px 5% }
+        }
+
+        @media print {
+            .glow-line, nav { display:none }
+            body { background:#fff; color:#111 }
+            .hero::before { display:none }
+            .section { page-break-inside:avoid }
+            .kpi-card, .phase, .callout, .insight-box, .decision-card { break-inside:avoid }
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-line"></div>
+
+    <nav>
+        <div class="logo">SALES VELOCITY × PULSE UP</div>
+        <span class="meta">Estrategia Q2 2026 · Marzo 7, 2026</span>
+    </nav>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero">
+        <p class="eyebrow">Growth Strategy</p>
+        <div class="brand-icon">🧠</div>
+        <h1>Estrategia de<br>Crecimiento Q2 2026</h1>
+        <p class="subtitle">Diego Páramo · Pulse Up</p>
+        <p class="cover-meta">Presentación para <span>Diego Páramo</span> · Marzo 7, 2026 · <span>Data-Driven</span></p>
+    </section>
+
+    <!-- ═══════════ 01 · PANORAMA ACTUAL ═══════════ -->
+    <section class="section">
+        <span class="section-number">01</span>
+        <p class="section-label">Panorama Actual</p>
+        <h2>¿Dónde Estamos?</h2>
+        <p class="intro">Análisis basado en datos reales extraídos de GoHighLevel (pipelines, oportunidades) y Meta Ads Manager (pauta activa). Fecha de corte: 7 de marzo, 2026. <strong>Nota:</strong> Diego opera dos funnels paralelos — Meta Ads (always-on → entendiendo.ai) y Webinar (orgánico LinkedIn).</p>
+
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+            <div class="kpi-card accent">
+                <p class="label">Pipeline B2B</p>
+                <p class="value">$542K</p>
+                <p class="sub">20 oportunidades activas</p>
+            </div>
+            <div class="kpi-card success">
+                <p class="label">Registros Webinar</p>
+                <p class="value">26</p>
+                <p class="sub">100% orgánicos desde LinkedIn</p>
+            </div>
+            <div class="kpi-card">
+                <p class="label">CTR Meta Ads</p>
+                <p class="value">4.3%</p>
+                <p class="sub">vs benchmark 1.5-2.5%</p>
+            </div>
+            <div class="kpi-card warn">
+                <p class="label">Spend 30d (Always-On)</p>
+                <p class="value">$152</p>
+                <p class="sub">Landing entendiendo.ai · NO webinar</p>
+            </div>
+        </div>
+
+        <!-- Pipeline B2B Detail -->
+        <p class="section-label" style="margin-top:40px">Pipeline B2B — Distribución por Etapa</p>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Etapa</th>
+                    <th style="text-align:right">Oportunidades</th>
+                    <th style="text-align:right">% del Total</th>
+                    <th style="text-align:right">Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>🔍 Discovery</td>
+                    <td class="num">6</td>
+                    <td class="num">30%</td>
+                    <td class="num" style="color:var(--blue-light)">Prospección</td>
+                </tr>
+                <tr>
+                    <td>📞 Cita</td>
+                    <td class="num">4</td>
+                    <td class="num">20%</td>
+                    <td class="num" style="color:var(--yellow)">En proceso</td>
+                </tr>
+                <tr>
+                    <td>📋 Agenda</td>
+                    <td class="num">3</td>
+                    <td class="num">15%</td>
+                    <td class="num" style="color:var(--yellow)">En proceso</td>
+                </tr>
+                <tr>
+                    <td>🔄 Seguimiento</td>
+                    <td class="num">4</td>
+                    <td class="num">20%</td>
+                    <td class="num" style="color:var(--orange)">Requiere aten.</td>
+                </tr>
+                <tr>
+                    <td>📜 Propuesta</td>
+                    <td class="num highlight">3</td>
+                    <td class="num highlight">15%</td>
+                    <td class="num" style="color:var(--green)">Cierre inminente</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Other Pipelines -->
+        <p class="section-label" style="margin-top:32px">Otros Pipelines</p>
+        <table class="data-table">
+            <thead>
+                <tr><th>Pipeline</th><th style="text-align:right">Opps</th><th style="text-align:right">Valor</th><th style="text-align:right">Nota</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>💼 B2C</td>
+                    <td class="num">1</td>
+                    <td class="num">$2,500</td>
+                    <td class="dim">Seguimiento activo</td>
+                </tr>
+                <tr>
+                    <td>🎯 Sistema Ventas</td>
+                    <td class="num">31</td>
+                    <td class="num dim">$0</td>
+                    <td class="dim">Funnel anterior — 28 en Registro, 3 agendaron</td>
+                </tr>
+                <tr>
+                    <td>🚀 Lanzamiento</td>
+                    <td class="num dim">0</td>
+                    <td class="num dim">$0</td>
+                    <td class="dim">Pipeline vacío</td>
+                </tr>
+                <tr>
+                    <td>📺 Webinar</td>
+                    <td class="num" style="color:var(--red)">0</td>
+                    <td class="num dim">$0</td>
+                    <td style="color:var(--red); font-size:0.8rem">⚠️ Falta automatización</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Meta Ads Detail -->
+        <p class="section-label" style="margin-top:32px">Funnel 1 — Always-On (Meta Ads → entendiendo.ai)</p>
+        <table class="data-table">
+            <thead>
+                <tr><th>Métrica</th><th style="text-align:right">7 días</th><th style="text-align:right">30 días</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Gasto (USD)</td><td class="num">$37.47</td><td class="num">$152.05</td></tr>
+                <tr><td>Impresiones</td><td class="num">12,064</td><td class="num">50,784</td></tr>
+                <tr><td>Alcance</td><td class="num">10,832</td><td class="num">32,026</td></tr>
+                <tr><td>Clics → entendiendo.ai</td><td class="num">520</td><td class="num">2,177</td></tr>
+                <tr><td>CTR</td><td class="num highlight">4.31%</td><td class="num highlight">4.29%</td></tr>
+                <tr><td>Anuncios activos</td><td class="num">2</td><td class="num">2</td></tr>
+                <tr><td>Conversiones trackeadas (Pixel)</td><td class="num" style="color:var(--red)">0</td><td class="num" style="color:var(--red)">0</td></tr>
+            </tbody>
+        </table>
+
+        <p class="section-label" style="margin-top:32px">Funnel 2 — Webinar (Orgánico LinkedIn)</p>
+        <table class="data-table">
+            <thead>
+                <tr><th>Métrica</th><th style="text-align:right">Valor</th><th style="text-align:right">Nota</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Registros totales (tag GHL)</td><td class="num highlight">26</td><td class="dim">Ingresados manualmente con tag</td></tr>
+                <tr><td>Con email verificado</td><td class="num" style="color:var(--green)">26 (100%)</td><td class="dim">Todos tienen email</td></tr>
+                <tr><td>Con email + teléfono</td><td class="num" style="color:var(--green)">25 (96%)</td><td class="dim">Calidad de contacto excepcional</td></tr>
+                <tr><td>Solo nombre (sin datos)</td><td class="num">1 (4%)</td><td class="dim">1 contacto sin teléfono</td></tr>
+                <tr><td>Inversión en pauta</td><td class="num" style="color:var(--cyan)">$0</td><td class="dim">100% orgánico desde LinkedIn</td></tr>
+                <tr><td>CPL orgánico</td><td class="num" style="color:var(--cyan)">$0.00</td><td class="dim">CAC = $0 — pura tracción orgánica</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Critical Findings -->
+        <div class="callout red">
+            <p class="callout-title">🚨 Hallazgo Crítico — Meta Ads sin tracking de conversiones</p>
+            <p>Los Meta Ads dirigen tráfico al landing "always-on" (entendiendo.ai), <strong>NO al webinar</strong>. 2,177 clics en 30 días pero el pixel no trackea <code>CompleteRegistration</code> — Meta reporta 0 leads. No sabemos qué pasa después del clic al landing. <strong>¿Esos 2,177 clics se convierten en algo?</strong> Sin tracking, no hay forma de saberlo ni de optimizar.</p>
+        </div>
+
+        <div class="callout green">
+            <p class="callout-title">✅ Señal Positiva — Webinar 100% orgánico con data de calidad excepcional</p>
+            <p>26 registros de webinar generados <strong>exclusivamente desde LinkedIn, con $0 de inversión</strong>. De esos 26: <strong>100% tienen email</strong> y <strong>96% tienen email + teléfono</strong>. Esto es tracción orgánica real — la autoridad de Diego (Ex-Google, +120 empresas) genera confianza suficiente para que la gente se registre y deje datos completos sin necesidad de pauta.</p>
+        </div>
+
+        <div class="callout red">
+            <p class="callout-title">🚨 Hallazgo Crítico — Pipeline Webinar sin automatización</p>
+            <p>26 personas se registraron al webinar (tag manual en GHL), pero el pipeline "WEBINAR" tiene <strong>0 oportunidades</strong>. Falta un workflow en GHL que cree automáticamente una oportunidad cuando alguien se registra. Sin esto, no hay visibilidad del funnel de conversión post-registro.</p>
+        </div>
+
+        <div class="callout yellow">
+            <p class="callout-title">⚡ Oportunidad — Two funnels desconectados con potencial enorme</p>
+            <p><strong>Funnel 1 (Always-On):</strong> $152/mes, 2,177 clics, 4.3% CTR — mensaje resonante, pero sin tracking no sabemos su ROI real. <strong>Funnel 2 (Webinar):</strong> $0 pauta, 26 registros orgánicos con 96% de datos completos. La oportunidad está en <strong>conectar ambos funnels</strong>: dirigir la pauta de Meta Ads al webinar en lugar del landing genérico, y multiplicar los registros 10x.</p>
+        </div>
+
+        <div class="callout green">
+            <p class="callout-title">✅ Señal Positiva — CTR excepcional y pipeline B2B sólido</p>
+            <p>4.3% CTR demuestra que la propuesta de valor resuena fuerte en Meta. 20 oportunidades B2B con $542K en pipeline es una base sólida. La audiencia responde al mensaje "deja de usar la IA como Google" — es momento de redirigir esa pauta al webinar y escalar el funnel que ya tiene tracción orgánica.</p>
+        </div>
+
+        <!-- Insight Box -->
+        <div class="insight-box">
+            <h3>📊 Diagnóstico en 3 Líneas</h3>
+            <div class="insight-grid">
+                <div class="insight-item good">
+                    <p class="tag">✅ Lo Bueno</p>
+                    <p>Pipeline B2B de $542K. CTR de 4.3% en Meta (excepcional). 26 registros de webinar 100% orgánicos desde LinkedIn con 96% de datos completos. Tracción real sin inversión.</p>
+                </div>
+                <div class="insight-item bad">
+                    <p class="tag">❌ Lo Malo</p>
+                    <p>Meta Ads van al landing genérico, no al webinar. Pixel no trackea conversiones — 2,177 clics sin saber qué pasó después. Pipeline Webinar vacío (tags manuales, sin automatización).</p>
+                </div>
+                <div class="insight-item opp">
+                    <p class="tag">🔮 La Oportunidad</p>
+                    <p>Redirigir pauta de Meta al registro de webinar. Automatizar pipeline + nurturing. Conectar los 2 funnels en uno. Cerrar 3 propuestas B2B ($100K+ potencial). Escalar con datos reales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ 02 · OBJETIVOS ═══════════ -->
+    <section class="section">
+        <span class="section-number">02</span>
+        <p class="section-label">Objetivos Q2 2026</p>
+        <h2>¿A Dónde Vamos?</h2>
+        <p class="intro">Metas numéricas basadas en el modelo actual de Diego: webinar gratuito → low-ticket ($50) → high-ticket ($400-$7K) + pipeline B2B enterprise.</p>
+
+        <!-- Today vs Target -->
+        <div class="compare-grid">
+            <div class="compare-col today">
+                <h3>📍 Hoy (Marzo 2026)</h3>
+                <div class="compare-row"><span class="metric">Registros webinar</span><span class="val">26 (orgánico)</span></div>
+                <div class="compare-row"><span class="metric">Ventas low-ticket</span><span class="val">0</span></div>
+                <div class="compare-row"><span class="metric">Clientes high-ticket</span><span class="val">0</span></div>
+                <div class="compare-row"><span class="metric">Revenue B2C / mes</span><span class="val">$0</span></div>
+                <div class="compare-row"><span class="metric">Pipeline B2B</span><span class="val">$542K</span></div>
+                <div class="compare-row"><span class="metric">Meta Ads spend</span><span class="val">$152 (always-on)</span></div>
+                <div class="compare-row"><span class="metric">CPL webinar</span><span class="val" style="color:var(--green)">$0.00 💚</span></div>
+                <div class="compare-row"><span class="metric">Tracking</span><span class="val" style="color:var(--red)">❌ Roto</span></div>
+            </div>
+            <div class="compare-arrow">→</div>
+            <div class="compare-col target">
+                <h3>🎯 Meta Q2 (Junio 2026)</h3>
+                <div class="compare-row"><span class="metric">Registros webinar</span><span class="val">3,000+</span></div>
+                <div class="compare-row"><span class="metric">Ventas low-ticket</span><span class="val">150</span></div>
+                <div class="compare-row"><span class="metric">Clientes high-ticket</span><span class="val">10</span></div>
+                <div class="compare-row"><span class="metric">Revenue B2C / mes</span><span class="val">$12,500</span></div>
+                <div class="compare-row"><span class="metric">Pipeline B2B</span><span class="val">$1M+</span></div>
+                <div class="compare-row"><span class="metric">Spend mensual</span><span class="val">$1,500</span></div>
+                <div class="compare-row"><span class="metric">CPL estimado</span><span class="val">$0.50</span></div>
+                <div class="compare-row"><span class="metric">Tracking</span><span class="val" style="color:var(--green)">✅ Full</span></div>
+            </div>
+        </div>
+
+        <!-- Revenue Math -->
+        <p class="section-label" style="margin-top:40px">Proyección de Revenue B2C</p>
+
+        <div class="funnel-flow">
+            <div class="funnel-step"><p class="val">$1,500</p><p class="label">Budget / mes</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">3,000</p><p class="label">Clics (4% CTR)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">900</p><p class="label">Registros (30%)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">270</p><p class="label">Asisten (30%)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">54</p><p class="label">Compra $50 (20%)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">$2,700</p><p class="label">Revenue LT</p></div>
+        </div>
+        <div class="funnel-flow" style="margin-top:8px">
+            <div class="funnel-step"><p class="val">54</p><p class="label">Compradores LT</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">8</p><p class="label">Aplican HT (15%)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">3</p><p class="label">Cierran (40%)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step"><p class="val">$9,000</p><p class="label">Revenue HT ($3K avg)</p></div>
+            <span class="funnel-arrow">→</span>
+            <div class="funnel-step" style="border-color:var(--cyan)"><p class="val" style="color:var(--cyan)">$11,700</p><p class="label">Total / mes</p></div>
+        </div>
+
+        <div class="callout blue" style="margin-top:24px">
+            <p class="callout-title">💡 La matemática del escalamiento</p>
+            <p>El webinar ya demostró tracción orgánica con 26 registros y $0 de inversión. Si redirigimos los $1,500/mes de pauta al funnel de webinar (en vez del landing genérico) y mantenemos el CTR de 4.3%, la proyección conservadora es <strong>$11,700/mes de revenue B2C</strong> ($2,700 low-ticket + $9,000 high-ticket). ROAS proyectado: <strong>7.8x</strong>. Esto es <strong>adicional</strong> al pipeline B2B enterprise de $542K.</p>
+        </div>
+    </section>
+
+    <!-- ═══════════ 03 · PLAN DE ACCIÓN ═══════════ -->
+    <section class="section">
+        <span class="section-number">03</span>
+        <p class="section-label">Plan de Acción</p>
+        <h2>¿Cómo Llegamos?</h2>
+        <p class="intro">4 fases priorizadas por velocidad de impacto. Lo que genera cash rápido va primero.</p>
+
+        <!-- Phase 1 -->
+        <div class="phase p1">
+            <div class="phase-header">
+                <span class="phase-badge">🔴 Fase 1 — Acción Inmediata</span>
+                <h3>Arreglar el Tracking + Cerrar B2B</h3>
+                <span class="phase-timeline">Semana 1</span>
+            </div>
+            <ul>
+                <li><strong>Configurar Meta Pixel correctamente:</strong> Instalar evento <code>CompleteRegistration</code> en el formulario de registro de GHL. Sin esto, Meta no puede optimizar por conversiones.</li>
+                <li><strong>Construir workflow de pipeline Webinar:</strong> Crear automatización en GHL que mueva leads del formulario de registro al pipeline WEBINAR automáticamente. Cada registrado = oportunidad visible.</li>
+                <li><strong>Cerrar las 3 propuestas B2B activas:</strong> Hay $542K en pipeline con 3 propuestas listas. Priorizar seguimiento agresivo esta semana. Potencial de cierre: $100K+.</li>
+                <li><strong>Activar y calificar lead Jota Mundial:</strong> Lead orgánico enterprise ($200K/mes facturación). Agendar reunión de discovery esta semana — potencial $7K-$50K.</li>
+                <li><strong>Construir secuencia de nurturing:</strong> Configurar emails, SMS y WhatsApp de seguimiento para los 26 registrados existentes + 31 leads de Sistema Ventas (recordatorio de webinar 12 marzo).</li>
+            </ul>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="phase p2">
+            <div class="phase-header">
+                <span class="phase-badge">🟡 Fase 2 — Fundación</span>
+                <h3>Funnel de Ventas B2C Completo</h3>
+                <span class="phase-timeline">Semana 1-2</span>
+            </div>
+            <ul>
+                <li><strong>Webinar del 12 de marzo — Ejecución impecable:</strong> Demo en vivo, construir asistente, venta del paquete $50 al cierre. Target: 60% asistencia de los 26 registrados = ~16 en vivo. Objetivo: 4-5 ventas ($200-$250). El foco real es ejecutar el formato perfecto para escalar después.</li>
+                <li><strong>Activar post-webinar upsell:</strong> Email secuencia automática para compradores $50 → oferta premium ($400 personalización 1-on-1).</li>
+                <li><strong>Crear página de checkout y entrega:</strong> Flujo completo: compra → acceso inmediato a prompts → email de bienvenida → acceso comunidad.</li>
+                <li><strong>Reactivar los 31 leads de Sistema Ventas:</strong> 28 se registraron pero no avanzaron. Secuencia de reactivación con invitación al webinar del 12 de marzo — base adicional para sumar registros.</li>
+                <li><strong>Pipeline GHL completo:</strong> Configurar etapas del funnel B2C: Registro → Asistió → Compró LT → Aplicó HT → Cerrado Ganado/Perdido.</li>
+            </ul>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="phase p3">
+            <div class="phase-header">
+                <span class="phase-badge">🔵 Fase 3 — Aceleración</span>
+                <h3>Escalar Pauta + Contenido</h3>
+                <span class="phase-timeline">Semana 2-4</span>
+            </div>
+            <ul>
+                <li><strong>Escalar presupuesto de pauta:</strong> De $5/día a $50/día ($1,500/mes). El CTR de 4.3% indica que el mensaje funciona — ahora maximizar volumen.</li>
+                <li><strong>Crear 3 nuevos creativos:</strong> Variaciones del hook principal ("Estás usando IA mal") + hooks alternativos: prueba social (Ex-Google, 120 empresas), resultado (10 horas/semana), curiosidad (asistentes ejecutivos).</li>
+                <li><strong>Configurar retargeting:</strong> Retargeting a visitantes de entendiendo.ai que NO se registraron + lookalike basada en compradores $50 del primer webinar.</li>
+                <li><strong>Lanzar contenido orgánico semanal:</strong> 3 reels/semana en Instagram + TikTok + LinkedIn articles. Contenido educativo que alimenta los mismos hooks de la pauta.</li>
+                <li><strong>Segundo webinar (inmersión Evergreen):</strong> Pre-grabar el webinar perfeccionado y convertirlo en funnel automático. Herramientas: StreamYard o similar.</li>
+            </ul>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="phase p4">
+            <div class="phase-header">
+                <span class="phase-badge">🟢 Fase 4 — Escala</span>
+                <h3>Sistematizar y Multiplicar</h3>
+                <span class="phase-timeline">Semana 4-8</span>
+            </div>
+            <ul>
+                <li><strong>Webinar Evergreen automatizado:</strong> Funnel 100% automático: registro → emails → webinar grabado → venta → upsell → seguimiento closers.</li>
+                <li><strong>Expandir a USA / Florida:</strong> Ajustar precios ($97-$197 low-ticket, $1K-$15K high-ticket). Pauta en inglés con los mismos hooks adaptados.</li>
+                <li><strong>Construir pipeline de referidos B2B:</strong> Los clientes satisfechos del webinar se convierten en leads enterprise para Pulse Up. Cada cliente B2C es un potencial referido B2B.</li>
+                <li><strong>Automatizar reportería semanal:</strong> Dashboard automático con métricas clave (CPL, conversión, pipeline value, revenue) que se actualiza cada jueves.</li>
+                <li><strong>YouTube como motor de leads orgánicos:</strong> Miniclases de 10-15 min. Cada video = mini-webinar que alimenta el funnel de registro.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ═══════════ 04 · DECISIONES ═══════════ -->
+    <section class="section">
+        <span class="section-number">04</span>
+        <p class="section-label">Decisiones & Siguientes Pasos</p>
+        <h2>¿Qué Necesitamos Decidir?</h2>
+        <p class="intro">Puntos que requieren tu input para avanzar con el plan.</p>
+
+        <div class="decision-card">
+            <div class="decision-num">1</div>
+            <div class="decision-content">
+                <h4>Presupuesto de pauta para Q2</h4>
+                <p>Actualmente gastamos $5/día. Para escalar necesitamos mínimo $50/día ($1,500/mes). ¿Confirmamos este presupuesto a partir de la semana 2?</p>
+                <span class="rec">Recomendación: $1,500/mes</span>
+            </div>
+        </div>
+
+        <div class="decision-card">
+            <div class="decision-num">2</div>
+            <div class="decision-content">
+                <h4>Seguimiento a las 3 propuestas B2B activas</h4>
+                <p>Hay $542K en pipeline con 3 propuestas en etapa de cierre. ¿Quién hace seguimiento? ¿Diego directamente o un closer? ¿Con qué frecuencia?</p>
+                <span class="rec">Recomendación: Seguimiento diario por 7 días</span>
+            </div>
+        </div>
+
+        <div class="decision-card">
+            <div class="decision-num">3</div>
+            <div class="decision-content">
+                <h4>Reunión con lead Jota Mundial</h4>
+                <p>Lead orgánico enterprise (empresa de servicios, $200K/mes facturación). ¿Agendamos la reunión de discovery esta semana?</p>
+                <span class="rec">Recomendación: Agendar antes del viernes</span>
+            </div>
+        </div>
+
+        <div class="decision-card">
+            <div class="decision-num">4</div>
+            <div class="decision-content">
+                <h4>Precio del low-ticket para el webinar del 12 marzo</h4>
+                <p>El plan dice $50 para LATAM. ¿Confirmamos este precio? Alternativas: $47 (psicológico) o $97 (si la audiencia es más USA/Florida).</p>
+                <span class="rec">Recomendación: $50 (LATAM) — ajustar a $97 post-validación</span>
+            </div>
+        </div>
+
+        <div class="decision-card">
+            <div class="decision-num">5</div>
+            <div class="decision-content">
+                <h4>Webinar: ¿grabarlo para Evergreen?</h4>
+                <p>El del 12 de marzo es en vivo. ¿Lo grabamos para convertirlo en funnel Evergreen después? Esto permitiría automatizar la captación 24/7.</p>
+                <span class="rec">Recomendación: Sí — grabar este como template para iterar</span>
+            </div>
+        </div>
+
+        <div class="decision-card">
+            <div class="decision-num">6</div>
+            <div class="decision-content">
+                <h4>Configuración del Meta Pixel</h4>
+                <p>¿Tienes acceso al código del formulario de registro en GHL para instalar el evento de conversión? O ¿necesitas que lo hagamos nosotros remotamente?</p>
+                <span class="rec">Recomendación: Nosotros lo configuramos esta semana</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ 05 · RESUMEN EJECUTIVO ═══════════ -->
+    <section class="section" style="border:none">
+        <span class="section-number">05</span>
+        <p class="section-label">Resumen Ejecutivo</p>
+        <h2>El Roadmap Visual</h2>
+
+        <div class="roadmap">
+            <div class="roadmap-step">
+                <p class="icon">🔴</p>
+                <p class="week">Semana 1</p>
+                <p class="goal">Fix tracking. Cerrar B2B. Nurturing webinar 12 mar.</p>
+            </div>
+            <div class="roadmap-step">
+                <p class="icon">🟡</p>
+                <p class="week">Semana 1-2</p>
+                <p class="goal">Ejecutar webinar. Primera venta $50. Upsell HT.</p>
+            </div>
+            <div class="roadmap-step">
+                <p class="icon">🔵</p>
+                <p class="week">Semana 2-4</p>
+                <p class="goal">Escalar pauta 10x. Nuevos creativos. Orgánico.</p>
+            </div>
+            <div class="roadmap-step">
+                <p class="icon">🟢</p>
+                <p class="week">Semana 4-8</p>
+                <p class="goal">Evergreen. Expandir USA. YouTube. Automatizar.</p>
+            </div>
+        </div>
+
+        <div class="callout blue" style="margin-top:32px">
+            <p class="callout-title">💎 La Idea Central</p>
+            <p>Diego tiene dos señales poderosas operando en paralelo: un <strong>meta ads con 4.3% CTR</strong> que demuestra que el mensaje resuena, y un <strong>webinar con 26 registros 100% orgánicos</strong> que demuestra que la autoridad de marca convierte sin inversión. La clave del Q2 es <strong>unir estas dos fuerzas</strong>: redirigir la pauta al webinar, automatizar el pipeline, y escalar sobre tracción real — no sobre suposiciones. Pipeline B2B de $542K + tracción orgánica validada = la máquina está lista para ensamblarse.</p>
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer>
+        <p class="logo-text">SALES VELOCITY × PULSE UP</p>
+        <p>Estrategia de Crecimiento Q2 2026 · Marzo 7, 2026</p>
+        <p style="margin-top:6px; color:var(--blue); font-size:0.55rem; letter-spacing:0.15em">CONFIDENCIAL — USO INTERNO · DATOS EN TIEMPO REAL VÍA API</p>
+    </footer>
+</body>
+</html>

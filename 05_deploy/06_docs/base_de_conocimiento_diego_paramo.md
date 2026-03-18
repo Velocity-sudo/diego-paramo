@@ -1,8 +1,8 @@
 # BASE DE CONOCIMIENTO: Diego Páramo
 
-> **Última actualización:** 13 de marzo, 2026
-> **Versión:** 1.1
-> **Estado:** ✅ Post-webinar — preparando flujo de venta
+> **Última actualización:** 12 de marzo, 2026
+> **Versión:** 2.0
+> **Estado:** ✅ Post-Webinar — Living document
 
 ---
 
@@ -44,8 +44,8 @@ Diego no es un "gurú de IA" teórico. Es un ejecutor con resultados verificable
 - **Plataforma:** GoHighLevel bajo dominio entendiendo.ai
 - **Canales sociales:** Instagram, LinkedIn, X (Twitter), YouTube (@AiParaTodosOficial), TikTok
 - **Funnel activo:** Landing page de captación para clase gratuita "Las 12 Herramientas de IA que van a cambiar tu empresa en 2026"
-- **Webinar programado:** Marzo 12, 2026 — Webinar gratuito en vivo "Crea tu primer Asistente Ejecutivo de IA en 60 minutos"
-- **Modelo de monetización actual:** En transición — de consultoría B2B a modelo escalable B2C con low-ticket + high-ticket
+- **Webinar ejecutado:** ✅ 12 de Marzo, 2026 — Resultados: 1,148 registros, ~500 asistentes, 26 ventas ($520 USD)
+- **Modelo de monetización:** Low-ticket ($20 Pack Maestro) + High-ticket upsell (Mentoría $2,500) + Enterprise ($7K+)
 
 ### Objetivos de revenue
 - **Corto plazo (Mes 1-3):** Validar oferta low-ticket ($50) + high-ticket upsell ($400-$7K) a través de webinars
@@ -109,28 +109,31 @@ Democratizar el acceso a la inteligencia artificial para que cualquier profesion
 - **Urgencia:** Solo 100 cupos, no habrá grabación
 - **Landing page de registro:** https://entendiendo.ai/home-523387
 - **Landing page alterna (clase grabada):** https://entendiendo.ai/12ai-apps-para2026
-- **Próxima fecha:** 12 de marzo de 2026, 12:00 PM Colombia/Miami, 11:00 AM CDMX
+- **Primer webinar ejecutado:** 12 de marzo de 2026 ✅
 - **Formulario de registro:** Nombre, email, teléfono, ciudad
 
-#### FASE 2: Low-Ticket ($49) — Repositorio de Prompts
-- **Nombre:** "Biblioteca de Asistentes AI — Prompts Listos para Usar"
-- **Precio:** $49 USD ✅ confirmado (Stripe activo) | $97-$197 USD (USA, Fase 2)
-- **Pagos habilitados:** Stripe (tarjeta + OXXO para México) ✅ onboarding completo
+#### FASE 2: Low-Ticket ($20) — Pack Maestro de Prompts
+- **Nombre:** "Pack Maestro — Prompts y Asistentes AI"
+- **Precio en webinar:** $20 USD (oferta especial webinar)
+- **Precio regular LATAM:** $50 USD | **USA (Fase 2):** $97-$197 USD
 - **Incluye:**
   - 📚 Repositorio de 50+ prompts por rol (Marketing, Ventas, HR, Finanzas, Operaciones)
   - 🤖 5 asistentes pre-configurados con knowledge base
-  - 🎥 Video tutorial de personalización (30 min)
-  - 📄 Plantillas de knowledge base
+  - 🎥 Video tutorial de personalización
+  - 📄 Google Doc con instructivo y prompts
   - 💬 Comunidad privada
   - 🔄 Updates mensuales
 - **Bonos:** Guía PDF errores comunes + Checklist + 20 prompts avanzados
 - **Garantía:** 30 días, devolución 100%
 - **Momento de venta:** Al final del webinar
+- **Entrega:** Página post-compra con video + PDF (GitHub Pages)
+- **Tag GHL:** `pack-maestro`
 
 #### FASE 3: High-Ticket Upsell (Post-Compra)
 - **Opción 1 — Personalización Premium:** $400 (sesión 1-on-1, 90 min, 2-3 asistentes configurados, 30 días seguimiento)
 - **Opción 2 — Agente Completo Custom:** $7,000+ (agente autónomo, integraciones CRM/email, automatización workflows, 3 meses soporte)
 - **Opción 3 — Mentoría AI Intensiva:** $2,500 (4 sesiones/mes, recursos avanzados, grupo mastermind)
+- **Sorteo Mentoría Gratuita:** 86 participantes (formulario post-webinar)
 
 #### Oferta Alterna: Mentoría Premium 6 semanas
 - Mencionada en la landing de "12 Herramientas de IA"
@@ -208,7 +211,7 @@ Democratizar el acceso a la inteligencia artificial para que cualquier profesion
 | 6 | entendiendo.ai/12ai-apps-para2026 | Scrape de landing page | 7 Mar 2026 | Landing de captación para clase grabada "12 Herramientas de IA que van a cambiar tu empresa en 2026". Formulario de registro, testimoniales, mentoría 6 semanas como upsell |
 | 7 | entendiendo.ai/home-523387 | Scrape de webinar page | 7 Mar 2026 | Página del webinar en vivo (12 Mar 2026). "Deja de usar ChatGPT como Google y crea tu primer Asistente Ejecutivo de IA en 60 minutos". 100 cupos, sin grabación. Testimoniales, cases studies, countdown timer |
 | 8 | Conversación previa d621f7a7 | Conversación completa | ~Feb 2026 | Trabajo previo completo: VSL, Ads strategy, landing page, Notion pages, webinar page. Incluye múltiples artifacts (VSL scripts, landing copy, ad hooks, etc.) |
-| 9 | Sesión webinar prep 42bf2b56 | Conversación | 12 Mar 2026 | Preparación del webinar: Stripe onboarding completado, precio a $49, GHL producto + automatización post-compra, formulario sorteo mentoría $2,500, PDF de prompts entregado. Pendientes: landing post-compra, video Loom bienvenida, actualizar precio en Stripe |
+| 9 | Sesión post-webinar d351b1f8 | Conversación completa | 12 Mar 2026 | Sorteo mentoría, email entrega, página entrega Pack Maestro, CSS GHL, debriefing webinar, investigación pipeline, fix oportunidades vía API |
 
 ---
 
@@ -233,55 +236,90 @@ Democratizar el acceso a la inteligencia artificial para que cualquier profesion
 - **YouTube:** https://www.youtube.com/@AiParaTodosOficial
 - **TikTok:** https://www.tiktok.com/@diegoparamo_ai (presumido)
 
-### Webinar existente (diego_paramo_webinar/)
-- Código HTML/CSS/JS del webinar page construido en la conversación anterior
-- Ubicación: `/Users/niko/Desktop/Clientes/Diego Paramo/diego_paramo_webinar/`
+### Archivos locales importantes (02_funnel_ghl/)
+- `sorteo_mentoria.html` — Página standalone del sorteo de mentoría
+- `sorteo_mentoria_ghl.html` — Snippet para GHL (Custom HTML)
+- `css_form_sorteo_ghl.css` — CSS para formulario del sorteo en GHL
+- `email_entrega_pack_maestro.html` — Email HTML de entrega del Pack Maestro
+- `entrega_pack_maestro.html` — Página de entrega post-compra (video + PDF + guía)
+- `workflow_entrega_pack_maestro.md` — Documentación del workflow de entrega en GHL
+
+### GitHub Pages (05_deploy/)
+- `index.html` — Brand Manual
+- `sorteo.html` — Página del sorteo de mentoría
+- `entrega.html` — Página de entrega del Pack Maestro
+- `debriefing_webinar.html` — Debriefing con métricas del webinar
 
 ---
 
 ## 9. Contexto Estratégico Actual (Marzo 2026)
 
-### Estado post-webinar (12 de marzo)
-
-**Métricas reales del webinar:**
-| Métrica | Resultado |
-|---|---|
-| Registros totales | 1,290 |
-| Asistentes en vivo | ~500 (39% show-up rate) |
-| Pico simultáneo | 371 personas |
-| Ventas Pack Maestro ($20) | 30 ($600 USD) |
-| Registros sorteo mentoría $2,500 | 123 (24.6% de asistentes) |
-| Tasa conversión asistentes→compra | 6% |
-
-**Debriefing completo:** [debriefing_webinar.html](https://velocity-sudo.github.io/diego-paramo/05_deploy/debriefing_webinar.html)
-
-**Infraestructura de venta construida:**
-- Stripe onboarding ✅ completado (tarjeta + OXXO)
-- GHL producto + automatización post-compra ✅ creado
-- PDF de prompts maestros ✅ entregado
-- Formulario sorteo mentoría $2,500 ✅ creado
-- Página de entrega del pack ✅ desplegada
-- Email de entrega post-compra ✅ configurado
-
-**Pendientes críticos:**
-- 💰 Actualizar precio de $20 a $49 en Stripe (Diego)
-- 🌐 Construir landing page post-compra / onboarding (LuchoBranding)
-- 🎬 Grabar video Loom de bienvenida post-compra (Diego)
-4. **Dos funnels corriendo en paralelo:**
-   - Clase grabada → 12 herramientas → Mentoría premium (entendiendo.ai/12ai-apps-para2026)
-   - Webinar en vivo → Asistente en 60 min → Low-ticket prompt library → Upsell (entendiendo.ai/home-523387)
-5. **Estrategia de contenido:** Reels, stories, LinkedIn, keywords por DM (ManyChat)
-6. **Pauta:** En preparación — target abierto business owners, no sniper por ICPs específicos
+### Post-Webinar — Situación actual
+1. **Webinar ejecutado el 12 de marzo** ✅ — Resultados completos en debriefing
+2. **Funnel validado:** Registro → Webinar → Pack Maestro ($20) → Sorteo Mentoría → Upsell High-Ticket
+3. **Estrategia de contenido:** Reels, stories, LinkedIn, keywords por DM (ManyChat)
+4. **Pauta:** En preparación — target abierto business owners, no sniper por ICPs específicos
+5. **Lead caliente orgánico:** Contacto con dueño de Jota Mundial ($200K/mes facturación) — potencial cliente enterprise
 
 ### Decisiones estratégicas ya tomadas
 - ✅ Pivote B2B → B2C (mercado masivo, 99% que usa IA mal)
 - ✅ Target abierto en pauta (no sniper por ICP) para maximizar registros
-- ✅ Precio low-ticket $49 confirmado para LATAM, ajustable a $97-$197 para USA
+- ✅ Precio low-ticket $20 en webinar (validado), ajustable a $50-$197
 - ✅ Webinar en vivo como mecanismo principal de conversión
 - ✅ Sin grabación del webinar → genera urgencia real
 - ✅ Formulario post-registro para perfilar audiencia y adaptar contenido
-- ✅ Stripe completamente onboarded — pagos por tarjeta + OXXO
-- ✅ Automatización GHL post-compra configurada
+- ✅ Sorteo de mentoría como mecanismo de engagement post-webinar
+
+---
+
+## 10. Resultados del Webinar (12 de Marzo, 2026)
+
+### Métricas del Embudo
+
+| Métrica | Valor | Notas |
+|---|---|---|
+| **Registros totales** | 1,148 | Pipeline WEBINAR en GHL |
+| **Asistentes en vivo** | ~500 | Pico simultáneo ~370 |
+| **Tasa de asistencia** | 43% | Por encima del benchmark (25-40%) |
+| **Ventas exitosas (Stripe)** | 26 | Pack Maestro @ $20 USD |
+| **Revenue directo** | $520 USD | Self-liquidating offer |
+| **Pagos fallidos** | 9 | De 35 intentos totales (74% éxito pago) |
+| **Conversión asistencia→venta** | 5.2% | 26/500 |
+| **Conversión registro→venta** | 2.26% | 26/1,148 |
+| **Participantes sorteo mentoría** | 86 | Leads de alta intención |
+
+### Pipeline GHL — Estado actual
+
+| Stage | Oportunidades |
+|---|---|
+| Lead registrado Webinar | 1,148 |
+| Cerrado - Oferta de Asistentes | 28 (26 compradores + 2 test) |
+| Sorteo | 86 (después de mover 7 compradores a Cerrado) |
+
+### Incidencia técnica resuelta
+- **Problema:** El workflow `[Entrega] Pack Maestro - Post Pago` fallaba al crear oportunidades en la etapa "Cerrado" para contactos que ya estaban en etapas posteriores del pipeline (Sorteo)
+- **Error GHL:** "Moving a opportunity backward in the pipeline is not allowed"
+- **Solución:** Se movieron los 7 contactos faltantes vía API directa (`PUT /opportunities/{id}`) que sí permite mover hacia atrás a diferencia de la UI y los workflows
+- **Aprendizaje:** GHL workflows no pueden mover oportunidades hacia atrás en el pipeline, pero la API REST sí lo permite
+
+### Tags clave para identificar compradores
+- `pack-maestro` — Comprador confirmado del Pack Maestro
+- `venta - webinar` — Venta originada en el webinar
+- `sorteo webinar` — Participante del sorteo de mentoría
+- `registrado-webinar` — Registrado al webinar
+
+### Contactos sospechosos en tag pack-maestro
+- **Diego Paramo** (paramo.diego@gmail.com) — Compra de prueba, creado 18 Feb (pre-webinar)
+- **Oscar Caicedo** (paovelasquezmartinez@gmail.com) — Sin tag registrado-webinar, verificar en Stripe
+
+### Recursos entregados al comprador
+- **Video tutorial:** https://assets.cdn.filesafe.space/ouVnywxuvHFXuKyU3GVk/media/69b2ebb7bfc81f1c34bbb387.mov
+- **Google Doc (prompts + instructivo):** https://docs.google.com/document/d/16J39Bc37locJQ1gye3czfhx_tcZasSRrcazqZqhkIok/edit?usp=sharing
+- **Página de entrega:** https://velocity-sudo.github.io/diego-paramo/entrega.html
+- **Próximamente:** Guía de implementación paso a paso (pendiente de enviar por email)
+
+### Debriefing público
+- **URL:** https://velocity-sudo.github.io/diego-paramo/debriefing_webinar.html
 
 ---
 
@@ -297,21 +335,8 @@ Democratizar el acceso a la inteligencia artificial para que cualquier profesion
 | **Meta App Token** | Compartido — ver `clients_config.json` |
 | **Config key** | `diego_paramo` |
 | **Pipelines** | `b2b`, `b2c`, `lanzamiento`, `sistema_ventas`, `webinar` |
+| **Pipeline WEBINAR ID** | `Iwa5uF4EAGHLMNKSBEf3` |
+| **Stage: Cerrado (Asistentes)** | `ac5084ec-dc3b-48eb-af4c-79d86f112b0b` |
+| **Stage: Sorteo** | `7b86ee2c-e8b9-4e66-b7fb-df08101589f3` |
 | **Extracción automática** | ✅ Jueves 7am via LaunchAgent |
 | **GitHub Pages** | https://velocity-sudo.github.io/diego-paramo/ |
-
----
-
-## TAREAS & SEGUIMIENTO — Actualizado: 16 Mar 2026
-
-### ✅ Completado (semana 16 Mar 2026)
-- [x] ✅ Presentación webinar + dividi fin — lista y aprobada
-- [x] ✅ Afinar emails + oferta aprobada
-- [x] ✅ Actualizar precio $20 → $49 en Stripe
-
-### 🔄 En Progreso
-- [ ] 🎥 Seguimiento a Diego: grabar video introductorio del producto → **Esteban** | Hoy 16 Mar
-- [ ] 🏗️ Construir landing page post-compra → **Esteban** | Hoy 16 Mar
-
-### ⬜ Pendiente
-- [ ] 📞 Reunión con Diego para definir siguientes pasos y escalar oferta → **Esteban** | 17 Mar

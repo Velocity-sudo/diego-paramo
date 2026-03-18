@@ -1,0 +1,26 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Heavy media (videos, raw images, PSDs)
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.psd
+*.ai
+*.sketch
+*.fig
+*.zip
+*.rar
+
+# Node modules (if any)
+node_modules/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Archived versions (too large, not needed in sync)
+# _archivados/
