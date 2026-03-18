@@ -1,8 +1,8 @@
 # BASE DE CONOCIMIENTO: Diego Páramo
 
-> **Última actualización:** 18 de marzo, 2026
-> **Versión:** 1.2
-> **Estado:** 🚀 Post-webinar — setting calls activos + preparando segundo lanzamiento
+> **Última actualización:** 13 de marzo, 2026
+> **Versión:** 1.1
+> **Estado:** ✅ Post-webinar — preparando flujo de venta
 
 ---
 
@@ -209,7 +209,6 @@ Democratizar el acceso a la inteligencia artificial para que cualquier profesion
 | 7 | entendiendo.ai/home-523387 | Scrape de webinar page | 7 Mar 2026 | Página del webinar en vivo (12 Mar 2026). "Deja de usar ChatGPT como Google y crea tu primer Asistente Ejecutivo de IA en 60 minutos". 100 cupos, sin grabación. Testimoniales, cases studies, countdown timer |
 | 8 | Conversación previa d621f7a7 | Conversación completa | ~Feb 2026 | Trabajo previo completo: VSL, Ads strategy, landing page, Notion pages, webinar page. Incluye múltiples artifacts (VSL scripts, landing copy, ad hooks, etc.) |
 | 9 | Sesión webinar prep 42bf2b56 | Conversación | 12 Mar 2026 | Preparación del webinar: Stripe onboarding completado, precio a $49, GHL producto + automatización post-compra, formulario sorteo mentoría $2,500, PDF de prompts entregado. Pendientes: landing post-compra, video Loom bienvenida, actualizar precio en Stripe |
-| 10 | `Llamada 18-03-26.md` | Transcripción de llamada | 18 Mar 2026 | Tercera reunión. Revisión post-webinar: 37 ventas ($740), migración Zoom Webinars, nueva estructura de ofertas (3 tiers), setting calls para 134 contactos (asignados a Diego/Alejandro/Sofía), segundo webinar 8 Abr con oferta $147, idea certificados LinkedIn, N8N noticias virales, WhatsApp GHL desconectado |
 
 ---
 
@@ -242,89 +241,47 @@ Democratizar el acceso a la inteligencia artificial para que cualquier profesion
 
 ## 9. Contexto Estratégico Actual (Marzo 2026)
 
-### Resultados webinar #1 (12 de marzo) — FINAL
+### Estado post-webinar (12 de marzo)
+
+**Métricas reales del webinar:**
 | Métrica | Resultado |
 |---|---|
-| Registros totales pipeline | 1,358 (incluye sorteo) |
-| Registros webinar | ~1,290 |
-| Asistentes en vivo | ~380-400 (show-up ~30%) |
+| Registros totales | 1,290 |
+| Asistentes en vivo | ~500 (39% show-up rate) |
 | Pico simultáneo | 371 personas |
-| Ventas Pack Prompts ($20) | **37 ($740 USD)** — tasa conversión ~10% |
-| Registros sorteo mentoría | 103 personas |
-| Cerrado - Oferta Asistentes | 31 opp ($47,740 valor) |
-| Plataforma usada | StreamYard (se descarta — se migra a Zoom Webinars) |
+| Ventas Pack Maestro ($20) | 30 ($600 USD) |
+| Registros sorteo mentoría $2,500 | 123 (24.6% de asistentes) |
+| Tasa conversión asistentes→compra | 6% |
 
 **Debriefing completo:** [debriefing_webinar.html](https://velocity-sudo.github.io/diego-paramo/05_deploy/debriefing_webinar.html)
 
-### Decisiones tomadas en llamada 18 marzo
+**Infraestructura de venta construida:**
+- Stripe onboarding ✅ completado (tarjeta + OXXO)
+- GHL producto + automatización post-compra ✅ creado
+- PDF de prompts maestros ✅ entregado
+- Formulario sorteo mentoría $2,500 ✅ creado
+- Página de entrega del pack ✅ desplegada
+- Email de entrega post-compra ✅ configurado
 
-**1. Migración a Zoom Webinars** — StreamYard descartado por mala experiencia. Zoom es más robusto y la mayoría de la audiencia ya lo tiene.
+**Pendientes críticos:**
+- 💰 Actualizar precio de $20 a $49 en Stripe (Diego)
+- 🌐 Construir landing page post-compra / onboarding (LuchoBranding)
+- 🎬 Grabar video Loom de bienvenida post-compra (Diego)
+4. **Dos funnels corriendo en paralelo:**
+   - Clase grabada → 12 herramientas → Mentoría premium (entendiendo.ai/12ai-apps-para2026)
+   - Webinar en vivo → Asistente en 60 min → Low-ticket prompt library → Upsell (entendiendo.ai/home-523387)
+5. **Estrategia de contenido:** Reels, stories, LinkedIn, keywords por DM (ManyChat)
+6. **Pauta:** En preparación — target abierto business owners, no sniper por ICPs específicos
 
-**2. Nueva estructura de ofertas (3 tiers):**
-
-| Tier | Producto | Precio | Estado |
-|---|---|---|---|
-| Low-ticket | Pack Prompts (3 asistentes, PDF, paso a paso) | $20 USD | ✅ Ya vendido (37 ventas) |
-| Mid-ticket | Curso VIP 3-4 sesiones en vivo (grupos de 10 personas, creación de asistentes paso a paso, certificado) | $147 USD | 🔨 Por construir |
-| High-ticket | Mentoría AI intensiva (proyecto personalizado, 6-8 semanas) | $497-$700 USD | 🔨 Validar con setting calls |
-
-**3. Setting calls — proceso activo (desde 18 marzo):**
-- 134 contactos de Sorteo (103) + Cerrado (31) divididos en tercios:
-  - **Diego Páramo:** 45 contactos
-  - **Alejandro Garcia:** 45 contactos
-  - **Sofia Londoño:** 44 contactos
-- Objetivo: precalificar → agendar cita 30 min → cerrar mentoría $497-$700
-- Pipeline stages: Lead → C1 → C2 → C3 → Cita Agendada → Venta/No Interesado
-- Llamadas desde GHL directamente para trackear actividad
-- Si no contestan → WhatsApp personal (GHL WhatsApp desconectado actualmente)
-
-**4. Segundo webinar programado:**
-- **Fecha:** Miércoles 8 de abril, 2026
-- **Hora:** 12:00 PM Colombia (mediodía — funcionó bien el mediodía anterior, atrae gente de España también)
-- **Plataforma:** Zoom Webinars
-- **Oferta al cierre:** $147 USD — curso VIP de 3-4 sesiones
-- **Objetivo de registros:** 2,000+ (con pauta Meta + WhatsApp + orgánico)
-- **Formato mejorado:** Más corto, más directo, abierto a todas las plataformas AI (Gemini, Copilot, ChatGPT, Claude)
-- **Necesita:** Preparar la oferta de cierre, afinar webinar, meter pauta
-
-**5. Idea: certificados LinkedIn** — Diego quiere implementar certificados que los graduados puedan agregar a LinkedIn (como Stanford). TransUnion próximo cliente de 800 personas. Potencia de branding enorme. Alguien del equipo de Diego está investigando cómo implementarlo.
-
-**6. WhatsApp GHL** — La integración de WhatsApp con GHL se desconectó. Diego está configurando un WhatsApp corporativo aparte para re-integrarlo. Mientras tanto, llamadas desde GHL + WhatsApp personal como fallback.
-
-**7. Contenido orgánico** — Activar flujo de noticias virales (N8N) para que Diego reciba diariamente guiones selfie-style para calentar la audiencia antes del lanzamiento del 8 de abril. LinkedIn + Instagram.
-
-### Infraestructura de venta (ya construida)
-- ✅ Stripe onboarding completo (tarjeta + OXXO)
-- ✅ GHL producto + automatización post-compra
-- ✅ PDF de prompts maestros entregado
-- ✅ Formulario sorteo mentoría
-- ✅ Página de entrega del pack
-- ✅ Email de entrega post-compra
-- ✅ Pipeline WEBINAR con stages de setting configurado
-- ✅ Contactos del sorteo asignados a Diego/Alejandro/Sofía como owners
-
-### Decisiones estratégicas acumuladas
-- ✅ Pivote B2B → B2C (mercado masivo)
-- ✅ Target abierto en pauta (no sniper)
-- ✅ Webinar en vivo = mecanismo principal de conversión
+### Decisiones estratégicas ya tomadas
+- ✅ Pivote B2B → B2C (mercado masivo, 99% que usa IA mal)
+- ✅ Target abierto en pauta (no sniper por ICP) para maximizar registros
+- ✅ Precio low-ticket $49 confirmado para LATAM, ajustable a $97-$197 para USA
+- ✅ Webinar en vivo como mecanismo principal de conversión
 - ✅ Sin grabación del webinar → genera urgencia real
-- ✅ Stripe completamente onboarded
+- ✅ Formulario post-registro para perfilar audiencia y adaptar contenido
+- ✅ Stripe completamente onboarded — pagos por tarjeta + OXXO
 - ✅ Automatización GHL post-compra configurada
-- ✅ Migración StreamYard → Zoom Webinars
-- ✅ Abrir a todas las plataformas AI (no solo ChatGPT)
-- ✅ Precio low-ticket se mantiene en $20 (no subir), mid-ticket $147, high-ticket $497-$700
-
----
-
-## 10. Equipo de Diego (Interno)
-
-| Nombre | Rol | ID GHL |
-|---|---|---|
-| Diego Páramo | Fundador, speaker, closer | `W8K9LHM9Zw3YOy9zshaQ` |
-| Alejandro Garcia | Closer, instructor talleres | `QS9eYgAleav7U4Es0dom` |
-| Sofia Londoño | Closer, operaciones | `YghTebiUwhVCIUEdc1PM` |
-| Alejandra Subero | Admin | `DyiM5hZtD5Rc2DKKUqwD` |
-| Jorge Andres Rangel | Operaciones | `o9GYih7qGzO6W2k8gOG7` |
 
 ---
 
@@ -342,33 +299,3 @@ Democratizar el acceso a la inteligencia artificial para que cualquier profesion
 | **Pipelines** | `b2b`, `b2c`, `lanzamiento`, `sistema_ventas`, `webinar` |
 | **Extracción automática** | ✅ Jueves 7am via LaunchAgent |
 | **GitHub Pages** | https://velocity-sudo.github.io/diego-paramo/ |
-
----
-
-## TAREAS & SEGUIMIENTO — Actualizado: 18 Mar 2026
-
-### ✅ Completado
-- [x] ✅ Presentación webinar + dividi fin — lista y aprobada
-- [x] ✅ Afinar emails + oferta aprobada
-- [x] ✅ Actualizar precio $20 → $49 en Stripe
-- [x] ✅ Reunión con Diego para definir siguientes pasos (18 Mar)
-- [x] ✅ Asignar owners a 134 contactos de Sorteo + Cerrado (Diego/Alejandro/Sofía) — vía API
-
-### 🔄 En Progreso
-- [ ] 📞 Setting calls: Diego/Alejandro/Sofía llamando a los 134 contactos para precalificar y agendar citas mentoría → **Diego/Alejandro/Sofía** | Semana 18-25 Mar
-- [ ] 🎥 Seguimiento a Diego: grabar video introductorio del producto → **Esteban**
-
-### ⬜ Pendiente — Semana Santa (18-25 Mar)
-- [ ] 📋 Construir plan del segundo webinar (8 de abril, $147) → **Esteban + Lucho** | Esta semana
-- [ ] 🎤 Configurar Zoom Webinars (migración de StreamYard) → **LuchoBranding** | Esta semana
-- [ ] 📰 Activar flujo N8N de noticias virales diarias para Diego → **Lucho** | Esta semana
-- [ ] 📱 Empezar a publicar contenido orgánico para calentar audiencia → **Diego** | Desde esta semana
-- [ ] 💬 Resolver integración WhatsApp GHL (reconectar o nuevo número corporativo) → **Esteban** | Esta semana
-- [ ] 🎯 Diseñar oferta completa del curso VIP $147 (contenido, sesiones, certificado) → **Esteban + Lucho** | Antes del 1 Abr
-- [ ] 📣 Preparar pauta Meta Ads para registros webinar 8 Abr → **Esteban + Lucho** | Antes del 1 Abr
-- [ ] 🏗️ Construir landing page post-compra / onboarding → **Esteban**
-
-### 📅 Pipeline próximas semanas
-- **Semana 18-25 Mar:** Setting calls activos + plan webinar + contenido orgánico
-- **Semana 25 Mar - 1 Abr:** Semana Santa — preparar todo para lanzamiento
-- **Semana 1-8 Abr:** Lanzamiento pauta + registros masivos + webinar 8 de abril
